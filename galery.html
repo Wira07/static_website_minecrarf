@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Wira Sukma Saputra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="galery.css" />
+  </head>
+  <body class="minecraft-bg min-h-screen text-white">
+    <!-- Particles Effect -->
+    <div id="particles"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b-4 border-gray-700">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 border-4 border-green-800 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">🎮</span>
+            </div>
+            <div>
+              <h1 class="text-lg md:text-xl text-white drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]">PORTFOLIO</h1>
+              <div class="pixel-text text-green-400 text-xs">Level 25 Coder</div>
+            </div>
+          </div>
+
+          <!-- Navigation Menu Desktop -->
+          <nav class="hidden lg:flex items-center gap-4">
+            <a href="index.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🏠 Home </a>
+            <a href="index.html#projects" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📦 Projects </a>
+            <a href="about.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 👤 About </a>
+            <a href="galery.html" class="nav-link pixel-text text-xs text-yellow-400 transition-colors"> 🖼️ Gallery </a>
+            <a href="contact.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ✉️ Contact </a>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <!-- Hamburger Menu Button -->
+            <button id="hamburgerBtn" class="lg:hidden minecraft-button p-2" onclick="toggleMobileMenu()">
+              <span class="text-xl">☰</span>
+            </button>
+
+            <div class="hidden md:flex items-center gap-6">
+              <div class="health-bar">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-content">
+          <div class="flex justify-between items-center mb-6 pb-4 border-b-2 border-gray-600">
+            <h3 class="pixel-text text-yellow-400">MENU</h3>
+            <button onclick="toggleMobileMenu()" class="minecraft-button p-2">
+              <span class="text-xl">✕</span>
+            </button>
+          </div>
+          <nav class="flex flex-col gap-4">
+            <a href="index.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🏠</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Home</div>
+                <div class="pixel-text text-xs text-gray-400">Kembali ke home</div>
+              </div>
+            </a>
+            <a href="index.html#projects" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">📦</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Projects</div>
+                <div class="pixel-text text-xs text-gray-400">Lihat semua project</div>
+              </div>
+            </a>
+            <a href="about.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">👤</span>
+              <div>
+                <div class="pixel-text text-sm text-white">About Me</div>
+                <div class="pixel-text text-xs text-gray-400">Tentang pembuat</div>
+              </div>
+            </a>
+            <a href="gallery.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🖼️</span>
+              <div>
+                <div class="pixel-text text-sm text-yellow-400">Gallery</div>
+                <div class="pixel-text text-xs text-gray-400">Koleksi karya</div>
+              </div>
+            </a>
+            <a href="contact.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">✉️</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Contact</div>
+                <div class="pixel-text text-xs text-gray-400">Hubungi saya</div>
+              </div>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-32">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl">
+          <div class="text-6xl mb-6">🎨</div>
+          <h2 class="text-3xl md:text-4xl mb-4 text-cyan-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">PROJECT GALLERY</h2>
+          <div class="inline-block bg-purple-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4">🖼️ 12 Masterpieces 🖼️</div>
+          <p class="pixel-text text-sm text-gray-300 leading-relaxed">Koleksi screenshot dan dokumentasi dari berbagai project coding yang sudah saya kerjakan.</p>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex flex-wrap gap-3 bg-black/70 p-4 rounded-xl border-4 border-gray-600">
+          <button onclick="filterGallery('all')" class="filter-btn active minecraft-button pixel-text text-xs" data-filter="all">🎮 All</button>
+          <button onclick="filterGallery('games')" class="filter-btn minecraft-button pixel-text text-xs" data-filter="games">🕹️ Games</button>
+          <button onclick="filterGallery('mods')" class="filter-btn minecraft-button pixel-text text-xs" data-filter="mods">⛏️ Mods</button>
+          <button onclick="filterGallery('web')" class="filter-btn minecraft-button pixel-text text-xs" data-filter="web">🌐 Web</button>
+          <button onclick="filterGallery('art')" class="filter-btn minecraft-button pixel-text text-xs" data-filter="art">🎨 Pixel Art</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Gallery items will be dynamically inserted here -->
+      </div>
+
+      <!-- Stats Section -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
+        <div class="project-card p-6 text-center">
+          <div class="text-4xl mb-3">📸</div>
+          <div class="text-2xl text-cyan-400 mb-2">12</div>
+          <div class="pixel-text text-xs text-gray-300">Screenshots</div>
+        </div>
+        <div class="project-card p-6 text-center">
+          <div class="text-4xl mb-3">🎮</div>
+          <div class="text-2xl text-green-400 mb-2">4</div>
+          <div class="pixel-text text-xs text-gray-300">Game Projects</div>
+        </div>
+        <div class="project-card p-6 text-center">
+          <div class="text-4xl mb-3">⛏️</div>
+          <div class="text-2xl text-yellow-400 mb-2">3</div>
+          <div class="pixel-text text-xs text-gray-300">Minecraft Mods</div>
+        </div>
+        <div class="project-card p-6 text-center">
+          <div class="text-4xl mb-3">🎨</div>
+          <div class="text-2xl text-purple-400 mb-2">5</div>
+          <div class="pixel-text text-xs text-gray-300">Pixel Arts</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1); event.stopPropagation();">❮</button>
+      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1); event.stopPropagation();">❯</button>
+
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <div class="lightbox-image-container">
+          <img id="lightboxImage" src="" alt="" />
+        </div>
+        <div class="lightbox-info">
+          <h3 id="lightboxTitle" class="text-2xl text-cyan-400 mb-2"></h3>
+          <p id="lightboxCategory" class="pixel-text text-xs text-yellow-400 mb-3"></p>
+          <p id="lightboxDescription" class="pixel-text text-xs text-gray-300 leading-relaxed"></p>
+          <div id="lightboxTags" class="flex flex-wrap gap-2 mt-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 border-t-4 border-gray-700 py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p class="pixel-text text-xs text-gray-400">Made with ❤️ using Tynker × Minecraft Theme</p>
+        <p class="pixel-text text-xs text-gray-500 mt-2">© 2024 Wira Sukma Saputra - Coding Adventure Portfolio</p>
+      </div>
+    </footer>
+
+    <script src="galery.js"></script>
+  </body>
+</html>

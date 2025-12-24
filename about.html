@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Wira Sukma Saputra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body class="minecraft-bg min-h-screen text-white">
+    <!-- Particles Effect -->
+    <div id="particles"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b-4 border-gray-700">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 border-4 border-green-800 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">🎮</span>
+            </div>
+            <div>
+              <h1 class="text-lg md:text-xl text-white drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]">PORTFOLIO</h1>
+              <div class="pixel-text text-green-400 text-xs">Level 25 Coder</div>
+            </div>
+          </div>
+
+          <!-- Navigation Menu Desktop -->
+          <nav class="hidden lg:flex items-center gap-4">
+            <a href="index.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🏠 Home </a>
+            <a href="index.html#projects" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📦 Projects </a>
+            <a href="galery.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🖼️ Gallery </a>
+            <a href="blogs.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📝 Blog </a>
+            <a href="about.html" class="nav-link pixel-text text-xs text-yellow-400 transition-colors"> 👤 About </a>
+            <a href="contact.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ✉️ Contact </a>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <!-- Hamburger Menu Button -->
+            <button id="hamburgerBtn" class="lg:hidden minecraft-button p-2" onclick="toggleMobileMenu()">
+              <span class="text-xl">☰</span>
+            </button>
+
+            <div class="hidden md:flex items-center gap-6">
+              <div class="health-bar">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-content">
+          <div class="flex justify-between items-center mb-6 pb-4 border-b-2 border-gray-600">
+            <h3 class="pixel-text text-yellow-400">MENU</h3>
+            <button onclick="toggleMobileMenu()" class="minecraft-button p-2">
+              <span class="text-xl">✕</span>
+            </button>
+          </div>
+          <nav class="flex flex-col gap-4">
+            <a href="index.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🏠</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Home</div>
+                <div class="pixel-text text-xs text-gray-400">Kembali ke home</div>
+              </div>
+            </a>
+            <a href="index.html#projects" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">📦</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Projects</div>
+                <div class="pixel-text text-xs text-gray-400">Lihat semua project</div>
+              </div>
+            </a>
+
+            <a href="about.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">👤</span>
+              <div>
+                <div class="pixel-text text-sm text-yellow-400">About Me</div>
+                <div class="pixel-text text-xs text-gray-400">Tentang pembuat</div>
+              </div>
+            </a>
+
+            <!-- galery -->
+            <a href="galery.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🖼️</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Gallery</div>
+                <div class="pixel-text text-xs text-gray-400">Lihat galeri</div>
+              </div>
+            </a>
+
+            <a href="blogs.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">📝</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Blog</div>
+                <div class="pixel-text text-xs text-gray-400">Baca tulisan saya</div>
+              </div>
+            </a>
+
+            <a href="contact.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">✉️</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Contact</div>
+                <div class="pixel-text text-xs text-gray-400">Hubungi saya</div>
+              </div>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-32">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl parallax-layer">
+          <img src="aink.jpeg" alt="Wira Sukma Saputra" class="mx-auto w-64 h-64 rounded-full border-4 border-purple-600 mb-6 shadow-lg object-cover parallax-layer" />
+          <div class="text-6xl mb-6">👨‍💻</div>
+          <h2 class="text-3xl md:text-4xl mb-4 text-cyan-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">ABOUT ME</h2>
+          <div class="inline-block bg-purple-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4">⚔️ Level 25 Coding Master ⚔️</div>
+          <h3 class="text-2xl text-yellow-400 mb-4">Wira Sukma Saputra</h3>
+          <p class="pixel-text text-sm text-gray-300 leading-relaxed">Seorang programmer muda yang passionate dalam dunia coding dan game development.</p>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+        <div class="project-card p-6 text-center parallax-layer">
+          <div class="text-5xl mb-4">🎮</div>
+          <div class="text-3xl text-green-400 mb-2">4+</div>
+          <div class="pixel-text text-xs text-gray-300">Projects Completed</div>
+        </div>
+        <div class="project-card p-6 text-center parallax-layer">
+          <div class="text-5xl mb-4">⭐</div>
+          <div class="text-3xl text-yellow-400 mb-2">750</div>
+          <div class="pixel-text text-xs text-gray-300">Total Experience</div>
+        </div>
+        <div class="project-card p-6 text-center parallax-layer">
+          <div class="text-5xl mb-4">🏆</div>
+          <div class="text-3xl text-purple-400 mb-2">25</div>
+          <div class="pixel-text text-xs text-gray-300">Level Achieved</div>
+        </div>
+      </div>
+
+      <!-- About Content -->
+      <div class="max-w-4xl mx-auto">
+        <!-- Story -->
+        <div class="project-card p-8 mb-8 parallax-layer">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-4xl">📖</div>
+            <h3 class="text-2xl text-yellow-400">My Story</h3>
+          </div>
+          <div class="space-y-4 pixel-text text-xs leading-relaxed text-gray-300">
+            <p>Halo! Nama saya Wira Sukma Saputra. Perjalanan coding saya dimulai dari ketertarikan pada game Minecraft dan keinginan untuk membuat mod sendiri. Dari situ, saya mulai belajar tentang programming dan game development.</p>
+            <p>Saya sangat menikmati proses belajar teknologi baru, terutama yang berkaitan dengan game development dan creative coding. Setiap project adalah petualangan baru yang mengajarkan skill dan pengalaman berharga.</p>
+            <p>Saat ini, saya fokus mengembangkan kemampuan di berbagai platform seperti Tynker, Minecraft Modding, dan bahasa pemrograman seperti Python dan Java.</p>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="project-card p-8 mb-8 parallax-layer">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-4xl">⚔️</div>
+            <h3 class="text-2xl text-cyan-400">Skills & Technologies</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Programming Languages -->
+            <div class="bg-black/50 p-5 rounded-lg border-2 border-purple-600">
+              <div class="pixel-text text-sm text-purple-400 mb-4">💻 Programming</div>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between pixel-text text-xs text-gray-300 mb-2">
+                    <span>Python</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="w-full h-2 bg-gray-700 rounded overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-purple-500 to-purple-400" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between pixel-text text-xs text-gray-300 mb-2">
+                    <span>Java</span>
+                    <span>60%</span>
+                  </div>
+                  <div class="w-full h-2 bg-gray-700 rounded overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-blue-500 to-blue-400" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between pixel-text text-xs text-gray-300 mb-2">
+                    <span>JavaScript</span>
+                    <span>70%</span>
+                  </div>
+                  <div class="w-full h-2 bg-gray-700 rounded overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-yellow-500 to-yellow-400" style="width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools & Platforms -->
+            <div class="bg-black/50 p-5 rounded-lg border-2 border-green-600">
+              <div class="pixel-text text-sm text-green-400 mb-4">🛠️ Tools & Platforms</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Tynker</span>
+                <span class="tech-tag">Minecraft Forge</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">VS Code</span>
+                <span class="tech-tag">Block Coding</span>
+                <span class="tech-tag">Pixel Art</span>
+                <span class="tech-tag">Game Design</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">HTML</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="project-card p-8 mb-8 parallax-layer">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-4xl">🎯</div>
+            <h3 class="text-2xl text-green-400">Interests</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-black/50 p-4 rounded-lg border-2 border-red-600 flex items-center gap-3">
+              <div class="text-3xl">🎮</div>
+              <div>
+                <div class="pixel-text text-xs text-red-400">Game Development</div>
+                <div class="pixel-text text-xs text-gray-400">Creating interactive experiences</div>
+              </div>
+            </div>
+            <div class="bg-black/50 p-4 rounded-lg border-2 border-blue-600 flex items-center gap-3">
+              <div class="text-3xl">⛏️</div>
+              <div>
+                <div class="pixel-text text-xs text-blue-400">Minecraft Modding</div>
+                <div class="pixel-text text-xs text-gray-400">Custom mobs & mechanics</div>
+              </div>
+            </div>
+            <div class="bg-black/50 p-4 rounded-lg border-2 border-purple-600 flex items-center gap-3">
+              <div class="text-3xl">🎨</div>
+              <div>
+                <div class="pixel-text text-xs text-purple-400">Pixel Art</div>
+                <div class="pixel-text text-xs text-gray-400">Retro-style graphics</div>
+              </div>
+            </div>
+            <div class="bg-black/50 p-4 rounded-lg border-2 border-yellow-600 flex items-center gap-3">
+              <div class="text-3xl">💡</div>
+              <div>
+                <div class="pixel-text text-xs text-yellow-400">Problem Solving</div>
+                <div class="pixel-text text-xs text-gray-400">Logic & algorithms</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+          <div class="inline-block bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-4 border-purple-600 rounded-xl p-8 parallax-layer">
+            <div class="text-5xl mb-4">🚀</div>
+            <h3 class="text-2xl text-purple-400 mb-4">Let's Collaborate!</h3>
+            <p class="pixel-text text-xs text-gray-300 mb-6 max-w-md">Tertarik untuk berkolaborasi atau diskusi tentang project coding? Jangan ragu untuk menghubungi saya!</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+              <a href="contact.html" class="minecraft-button minecraft-button-primary">
+                <span class="pixel-text text-xs">Contact Me</span>
+              </a>
+              <a href="index.html#projects" class="minecraft-button">
+                <span class="pixel-text text-xs">View Projects</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 border-t-4 border-gray-700 py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p class="pixel-text text-xs text-gray-400">Made with ❤️ using Tynker × Minecraft Theme</p>
+        <p class="pixel-text text-xs text-gray-500 mt-2">© 2024 Wira Sukma Saputra - Coding Adventure Portfolio</p>
+      </div>
+    </footer>
+
+    <script src="about.js"></script>
+  </body>
+</html>

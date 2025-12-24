@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Coding Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        image-rendering: pixelated;
+      }
+
+      body {
+        font-family: "Press Start 2P", cursive;
+        overflow-x: hidden;
+      }
+
+      .minecraft-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+          url('data:image/svg+xml,<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><rect fill="%2387CEEB" width="64" height="64"/><rect fill="%235F9EA0" x="0" y="32" width="32" height="32"/><rect fill="%236B8E23" x="32" y="0" width="32" height="32"/></svg>');
+        background-size: 64px 64px;
+        animation: bgScroll 30s linear infinite;
+        min-height: 100vh;
+      }
+
+      @keyframes bgScroll {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 64px 64px;
+        }
+      }
+
+      .pixel-text {
+        font-size: 0.7rem;
+        line-height: 1.6;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+      }
+
+      .blog-card {
+        background: linear-gradient(135deg, rgba(40, 40, 40, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
+        border: 4px solid #444;
+        border-radius: 12px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        animation: cardAppear 0.6s ease-out backwards;
+      }
+
+      .blog-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .blog-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .blog-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .blog-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .blog-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .blog-card:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes cardAppear {
+        from {
+          opacity: 0;
+          transform: translateY(30px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .blog-card::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(0, 191, 255, 0.3), rgba(255, 215, 0, 0.3));
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.4s;
+        filter: blur(8px);
+      }
+
+      .blog-card:hover::before {
+        opacity: 1;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        border-color: #666;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.3);
+      }
+
+      .minecraft-button {
+        background: linear-gradient(180deg, #8b8b8b 0%, #5a5a5a 100%);
+        border: 3px solid;
+        border-color: #ffffff #373737 #373737 #ffffff;
+        color: #fff;
+        text-shadow: 2px 2px #000;
+        padding: 12px 24px;
+        cursor: pointer;
+        transition: all 0.2s;
+        border-radius: 6px;
+      }
+
+      .minecraft-button:hover {
+        background: linear-gradient(180deg, #a0a0a0 0%, #6f6f6f 100%);
+        transform: translateY(-2px);
+      }
+
+      .category-tag {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        border: 2px solid;
+        font-size: 0.6rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+      }
+
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        padding: 1rem;
+        animation: fadeIn 0.3s;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal-content {
+        background: linear-gradient(135deg, rgba(40, 40, 40, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+        border: 4px solid #666;
+        border-radius: 16px;
+        max-width: 700px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2rem;
+        position: relative;
+        animation: modalSlide 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      }
+
+      @keyframes modalSlide {
+        from {
+          transform: translateY(-50px) scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        background: rgba(239, 68, 68, 0.8);
+        border: 3px solid #dc2626;
+        border-radius: 6px;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-close:hover {
+        background: #dc2626;
+        transform: rotate(90deg) scale(1.1);
+      }
+
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+        border-left: 2px solid #333;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #666 0%, #444 100%);
+        border: 2px solid #333;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body class="minecraft-bg min-h-screen text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b-4 border-gray-700">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 border-4 border-green-800 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">🎮</span>
+            </div>
+            <div>
+              <h1 class="text-lg md:text-xl text-white drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]">BLOG</h1>
+              <div class="pixel-text text-green-400 text-xs">Coding Stories</div>
+            </div>
+          </div>
+
+          <nav class="hidden lg:flex items-center gap-4">
+            <a href="index.html" class="pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors">🏠 Home</a>
+            <a href="#blog" class="pixel-text text-xs text-yellow-400">📝 Blog</a>
+            <a href="index.html#projects" class="pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors">📦 Projects</a>
+            <a href="contact.html" class="pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors">✉️ Contact</a>
+          </nav>
+
+          <button class="lg:hidden minecraft-button p-2">
+            <span class="text-xl">☰</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4">
+      <div class="container mx-auto max-w-4xl text-center">
+        <div class="bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8">
+          <div class="mb-4">
+            <span class="inline-block bg-blue-600 px-4 py-2 rounded border-2 border-blue-400 pixel-text text-xs"> 📝 CODING JOURNAL 📝 </span>
+          </div>
+          <h2 class="text-2xl md:text-4xl mb-6 text-cyan-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">ADVENTURE LOG</h2>
+          <p class="pixel-text text-sm text-gray-300 mb-6">
+            Baca cerita perjalanan coding ku, tips & tricks,<br />
+            dan pengalaman seru dalam dunia programming!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section id="blog" class="pb-32 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Blog Post 1 -->
+          <div class="blog-card cursor-pointer" onclick="openBlogModal(0)">
+            <div class="p-6 relative z-10">
+              <div class="text-4xl mb-4">🎮</div>
+              <div class="mb-3">
+                <span class="category-tag bg-purple-600/30 border-purple-400 text-purple-300">Tutorial</span>
+              </div>
+              <h3 class="text-lg text-yellow-400 mb-3">Membuat Game Pertama dengan Tynker</h3>
+              <p class="pixel-text text-xs text-gray-400 mb-3">15 Des 2024</p>
+              <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-4">Langkah demi langkah membuat game platformer sederhana menggunakan block coding Tynker...</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500">⏱️ 5 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="blog-card cursor-pointer" onclick="openBlogModal(1)">
+            <div class="p-6 relative z-10">
+              <div class="text-4xl mb-4">⚡</div>
+              <div class="mb-3">
+                <span class="category-tag bg-red-600/30 border-red-400 text-red-300">Tips</span>
+              </div>
+              <h3 class="text-lg text-cyan-400 mb-3">10 Tips Membuat Minecraft Mod</h3>
+              <p class="pixel-text text-xs text-gray-400 mb-3">10 Des 2024</p>
+              <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-4">Tips dan trik untuk pemula yang ingin membuat mod Minecraft menggunakan Forge API...</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500">⏱️ 8 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="blog-card cursor-pointer" onclick="openBlogModal(2)">
+            <div class="p-6 relative z-10">
+              <div class="text-4xl mb-4">🐍</div>
+              <div class="mb-3">
+                <span class="category-tag bg-green-600/30 border-green-400 text-green-300">Story</span>
+              </div>
+              <h3 class="text-lg text-green-400 mb-3">Perjalanan Belajar Python</h3>
+              <p class="pixel-text text-xs text-gray-400 mb-3">5 Des 2024</p>
+              <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-4">Cerita pengalaman ku belajar Python dari nol hingga bisa membuat game sederhana...</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500">⏱️ 6 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 4 -->
+          <div class="blog-card cursor-pointer" onclick="openBlogModal(3)">
+            <div class="p-6 relative z-10">
+              <div class="text-4xl mb-4">🎨</div>
+              <div class="mb-3">
+                <span class="category-tag bg-yellow-600/30 border-yellow-400 text-yellow-300">Design</span>
+              </div>
+              <h3 class="text-lg text-orange-400 mb-3">Pixel Art untuk Pemula</h3>
+              <p class="pixel-text text-xs text-gray-400 mb-3">1 Des 2024</p>
+              <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-4">Dasar-dasar pixel art dan cara membuat sprite untuk game kamu sendiri...</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500">⏱️ 7 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 5 -->
+          <div class="blog-card cursor-pointer" onclick="openBlogModal(4)">
+            <div class="p-6 relative z-10">
+              <div class="text-4xl mb-4">💻</div>
+              <div class="mb-3">
+                <span class="category-tag bg-blue-600/30 border-blue-400 text-blue-300">Tutorial</span>
+              </div>
+              <h3 class="text-lg text-blue-400 mb-3">Debugging Tips untuk Coder Muda</h3>
+              <p class="pixel-text text-xs text-gray-400 mb-3">25 Nov 2024</p>
+              <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-4">Cara efektif mencari dan memperbaiki bug dalam kode program kamu...</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500">⏱️ 5 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 6 -->
+          <div class="blog-card cursor-pointer" onclick="openBlogModal(5)">
+            <div class="p-6 relative z-10">
+              <div class="text-4xl mb-4">🚀</div>
+              <div class="mb-3">
+                <span class="category-tag bg-pink-600/30 border-pink-400 text-pink-300">Motivation</span>
+              </div>
+              <h3 class="text-lg text-pink-400 mb-3">Kenapa Aku Suka Coding?</h3>
+              <p class="pixel-text text-xs text-gray-400 mb-3">20 Nov 2024</p>
+              <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-4">Alasan mengapa coding itu seru dan kenapa kamu juga harus mencobanya...</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500">⏱️ 4 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal-overlay" onclick="closeBlogModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button onclick="closeBlogModal()" class="modal-close">✕</button>
+        <div id="blogModalContent"></div>
+        <div class="mt-8 flex gap-4 justify-center">
+          <button onclick="closeBlogModal()" class="minecraft-button">
+            <span class="pixel-text text-xs">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 border-t-4 border-gray-700 py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p class="pixel-text text-xs text-gray-400">Made with ❤️ using Tynker × Minecraft Theme</p>
+        <p class="pixel-text text-xs text-gray-500 mt-2">© 2024 Coding Adventure Portfolio</p>
+      </div>
+    </footer>
+
+    <script>
+      const blogPosts = [
+        {
+          title: "🎮 Membuat Game Pertama dengan Tynker",
+          date: "15 Desember 2024",
+          category: "Tutorial",
+          readTime: "5 min read",
+          content: `
+            <p class="pixel-text text-xs text-gray-300 mb-4 leading-relaxed">
+              Hai semuanya! Di post pertama ini, aku mau share pengalaman membuat game platformer pertama ku menggunakan Tynker. Tynker adalah platform block coding yang sangat cocok untuk pemula.
+            </p>
+            <h4 class="text-lg text-yellow-400 mb-3">Langkah-langkah:</h4>
+            <ol class="space-y-3 mb-6">
+              <li class="pixel-text text-xs text-gray-300">1. Pilih template platformer di Tynker</li>
+              <li class="pixel-text text-xs text-gray-300">2. Tambahkan karakter dan set movement controls</li>
+              <li class="pixel-text text-xs text-gray-300">3. Buat sistem coin collection dengan score counter</li>
+              <li class="pixel-text text-xs text-gray-300">4. Tambahkan enemy dengan collision detection</li>
+              <li class="pixel-text text-xs text-gray-300">5. Test dan debug game kamu!</li>
+            </ol>
+            <div class="bg-green-900/20 border-2 border-green-600 rounded-lg p-4 mb-4">
+              <p class="pixel-text text-xs text-green-300">💡 Tips: Mulai dari yang simple dulu, jangan langsung bikin game yang terlalu kompleks!</p>
+            </div>
+          `,
+        },
+        {
+          title: "⚡ 10 Tips Membuat Minecraft Mod",
+          date: "10 Desember 2024",
+          category: "Tips",
+          readTime: "8 min read",
+          content: `
+            <p class="pixel-text text-xs text-gray-300 mb-4 leading-relaxed">
+              Minecraft modding adalah salah satu cara paling seru untuk belajar Java programming. Ini tips-tips yang aku pelajari selama membuat mod pertama ku.
+            </p>
+            <h4 class="text-lg text-cyan-400 mb-3">Tips Terbaik:</h4>
+            <ol class="space-y-3 mb-6">
+              <li class="pixel-text text-xs text-gray-300">1. Install Forge MDK dan setup workspace dengan benar</li>
+              <li class="pixel-text text-xs text-gray-300">2. Mulai dengan item sederhana sebelum mob</li>
+              <li class="pixel-text text-xs text-gray-300">3. Pelajari event system Forge</li>
+              <li class="pixel-text text-xs text-gray-300">4. Gunakan texture maker untuk custom sprites</li>
+              <li class="pixel-text text-xs text-gray-300">5. Test mod di creative mode dulu</li>
+            </ol>
+            <div class="bg-red-900/20 border-2 border-red-600 rounded-lg p-4 mb-4">
+              <p class="pixel-text text-xs text-red-300">⚠️ Warning: Selalu backup dunia Minecraft kamu sebelum test mod!</p>
+            </div>
+          `,
+        },
+        {
+          title: "🐍 Perjalanan Belajar Python",
+          date: "5 Desember 2024",
+          category: "Story",
+          readTime: "6 min read",
+          content: `
+            <p class="pixel-text text-xs text-gray-300 mb-4 leading-relaxed">
+              Python adalah bahasa programming pertama yang serius aku pelajari. Di sini aku mau cerita perjalanan belajar ku dan project-project yang aku buat.
+            </p>
+            <h4 class="text-lg text-green-400 mb-3">Timeline Belajar:</h4>
+            <ol class="space-y-3 mb-6">
+              <li class="pixel-text text-xs text-gray-300">Minggu 1-2: Basic syntax, variables, loops</li>
+              <li class="pixel-text text-xs text-gray-300">Minggu 3-4: Functions dan data structures</li>
+              <li class="pixel-text text-xs text-gray-300">Minggu 5-6: OOP concepts</li>
+              <li class="pixel-text text-xs text-gray-300">Minggu 7-8: Membuat text-based RPG game</li>
+            </ol>
+            <div class="bg-blue-900/20 border-2 border-blue-600 rounded-lg p-4 mb-4">
+              <p class="pixel-text text-xs text-blue-300">✨ Lesson Learned: Practice coding setiap hari, walau cuma 30 menit!</p>
+            </div>
+          `,
+        },
+        {
+          title: "🎨 Pixel Art untuk Pemula",
+          date: "1 Desember 2024",
+          category: "Design",
+          readTime: "7 min read",
+          content: `
+            <p class="pixel-text text-xs text-gray-300 mb-4 leading-relaxed">
+              Pixel art adalah skill penting untuk game development. Aku belajar pixel art untuk membuat sprite custom di game-game ku.
+            </p>
+            <h4 class="text-lg text-orange-400 mb-3">Tools & Teknik:</h4>
+            <ol class="space-y-3 mb-6">
+              <li class="pixel-text text-xs text-gray-300">1. Gunakan Piskel atau Aseprite untuk mulai</li>
+              <li class="pixel-text text-xs text-gray-300">2. Mulai dengan 16x16 atau 32x32 canvas</li>
+              <li class="pixel-text text-xs text-gray-300">3. Limit color palette (8-16 colors)</li>
+              <li class="pixel-text text-xs text-gray-300">4. Practice dengan sprite sheet animation</li>
+              <li class="pixel-text text-xs text-gray-300">5. Study pixel art dari game klasik</li>
+            </ol>
+            <div class="bg-yellow-900/20 border-2 border-yellow-600 rounded-lg p-4 mb-4">
+              <p class="pixel-text text-xs text-yellow-300">🎨 Pro Tip: Pixel art butuh kesabaran, jangan menyerah!</p>
+            </div>
+          `,
+        },
+        {
+          title: "💻 Debugging Tips untuk Coder Muda",
+          date: "25 November 2024",
+          category: "Tutorial",
+          readTime: "5 min read",
+          content: `
+            <p class="pixel-text text-xs text-gray-300 mb-4 leading-relaxed">
+              Bug adalah bagian normal dari coding. Yang penting adalah cara kita handle dan fix bugs tersebut. Ini adalah debugging tips yang sering aku pakai.
+            </p>
+            <h4 class="text-lg text-blue-400 mb-3">Debugging Strategy:</h4>
+            <ol class="space-y-3 mb-6">
+              <li class="pixel-text text-xs text-gray-300">1. Baca error message dengan teliti</li>
+              <li class="pixel-text text-xs text-gray-300">2. Gunakan print/console.log untuk tracking</li>
+              <li class="pixel-text text-xs text-gray-300">3. Comment out code sections untuk isolate bug</li>
+              <li class="pixel-text text-xs text-gray-300">4. Google error message kamu</li>
+              <li class="pixel-text text-xs text-gray-300">5. Take a break kalau stuck</li>
+            </ol>
+            <div class="bg-purple-900/20 border-2 border-purple-600 rounded-lg p-4 mb-4">
+              <p class="pixel-text text-xs text-purple-300">🔍 Remember: Every bug is a learning opportunity!</p>
+            </div>
+          `,
+        },
+        {
+          title: "🚀 Kenapa Aku Suka Coding?",
+          date: "20 November 2024",
+          category: "Motivation",
+          readTime: "4 min read",
+          content: `
+            <p class="pixel-text text-xs text-gray-300 mb-4 leading-relaxed">
+              Banyak orang tanya, kenapa aku suka coding? Di post ini aku mau share alasan-alasan yang bikin aku passionate dengan programming.
+            </p>
+            <h4 class="text-lg text-pink-400 mb-3">Alasan Aku Suka Coding:</h4>
+            <ol class="space-y-3 mb-6">
+              <li class="pixel-text text-xs text-gray-300">1. Bisa bikin game sendiri sesuai imajinasi</li>
+              <li class="pixel-text text-xs text-gray-300">2. Problem solving yang menantang tapi seru</li>
+              <li class="pixel-text text-xs text-gray-300">3. Community yang supportive</li>
+              <li class="pixel-text text-xs text-gray-300">4. Skill yang berguna untuk masa depan</li>
+              <li class="pixel-text text-xs text-gray-300">5. Kepuasan saat code akhirnya work!</li>
+            </ol>
+            <div class="bg-pink-900/20 border-2 border-pink-600 rounded-lg p-4 mb-4">
+              <p class="pixel-text text-xs text-pink-300">💖 Message: Kalau kamu tertarik, langsung aja mulai belajar coding sekarang!</p>
+            </div>
+          `,
+        },
+      ];
+
+      function openBlogModal(index) {
+        const post = blogPosts[index];
+        const modal = document.getElementById("blogModal");
+        const content = document.getElementById("blogModalContent");
+
+        content.innerHTML = `
+          <div class="text-center mb-6">
+            <h2 class="text-xl md:text-2xl mb-3 text-cyan-400 drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]">
+              ${post.title}
+            </h2>
+            <div class="flex items-center justify-center gap-4 pixel-text text-xs text-gray-400">
+              <span>📅 ${post.date}</span>
+              <span>⏱️ ${post.readTime}</span>
+            </div>
+          </div>
+          
+          <div class="bg-black/50 p-5 rounded-lg border-2 border-gray-700 mb-6">
+            ${post.content}
+          </div>
+        `;
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeBlogModal(event) {
+        if (event && event.target !== event.currentTarget) {
+          return;
+        }
+
+        const modal = document.getElementById("blogModal");
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeBlogModal();
+        }
+      });
+    </script>
+  </body>
+</html>
