@@ -35,6 +35,7 @@
             <a href="galery.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🖼️ Gallery </a>
             <a href="blogs.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📝 Blog </a>
             <a href="about.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 👤 About </a>
+            <a href="faq.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ❓ FAQ </a>
             <a href="contact.html" class="nav-link pixel-text text-xs text-yellow-400 transition-colors"> ✉️ Contact </a>
           </nav>
 
@@ -103,6 +104,13 @@
               <div>
                 <div class="pixel-text text-sm text-white">About Me</div>
                 <div class="pixel-text text-xs text-gray-400">Tentang pembuat</div>
+              </div>
+            </a>
+            <a href="faq.html" class="mobile-menu-link">
+              <span class="text-2xl">❓</span>
+              <div>
+                <div class="pixel-text text-sm text-white">FAQ</div>
+                <div class="pixel-text text-xs text-gray-400">Pertanyaan umum</div>
               </div>
             </a>
             <a href="contact.html" class="mobile-menu-link">
@@ -407,11 +415,16 @@
           </div>
         </div>
 
-        <!-- FAQ Section - DIPERBAIKI -->
+        <!-- FAQ Preview Section -->
         <div class="project-card p-8 mt-8">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="text-4xl">❓</div>
-            <h3 class="text-2xl text-purple-400">Frequently Asked Questions</h3>
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-4">
+              <div class="text-4xl">❓</div>
+              <h3 class="text-2xl text-purple-400">Frequently Asked Questions</h3>
+            </div>
+            <a href="faq.html" class="minecraft-button pixel-text text-xs">
+              Lihat Semua FAQ →
+            </a>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -419,7 +432,7 @@
             <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
               <div class="flex justify-between items-center">
                 <div class="pixel-text text-xs text-purple-400">🎮 Apakah menerima kolaborasi project?</div>
-                <span class="faq-icon text-xl">+</span>
+                <span class="faq-icon text-xl text-purple-400">+</span>
               </div>
               <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Tentu! Saya selalu tertarik berkolaborasi dalam project coding yang menarik, terutama game development dan creative coding challenges.</div>
             </div>
@@ -428,7 +441,7 @@
             <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
               <div class="flex justify-between items-center">
                 <div class="pixel-text text-xs text-purple-400">💻 Bahasa pemrograman apa saja yang dikuasai?</div>
-                <span class="faq-icon text-xl">+</span>
+                <span class="faq-icon text-xl text-purple-400">+</span>
               </div>
               <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Saya menguasai Python, Java, dan JavaScript. Juga berpengalaman dengan platform block coding seperti Tynker dan Minecraft modding menggunakan Forge API.</div>
             </div>
@@ -437,7 +450,7 @@
             <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
               <div class="flex justify-between items-center">
                 <div class="pixel-text text-xs text-purple-400">📚 Bisa bantu tutorial coding?</div>
-                <span class="faq-icon text-xl">+</span>
+                <span class="faq-icon text-xl text-purple-400">+</span>
               </div>
               <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Pasti! Saya senang berbagi ilmu dan membantu orang lain belajar programming. Silakan hubungi untuk pertanyaan atau topik yang ingin dipelajari.</div>
             </div>
@@ -446,46 +459,18 @@
             <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
               <div class="flex justify-between items-center">
                 <div class="pixel-text text-xs text-purple-400">⏰ Berapa lama waktu respon?</div>
-                <span class="faq-icon text-xl">+</span>
+                <span class="faq-icon text-xl text-purple-400">+</span>
               </div>
               <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Biasanya saya merespon dalam 24 jam di hari kerja. Pesan di weekend mungkin sedikit lebih lama, tapi pasti akan dibalas secepat mungkin!</div>
             </div>
+          </div>
 
-            <!-- FAQ 5 -->
-            <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
-              <div class="flex justify-between items-center">
-                <div class="pixel-text text-xs text-purple-400">💰 Berapa biaya untuk project?</div>
-                <span class="faq-icon text-xl">+</span>
-              </div>
-              <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Biaya tergantung kompleksitas project. Untuk estimasi harga, silakan hubungi saya dengan detail kebutuhan project Anda!</div>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
-              <div class="flex justify-between items-center">
-                <div class="pixel-text text-xs text-purple-400">🔧 Apakah menyediakan revisi?</div>
-                <span class="faq-icon text-xl">+</span>
-              </div>
-              <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Ya! Setiap project termasuk revisi untuk memastikan hasil sesuai ekspektasi. Detail revisi akan dibahas di awal project.</div>
-            </div>
-
-            <!-- FAQ 7 -->
-            <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
-              <div class="flex justify-between items-center">
-                <div class="pixel-text text-xs text-purple-400">🎨 Bisa custom design?</div>
-                <span class="faq-icon text-xl">+</span>
-              </div>
-              <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Tentu! Saya bisa membuat design custom sesuai preferensi Anda. Kirimkan referensi atau konsep yang diinginkan untuk diskusi lebih lanjut.</div>
-            </div>
-
-            <!-- FAQ 8 -->
-            <div class="faq-item bg-black/50 p-5 rounded-lg border-2 border-gray-600 cursor-pointer hover:border-purple-500 transition-all">
-              <div class="flex justify-between items-center">
-                <div class="pixel-text text-xs text-purple-400">📦 Bagaimana proses pengerjaannya?</div>
-                <span class="faq-icon text-xl">+</span>
-              </div>
-              <div class="faq-answer pixel-text text-xs text-gray-300 leading-relaxed">Proses dimulai dari diskusi kebutuhan, pembuatan proposal, development dengan update progress berkala, testing, hingga delivery final.</div>
-            </div>
+          <!-- Link to full FAQ page -->
+          <div class="mt-6 text-center">
+            <a href="faq.html" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors pixel-text text-xs">
+              <span>Lihat 10+ pertanyaan lainnya di halaman FAQ</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
@@ -495,9 +480,14 @@
             <div class="text-5xl mb-4">🚀</div>
             <h3 class="pixel-text text-xl text-purple-400 mb-3">Ready to Start Your Project?</h3>
             <p class="pixel-text text-xs text-gray-300 mb-6 max-w-xl mx-auto">Jangan ragu untuk menghubungi saya. Mari wujudkan ide kreatif Anda menjadi kenyataan!</p>
-            <a href="#contactForm" class="minecraft-button minecraft-button-primary pixel-text text-xs inline-block">
-              ✉️ Send Message Now
-            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#contactForm" class="minecraft-button minecraft-button-primary pixel-text text-xs inline-block">
+                ✉️ Send Message Now
+              </a>
+              <a href="faq.html" class="minecraft-button pixel-text text-xs inline-block">
+                ❓ Lihat FAQ
+              </a>
+            </div>
           </div>
         </div>
       </div>

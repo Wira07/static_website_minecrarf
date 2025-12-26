@@ -312,3 +312,9 @@ document.addEventListener('mouseleave', () => {
     card.style.transform = '';
   });
 });
+
+// function untuk menghitung total harga dengan pajak
+function calculateTotalPrice(price, taxRate) {
+  const taxAmount = price * taxRate;
+  return price + taxAmount;
+}

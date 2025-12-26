@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Pertanyaan Umum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="faq.css" />
+  </head>
+  <body class="minecraft-bg min-h-screen text-white">
+    <!-- Particles Effect -->
+    <div id="particles"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b-4 border-gray-700">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 border-4 border-green-800 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">🎮</span>
+            </div>
+            <div>
+              <h1 class="text-lg md:text-xl text-white drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]">PORTFOLIO</h1>
+              <div class="pixel-text text-green-400 text-xs">Level 25 Coder</div>
+            </div>
+          </div>
+
+          <!-- Navigation Menu Desktop -->
+          <nav class="hidden lg:flex items-center gap-4">
+            <a href="index.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🏠 Home </a>
+            <a href="index.html#projects" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📦 Projects </a>
+            <a href="galery.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🖼️ Gallery </a>
+            <a href="blogs.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📝 Blog </a>
+            <a href="about.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 👤 About </a>
+            <a href="faq.html" class="nav-link pixel-text text-xs text-yellow-400 transition-colors"> ❓ FAQ </a>
+            <a href="contact.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ✉️ Contact </a>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <!-- Hamburger Menu Button -->
+            <button id="hamburgerBtn" class="lg:hidden minecraft-button p-2" onclick="toggleMobileMenu()">
+              <span class="text-xl">☰</span>
+            </button>
+
+            <div class="hidden md:flex items-center gap-6">
+              <div class="health-bar">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-content">
+          <div class="flex justify-between items-center mb-6 pb-4 border-b-2 border-gray-600">
+            <h3 class="pixel-text text-yellow-400">MENU</h3>
+            <button onclick="toggleMobileMenu()" class="minecraft-button p-2">
+              <span class="text-xl">✕</span>
+            </button>
+          </div>
+          <nav class="flex flex-col gap-4">
+            <a href="index.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🏠</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Home</div>
+                <div class="pixel-text text-xs text-gray-400">Kembali ke home</div>
+              </div>
+            </a>
+            <a href="index.html#projects" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">📦</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Projects</div>
+                <div class="pixel-text text-xs text-gray-400">Lihat semua project</div>
+              </div>
+            </a>
+            <a href="galery.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🖼️</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Gallery</div>
+                <div class="pixel-text text-xs text-gray-400">Lihat galeri</div>
+              </div>
+            </a>
+            <a href="blogs.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">📝</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Blog</div>
+                <div class="pixel-text text-xs text-gray-400">Baca tulisan saya</div>
+              </div>
+            </a>
+            <a href="about.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">👤</span>
+              <div>
+                <div class="pixel-text text-sm text-white">About Me</div>
+                <div class="pixel-text text-xs text-gray-400">Tentang pembuat</div>
+              </div>
+            </a>
+            <a href="faq.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">❓</span>
+              <div>
+                <div class="pixel-text text-sm text-yellow-400">FAQ</div>
+                <div class="pixel-text text-xs text-gray-400">Pertanyaan umum</div>
+              </div>
+            </a>
+            <a href="contact.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">✉️</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Contact</div>
+                <div class="pixel-text text-xs text-gray-400">Hubungi saya</div>
+              </div>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-32">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl">
+          <div class="text-6xl mb-6">❓</div>
+          <h2 class="text-3xl md:text-4xl mb-4 text-purple-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">FREQUENTLY ASKED QUESTIONS</h2>
+          <div class="inline-block bg-purple-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4">🎯 Temukan Jawabanmu 🎯</div>
+          <p class="pixel-text text-sm text-gray-300 leading-relaxed">Pertanyaan yang sering ditanyakan tentang project dan kolaborasi</p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <!-- Search FAQ -->
+        <div class="project-card p-6 mb-8">
+          <div class="flex items-center gap-4">
+            <span class="text-3xl">🔍</span>
+            <input 
+              type="text" 
+              id="faqSearch" 
+              placeholder="Cari pertanyaan..."
+              class="flex-1 bg-black/50 border-2 border-gray-600 rounded-lg px-4 py-3 pixel-text text-xs text-white focus:border-purple-400 focus:outline-none transition-all"
+            />
+          </div>
+        </div>
+
+        <!-- FAQ Categories -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <button onclick="filterFAQ('all')" class="faq-filter-btn active minecraft-button pixel-text text-xs" data-filter="all">📋 Semua</button>
+          <button onclick="filterFAQ('general')" class="faq-filter-btn minecraft-button pixel-text text-xs" data-filter="general">💡 Umum</button>
+          <button onclick="filterFAQ('project')" class="faq-filter-btn minecraft-button pixel-text text-xs" data-filter="project">🎮 Project</button>
+          <button onclick="filterFAQ('service')" class="faq-filter-btn minecraft-button pixel-text text-xs" data-filter="service">🛠️ Layanan</button>
+          <button onclick="filterFAQ('pricing')" class="faq-filter-btn minecraft-button pixel-text text-xs" data-filter="pricing">💰 Harga</button>
+        </div>
+
+        <!-- FAQ List -->
+        <div id="faqContainer" class="space-y-4">
+          <!-- FAQ 1 - General -->
+          <div class="faq-item project-card" data-category="general">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">🎮</span>
+                <div class="pixel-text text-xs text-purple-400">Apakah menerima kolaborasi project?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed">
+                  Tentu! Saya selalu tertarik berkolaborasi dalam project coding yang menarik, terutama:
+                </p>
+                <ul class="pixel-text text-xs text-gray-400 mt-3 space-y-2 ml-4">
+                  <li>🎯 Game development dengan berbagai platform</li>
+                  <li>🎯 Creative coding challenges</li>
+                  <li>🎯 Minecraft modding & plugin</li>
+                  <li>🎯 Web development projects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 - General -->
+          <div class="faq-item project-card" data-category="general">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">💻</span>
+                <div class="pixel-text text-xs text-purple-400">Bahasa pemrograman apa saja yang dikuasai?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <div class="bg-yellow-900/30 border border-yellow-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">🐍</div>
+                    <div class="pixel-text text-xs text-yellow-400">Python</div>
+                    <div class="pixel-text text-xs text-gray-500">75%</div>
+                  </div>
+                  <div class="bg-orange-900/30 border border-orange-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">☕</div>
+                    <div class="pixel-text text-xs text-orange-400">Java</div>
+                    <div class="pixel-text text-xs text-gray-500">60%</div>
+                  </div>
+                  <div class="bg-yellow-900/30 border border-yellow-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">⚡</div>
+                    <div class="pixel-text text-xs text-yellow-400">JavaScript</div>
+                    <div class="pixel-text text-xs text-gray-500">70%</div>
+                  </div>
+                  <div class="bg-blue-900/30 border border-blue-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">🎨</div>
+                    <div class="pixel-text text-xs text-blue-400">HTML/CSS</div>
+                    <div class="pixel-text text-xs text-gray-500">80%</div>
+                  </div>
+                  <div class="bg-purple-900/30 border border-purple-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">🧩</div>
+                    <div class="pixel-text text-xs text-purple-400">Block Coding</div>
+                    <div class="pixel-text text-xs text-gray-500">90%</div>
+                  </div>
+                  <div class="bg-green-900/30 border border-green-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">⛏️</div>
+                    <div class="pixel-text text-xs text-green-400">Forge API</div>
+                    <div class="pixel-text text-xs text-gray-500">65%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 - Project -->
+          <div class="faq-item project-card" data-category="project">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">📚</span>
+                <div class="pixel-text text-xs text-purple-400">Bisa bantu tutorial coding?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-3">
+                  Pasti! Saya senang berbagi ilmu dan membantu orang lain belajar programming. Topik yang bisa saya bantu:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-green-400 mb-1">✅ Pemrograman Dasar</div>
+                    <div class="pixel-text text-xs text-gray-500">Logika, variabel, loop, fungsi</div>
+                  </div>
+                  <div class="bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-green-400 mb-1">✅ Game Development</div>
+                    <div class="pixel-text text-xs text-gray-500">Tynker, scratch, basic game logic</div>
+                  </div>
+                  <div class="bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-green-400 mb-1">✅ Minecraft Modding</div>
+                    <div class="pixel-text text-xs text-gray-500">Forge setup, custom items, mobs</div>
+                  </div>
+                  <div class="bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-green-400 mb-1">✅ Web Development</div>
+                    <div class="pixel-text text-xs text-gray-500">HTML, CSS, JavaScript dasar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 - Service -->
+          <div class="faq-item project-card" data-category="service">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">⏰</span>
+                <div class="pixel-text text-xs text-purple-400">Berapa lama waktu respon?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3 bg-green-900/30 border border-green-500 rounded-lg p-3">
+                    <span class="text-xl">🟢</span>
+                    <div>
+                      <div class="pixel-text text-xs text-green-400">Hari Kerja (Senin-Jumat)</div>
+                      <div class="pixel-text text-xs text-gray-400">Respon dalam 1-24 jam</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 bg-yellow-900/30 border border-yellow-500 rounded-lg p-3">
+                    <span class="text-xl">🟡</span>
+                    <div>
+                      <div class="pixel-text text-xs text-yellow-400">Sabtu</div>
+                      <div class="pixel-text text-xs text-gray-400">Respon dalam 24-48 jam</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 bg-orange-900/30 border border-orange-500 rounded-lg p-3">
+                    <span class="text-xl">🟠</span>
+                    <div>
+                      <div class="pixel-text text-xs text-orange-400">Minggu & Libur</div>
+                      <div class="pixel-text text-xs text-gray-400">Respon di hari kerja berikutnya</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 - Pricing -->
+          <div class="faq-item project-card" data-category="pricing">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">💰</span>
+                <div class="pixel-text text-xs text-purple-400">Berapa biaya untuk project?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-3">
+                  Biaya tergantung kompleksitas project. Berikut estimasi umum:
+                </p>
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-cyan-400">🌐 Website Sederhana</div>
+                    <div class="pixel-text text-xs text-gray-400">Hubungi untuk info</div>
+                  </div>
+                  <div class="flex justify-between items-center bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-green-400">🎮 Mini Game</div>
+                    <div class="pixel-text text-xs text-gray-400">Hubungi untuk info</div>
+                  </div>
+                  <div class="flex justify-between items-center bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-purple-400">⛏️ Minecraft Mod</div>
+                    <div class="pixel-text text-xs text-gray-400">Hubungi untuk info</div>
+                  </div>
+                  <div class="flex justify-between items-center bg-black/50 border border-gray-600 rounded-lg p-3">
+                    <div class="pixel-text text-xs text-yellow-400">🤖 Discord Bot</div>
+                    <div class="pixel-text text-xs text-gray-400">Hubungi untuk info</div>
+                  </div>
+                </div>
+                <div class="mt-3 bg-yellow-900/20 border border-yellow-600 rounded-lg p-3">
+                  <p class="pixel-text text-xs text-yellow-400">💡 Tip: Hubungi saya dengan detail project untuk estimasi yang lebih akurat!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 - Service -->
+          <div class="faq-item project-card" data-category="service">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">🔧</span>
+                <div class="pixel-text text-xs text-purple-400">Apakah menyediakan revisi?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-3">
+                  Ya! Setiap project termasuk revisi untuk memastikan hasil sesuai ekspektasi:
+                </p>
+                <ul class="pixel-text text-xs text-gray-400 space-y-2 ml-4">
+                  <li>✅ 2-3 revisi minor termasuk dalam harga</li>
+                  <li>✅ Revisi major akan dibahas terlebih dahulu</li>
+                  <li>✅ Komunikasi terbuka selama proses development</li>
+                  <li>✅ Feedback loop untuk memastikan kepuasan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 - Project -->
+          <div class="faq-item project-card" data-category="project">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">🎨</span>
+                <div class="pixel-text text-xs text-purple-400">Bisa custom design?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-3">
+                  Tentu! Saya bisa membuat design custom sesuai preferensi Anda:
+                </p>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-pink-900/30 border border-pink-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">🎨</div>
+                    <div class="pixel-text text-xs text-pink-400">Pixel Art</div>
+                  </div>
+                  <div class="bg-blue-900/30 border border-blue-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">🖼️</div>
+                    <div class="pixel-text text-xs text-blue-400">UI/UX Design</div>
+                  </div>
+                  <div class="bg-green-900/30 border border-green-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">🌐</div>
+                    <div class="pixel-text text-xs text-green-400">Web Theme</div>
+                  </div>
+                  <div class="bg-purple-900/30 border border-purple-500 rounded-lg p-3 text-center">
+                    <div class="text-xl mb-1">⛏️</div>
+                    <div class="pixel-text text-xs text-purple-400">Game Assets</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 - Service -->
+          <div class="faq-item project-card" data-category="service">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">📦</span>
+                <div class="pixel-text text-xs text-purple-400">Bagaimana proses pengerjaannya?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center pixel-text text-xs">1</div>
+                    <div>
+                      <div class="pixel-text text-xs text-purple-400">Diskusi Kebutuhan</div>
+                      <div class="pixel-text text-xs text-gray-500">Memahami requirement & goals</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center pixel-text text-xs">2</div>
+                    <div>
+                      <div class="pixel-text text-xs text-blue-400">Proposal & Timeline</div>
+                      <div class="pixel-text text-xs text-gray-500">Membuat rencana dan estimasi</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center pixel-text text-xs">3</div>
+                    <div>
+                      <div class="pixel-text text-xs text-green-400">Development</div>
+                      <div class="pixel-text text-xs text-gray-500">Pengerjaan dengan update progress</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center pixel-text text-xs">4</div>
+                    <div>
+                      <div class="pixel-text text-xs text-yellow-400">Testing & Review</div>
+                      <div class="pixel-text text-xs text-gray-500">Quality check dan revisi</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-cyan-600 rounded-full flex items-center justify-center pixel-text text-xs">5</div>
+                    <div>
+                      <div class="pixel-text text-xs text-cyan-400">Delivery</div>
+                      <div class="pixel-text text-xs text-gray-500">Serah terima project final</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 - General -->
+          <div class="faq-item project-card" data-category="general">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">🌍</span>
+                <div class="pixel-text text-xs text-purple-400">Bisa remote/online collaboration?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-3">
+                  Ya! Semua project saya kerjakan secara remote. Tools yang saya gunakan:
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-900/30 border border-blue-500 rounded-lg px-3 py-2 pixel-text text-xs text-blue-400">💬 Discord</span>
+                  <span class="bg-green-900/30 border border-green-500 rounded-lg px-3 py-2 pixel-text text-xs text-green-400">📱 WhatsApp</span>
+                  <span class="bg-purple-900/30 border border-purple-500 rounded-lg px-3 py-2 pixel-text text-xs text-purple-400">📧 Email</span>
+                  <span class="bg-gray-900/30 border border-gray-500 rounded-lg px-3 py-2 pixel-text text-xs text-gray-400">🐙 GitHub</span>
+                  <span class="bg-cyan-900/30 border border-cyan-500 rounded-lg px-3 py-2 pixel-text text-xs text-cyan-400">📹 Google Meet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 - Pricing -->
+          <div class="faq-item project-card" data-category="pricing">
+            <div class="faq-header p-5 cursor-pointer flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <span class="faq-emoji text-2xl">💳</span>
+                <div class="pixel-text text-xs text-purple-400">Bagaimana sistem pembayaran?</div>
+              </div>
+              <span class="faq-icon text-xl text-purple-400 transition-transform">+</span>
+            </div>
+            <div class="faq-answer px-5 pb-0 overflow-hidden">
+              <div class="faq-answer-content border-t border-gray-700 pt-4 pb-5">
+                <p class="pixel-text text-xs text-gray-300 leading-relaxed mb-3">
+                  Sistem pembayaran fleksibel sesuai kesepakatan:
+                </p>
+                <ul class="pixel-text text-xs text-gray-400 space-y-2 ml-4">
+                  <li>💵 50% DP sebelum mulai, 50% setelah selesai</li>
+                  <li>💵 Atau milestone-based untuk project besar</li>
+                  <li>💵 Pembayaran via Transfer Bank / E-wallet</li>
+                </ul>
+                <div class="mt-3 bg-green-900/20 border border-green-600 rounded-lg p-3">
+                  <p class="pixel-text text-xs text-green-400">✅ Invoice dan nota pembayaran akan dikirimkan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="hidden text-center py-12">
+          <div class="text-6xl mb-4">🔍</div>
+          <div class="pixel-text text-sm text-gray-400 mb-2">Tidak ada pertanyaan yang ditemukan</div>
+          <div class="pixel-text text-xs text-gray-500">Coba kata kunci lain atau hubungi saya langsung</div>
+        </div>
+
+        <!-- Still Have Questions -->
+        <div class="project-card p-8 mt-12 bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-purple-900/30 border-purple-500">
+          <div class="text-center">
+            <div class="text-5xl mb-4">💬</div>
+            <h3 class="pixel-text text-xl text-purple-400 mb-3">Masih Ada Pertanyaan?</h3>
+            <p class="pixel-text text-xs text-gray-300 mb-6 max-w-xl mx-auto">
+              Tidak menemukan jawaban yang kamu cari? Jangan ragu untuk menghubungi saya langsung!
+            </p>
+            <a href="contact.html" class="minecraft-button minecraft-button-primary pixel-text text-xs inline-block">
+              ✉️ Hubungi Saya
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 border-t-4 border-gray-700 py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p class="pixel-text text-xs text-gray-400">Made with ❤️ using Tynker × Minecraft Theme</p>
+        <p class="pixel-text text-xs text-gray-500 mt-2">© 2024 Wira Sukma Saputra - Coding Adventure Portfolio</p>
+      </div>
+    </footer>
+
+    <script src="faq.js"></script>
+  </body>
+</html>
