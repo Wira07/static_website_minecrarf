@@ -704,3 +704,121 @@ html {
 .border-3 {
   border-width: 3px;
 }
+
+/* Floating Icons Decoration */
+.floating-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatIcon 6s ease-in-out infinite;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+/* Slow bounce animation */
+.animate-bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse glow effect */
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(236, 72, 153, 0.5);
+  }
+}
+
+/* Glitch text effect */
+.glitch-text {
+  position: relative;
+  animation: glitchText 5s infinite;
+}
+
+@keyframes glitchText {
+  0%, 90%, 100% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1);
+  }
+  91% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1), -2px 0 #ff00ff;
+  }
+  92% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1), 2px 0 #00ffff;
+  }
+  93% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1);
+  }
+}
+
+/* Hero Glow Effect */
+.hero-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #06b6d4, #a855f7, #ec4899, #06b6d4);
+  background-size: 400% 400%;
+  animation: heroGlow 8s ease infinite;
+  border-radius: 16px;
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.4;
+}
+
+@keyframes heroGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Mini stat badges */
+.mini-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.mini-stat:hover {
+  transform: scale(1.1);
+  border-color: rgba(168, 85, 247, 0.5);
+}

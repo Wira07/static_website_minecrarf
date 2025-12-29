@@ -130,34 +130,104 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 pt-32 pb-32">
+      <!-- Floating Icons Decoration -->
+      <div class="floating-icons">
+        <div class="floating-icon" style="top: 15%; left: 5%; animation-delay: 0s;">⚔️</div>
+        <div class="floating-icon" style="top: 25%; right: 8%; animation-delay: 1s;">🛡️</div>
+        <div class="floating-icon" style="top: 45%; left: 3%; animation-delay: 2s;">💎</div>
+        <div class="floating-icon" style="top: 60%; right: 5%; animation-delay: 0.5s;">🏆</div>
+        <div class="floating-icon" style="top: 80%; left: 8%; animation-delay: 1.5s;">⭐</div>
+        <div class="floating-icon" style="top: 35%; right: 3%; animation-delay: 2.5s;">🎮</div>
+      </div>
+
       <!-- Hero Section -->
       <div class="text-center mb-16">
-        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl parallax-layer">
-          <img src="aink.jpeg" alt="Wira Sukma Saputra" class="mx-auto w-64 h-64 rounded-full border-4 border-purple-600 mb-6 shadow-lg object-cover parallax-layer" />
-          <div class="text-6xl mb-6">👨‍💻</div>
-          <h2 class="text-3xl md:text-4xl mb-4 text-cyan-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">ABOUT ME</h2>
-          <div class="inline-block bg-purple-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4">⚔️ Level 25 Coding Master ⚔️</div>
-          <h3 class="text-2xl text-yellow-400 mb-4">Wira Sukma Saputra</h3>
+        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl parallax-layer relative">
+          <!-- Glowing Ring Effect -->
+          <div class="glow-ring"></div>
+          
+          <!-- Avatar with animated border -->
+          <div class="avatar-container mx-auto mb-6">
+            <div class="avatar-glow"></div>
+            <img src="aink.jpeg" alt="Wira Sukma Saputra" class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-purple-600 shadow-lg object-cover relative z-10" />
+            <div class="avatar-ring"></div>
+          </div>
+          
+          <div class="text-6xl mb-6 animate-bounce-slow">👨‍💻</div>
+          <h2 class="text-3xl md:text-4xl mb-4 text-cyan-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] glitch-text">ABOUT ME</h2>
+          
+          <!-- Achievement Badges -->
+          <div class="flex flex-wrap justify-center gap-2 mb-4">
+            <div class="achievement-badge">
+              <span class="text-lg">🏅</span>
+              <span class="pixel-text text-xs text-yellow-400">Coding Master</span>
+            </div>
+            <div class="achievement-badge">
+              <span class="text-lg">🎯</span>
+              <span class="pixel-text text-xs text-green-400">Level 25</span>
+            </div>
+            <div class="achievement-badge">
+              <span class="text-lg">⚡</span>
+              <span class="pixel-text text-xs text-cyan-400">Pro Gamer</span>
+            </div>
+          </div>
+          
+          <div class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4 animate-pulse-glow">⚔️ Level 25 Coding Master ⚔️</div>
+          <h3 class="text-2xl text-yellow-400 mb-4 typewriter">Wira Sukma Saputra</h3>
           <p class="pixel-text text-sm text-gray-300 leading-relaxed">Seorang programmer muda yang passionate dalam dunia coding dan game development.</p>
+          
+          <!-- Social Stats Mini -->
+          <div class="flex justify-center gap-4 mt-6">
+            <div class="mini-stat">
+              <span class="text-2xl">🔥</span>
+              <span class="pixel-text text-xs text-orange-400">Hot Streak</span>
+            </div>
+            <div class="mini-stat">
+              <span class="text-2xl">💻</span>
+              <span class="pixel-text text-xs text-blue-400">Code Lover</span>
+            </div>
+            <div class="mini-stat">
+              <span class="text-2xl">🎮</span>
+              <span class="pixel-text text-xs text-green-400">Gamer</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Stats Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
-        <div class="project-card p-6 text-center parallax-layer">
-          <div class="text-5xl mb-4">🎮</div>
-          <div class="text-3xl text-green-400 mb-2">4+</div>
+        <div class="project-card p-6 text-center parallax-layer stat-card hover-lift">
+          <div class="stat-icon-container">
+            <div class="text-5xl mb-4 animate-bounce-slow">🎮</div>
+            <div class="stat-glow green"></div>
+          </div>
+          <div class="stat-counter text-3xl text-green-400 mb-2" data-target="4">4+</div>
           <div class="pixel-text text-xs text-gray-300">Projects Completed</div>
+          <div class="stat-bar mt-3">
+            <div class="stat-bar-fill bg-green-500" style="width: 80%;"></div>
+          </div>
         </div>
-        <div class="project-card p-6 text-center parallax-layer">
-          <div class="text-5xl mb-4">⭐</div>
-          <div class="text-3xl text-yellow-400 mb-2">750</div>
+        <div class="project-card p-6 text-center parallax-layer stat-card hover-lift">
+          <div class="stat-icon-container">
+            <div class="text-5xl mb-4 animate-bounce-slow" style="animation-delay: 0.3s;">⭐</div>
+            <div class="stat-glow yellow"></div>
+          </div>
+          <div class="stat-counter text-3xl text-yellow-400 mb-2" data-target="750">750</div>
           <div class="pixel-text text-xs text-gray-300">Total Experience</div>
+          <div class="stat-bar mt-3">
+            <div class="stat-bar-fill bg-yellow-500" style="width: 75%;"></div>
+          </div>
         </div>
-        <div class="project-card p-6 text-center parallax-layer">
-          <div class="text-5xl mb-4">🏆</div>
-          <div class="text-3xl text-purple-400 mb-2">25</div>
+        <div class="project-card p-6 text-center parallax-layer stat-card hover-lift">
+          <div class="stat-icon-container">
+            <div class="text-5xl mb-4 animate-bounce-slow" style="animation-delay: 0.6s;">🏆</div>
+            <div class="stat-glow purple"></div>
+          </div>
+          <div class="stat-counter text-3xl text-purple-400 mb-2" data-target="25">25</div>
           <div class="pixel-text text-xs text-gray-300">Level Achieved</div>
+          <div class="stat-bar mt-3">
+            <div class="stat-bar-fill bg-purple-500" style="width: 100%;"></div>
+          </div>
         </div>
       </div>
 

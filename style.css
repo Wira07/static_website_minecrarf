@@ -407,3 +407,123 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #888 0%, #666 100%);
 }
+
+/* Floating Icons Decoration */
+.floating-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatIcon 6s ease-in-out infinite;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+/* Slow bounce animation */
+.animate-bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse glow effect */
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(236, 72, 153, 0.5);
+  }
+}
+
+/* Glitch text effect */
+.glitch-text {
+  position: relative;
+  animation: glitchText 5s infinite;
+}
+
+@keyframes glitchText {
+  0%, 90%, 100% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1);
+  }
+  91% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1), -2px 0 #ff00ff;
+  }
+  92% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1), 2px 0 #00ffff;
+  }
+  93% {
+    text-shadow: 4px 4px 0px rgba(0,0,0,1);
+  }
+}
+
+/* Hero Glow Effect */
+.hero-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #eab308, #a855f7, #ec4899, #eab308);
+  background-size: 400% 400%;
+  animation: heroGlow 8s ease infinite;
+  border-radius: 16px;
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.4;
+}
+
+@keyframes heroGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Stat Box Hover Effect */
+.stat-box {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-box:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: #a855f7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px) scale(1.05);
+}

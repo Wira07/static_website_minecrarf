@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="faq.css" />
   </head>
   <body class="minecraft-bg min-h-screen text-white">
+    <!-- Parallax Background Layers -->
+    <div id="parallaxContainer"></div>
+    
+    <!-- Gradient Mesh Background -->
+    <div class="gradient-mesh"></div>
+    
+    <!-- Nebula Effects -->
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <div class="nebula nebula-3"></div>
+    
+    <!-- Hexagon Pattern -->
+    <div class="hexagon-pattern"></div>
+    
+    <!-- Shooting Stars -->
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+
     <!-- Particles Effect -->
     <div id="particles"></div>
 
@@ -34,6 +53,9 @@
             <a href="index.html#projects" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📦 Projects </a>
             <a href="galery.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🖼️ Gallery </a>
             <a href="blogs.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 📝 Blog </a>
+            <a href="services.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 🛠️ Services </a>
+            <a href="skills.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ⚡ Skills </a>
+            <a href="testimonials.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ⭐ Testimonials </a>
             <a href="about.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> 👤 About </a>
             <a href="faq.html" class="nav-link pixel-text text-xs text-yellow-400 transition-colors"> ❓ FAQ </a>
             <a href="contact.html" class="nav-link pixel-text text-xs text-gray-300 hover:text-yellow-400 transition-colors"> ✉️ Contact </a>
@@ -96,6 +118,27 @@
                 <div class="pixel-text text-xs text-gray-400">Baca tulisan saya</div>
               </div>
             </a>
+            <a href="services.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">🛠️</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Services</div>
+                <div class="pixel-text text-xs text-gray-400">Layanan yang tersedia</div>
+              </div>
+            </a>
+            <a href="skills.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">⚡</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Skills</div>
+                <div class="pixel-text text-xs text-gray-400">Keahlian saya</div>
+              </div>
+            </a>
+            <a href="testimonials.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
+              <span class="text-2xl">⭐</span>
+              <div>
+                <div class="pixel-text text-sm text-white">Testimonials</div>
+                <div class="pixel-text text-xs text-gray-400">Ulasan pelanggan</div>
+              </div>
+            </a>
             <a href="about.html" onclick="toggleMobileMenu()" class="mobile-menu-link">
               <span class="text-2xl">👤</span>
               <div>
@@ -124,13 +167,42 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 pt-32 pb-32">
+      <!-- Floating Icons Decoration -->
+      <div class="floating-icons">
+        <div class="floating-icon" style="top: 15%; left: 5%; animation-delay: 0s;">❓</div>
+        <div class="floating-icon" style="top: 25%; right: 8%; animation-delay: 1s;">💡</div>
+        <div class="floating-icon" style="top: 45%; left: 3%; animation-delay: 2s;">🎯</div>
+        <div class="floating-icon" style="top: 60%; right: 5%; animation-delay: 0.5s;">💬</div>
+        <div class="floating-icon" style="top: 80%; left: 8%; animation-delay: 1.5s;">✨</div>
+        <div class="floating-icon" style="top: 35%; right: 3%; animation-delay: 2.5s;">🔍</div>
+      </div>
+
       <!-- Hero Section -->
       <div class="text-center mb-16">
-        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl">
-          <div class="text-6xl mb-6">❓</div>
-          <h2 class="text-3xl md:text-4xl mb-4 text-purple-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">FREQUENTLY ASKED QUESTIONS</h2>
-          <div class="inline-block bg-purple-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4">🎯 Temukan Jawabanmu 🎯</div>
+        <div class="inline-block bg-black/70 backdrop-blur-sm border-4 border-gray-600 rounded-xl p-8 mb-8 hero-card max-w-2xl relative">
+          <!-- Glow Effect -->
+          <div class="hero-glow"></div>
+          
+          <div class="text-6xl mb-6 animate-bounce-slow">❓</div>
+          <h2 class="text-3xl md:text-4xl mb-4 text-purple-400 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] glitch-text">FREQUENTLY ASKED QUESTIONS</h2>
+          <div class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded border-2 border-purple-400 pixel-text text-xs mb-4 animate-pulse-glow">🎯 Temukan Jawabanmu 🎯</div>
           <p class="pixel-text text-sm text-gray-300 leading-relaxed">Pertanyaan yang sering ditanyakan tentang project dan kolaborasi</p>
+          
+          <!-- FAQ Quick Stats -->
+          <div class="flex justify-center gap-4 mt-6">
+            <div class="mini-stat">
+              <span class="text-xl">📋</span>
+              <span class="pixel-text text-xs text-purple-400">10 FAQ</span>
+            </div>
+            <div class="mini-stat">
+              <span class="text-xl">🏷️</span>
+              <span class="pixel-text text-xs text-blue-400">5 Kategori</span>
+            </div>
+            <div class="mini-stat">
+              <span class="text-xl">⚡</span>
+              <span class="pixel-text text-xs text-yellow-400">Fast Reply</span>
+            </div>
+          </div>
         </div>
       </div>
 
