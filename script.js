@@ -1,66 +1,66 @@
 const projects = [
   {
-    title: "🎮 Game Platformer",
-    subtitle: "Block Coding Tynker",
-    description: "Game platformer 2D dengan karakter yang bisa lompat, kumpulkan koin, dan hindari musuh. Dibuat menggunakan Tynker block coding dengan logic yang kompleks.",
-    tech: ["Tynker Blocks", "JavaScript", "Game Logic"],
-    difficulty: "Beginner",
-    xp: "+150 XP",
-    color: "yellow",
-    icon: "🎮",
-    features: [
-      "Player movement & jump mechanic",
-      "Coin collection system",
-      "Enemy AI & collision detection",
-      "Level progression"
-    ]
-  },
-  {
-    title: "⚡ Minecraft Mod",
-    subtitle: "Custom Mob & Items",
-    description: "Mod Minecraft yang menambahkan mob baru, item custom, dan mekanik gameplay unik. Menggunakan Java dan Forge API dengan advanced modding techniques.",
-    tech: ["Java", "Forge API", "Minecraft Modding"],
-    difficulty: "Advanced",
-    xp: "+300 XP",
-    color: "cyan",
-    icon: "⚡",
-    features: [
-      "Custom mob dengan AI behavior",
-      "New items & crafting recipes",
-      "Unique gameplay mechanics",
-      "Texture & model creation"
-    ]
-  },
-  {
-    title: "🐍 Python Project",
-    subtitle: "Text-based Game",
-    description: "Game petualangan berbasis teks dengan sistem inventory, battle, dan quest. Belajar dasar-dasar Python programming dengan OOP principles.",
-    tech: ["Python", "OOP", "Data Structures"],
+    title: "📱 E-Commerce App",
+    subtitle: "Flutter & Firebase",
+    description: "Aplikasi e-commerce lengkap dengan fitur shopping cart, payment gateway integration, real-time notification, dan user authentication. Menggunakan Flutter dan Firebase untuk backend.",
+    tech: ["Flutter", "Firebase", "Dart", "REST API"],
     difficulty: "Intermediate",
-    xp: "+200 XP",
-    color: "red",
-    icon: "🐍",
+    status: "Published",
+    color: "yellow",
+    icon: "📱",
     features: [
-      "Turn-based battle system",
-      "Inventory management",
-      "Quest & storyline system",
-      "Save/Load game state"
+      "Shopping cart & checkout system",
+      "Payment gateway integration",
+      "Real-time push notifications",
+      "User authentication & profiles"
     ]
   },
   {
-    title: "🎨 Pixel Animation",
-    subtitle: "Karakter Bergerak",
-    description: "Animasi pixel art dengan karakter yang bisa berjalan, melompat, dan menyerang. Menggunakan sprite sheet dan frame animation dengan CSS & JavaScript.",
-    tech: ["Pixel Art", "CSS Animation", "JavaScript"],
-    difficulty: "Beginner",
-    xp: "+120 XP",
-    color: "orange",
-    icon: "🎨",
+    title: "🤖 Task Manager App",
+    subtitle: "Android Native Kotlin",
+    description: "Aplikasi task manager dengan fitur reminder, kategori tugas, dan cloud sync. Dibangun dengan Android Native menggunakan Kotlin dan arsitektur MVVM.",
+    tech: ["Kotlin", "Room DB", "MVVM", "WorkManager"],
+    difficulty: "Advanced",
+    status: "Published",
+    color: "cyan",
+    icon: "🤖",
     features: [
-      "Sprite sheet animation",
-      "Character movement cycles",
-      "Attack animations",
-      "Smooth frame transitions"
+      "Task scheduling & reminders",
+      "Category management",
+      "Cloud sync dengan Firebase",
+      "Material Design 3 UI"
+    ]
+  },
+  {
+    title: "⚛️ Social Media App",
+    subtitle: "React Native",
+    description: "Aplikasi sosial media cross-platform dengan fitur posting, like, comment, dan real-time chat. Menggunakan React Native dengan Node.js backend.",
+    tech: ["React Native", "Redux", "Node.js", "Socket.io"],
+    difficulty: "Intermediate",
+    status: "Published",
+    color: "red",
+    icon: "⚛️",
+    features: [
+      "Post, like & comment system",
+      "Real-time chat messaging",
+      "User profiles & following",
+      "Push notifications"
+    ]
+  },
+  {
+    title: "🌐 Portfolio Website",
+    subtitle: "HTML, CSS, JavaScript",
+    description: "Website portfolio responsive dengan animasi modern, UI interaktif, dan desain yang menarik. Menggunakan HTML, CSS, TailwindCSS, dan JavaScript.",
+    tech: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+    difficulty: "Beginner",
+    status: "Live",
+    color: "orange",
+    icon: "🌐",
+    features: [
+      "Responsive design",
+      "Modern animations",
+      "Interactive UI components",
+      "SEO optimized"
     ]
   },
 ];
@@ -115,14 +115,14 @@ function openModal(index) {
     
     <div class="grid grid-cols-2 gap-4 mb-6">
       <div class="${difficultyBgColors[project.difficulty]} p-4 rounded-lg border-2">
-        <div class="pixel-text text-xs mb-2 text-gray-400">⚔️ Difficulty</div>
+        <div class="pixel-text text-xs mb-2 text-gray-400">⚙️ Difficulty</div>
         <div class="pixel-text text-sm ${difficultyColors[project.difficulty]}">
           ${project.difficulty}
         </div>
       </div>
       <div class="bg-green-900/30 p-4 rounded-lg border-2 border-green-600">
-        <div class="pixel-text text-xs mb-2 text-gray-400">✨ Reward</div>
-        <div class="pixel-text text-sm text-yellow-400">${project.xp}</div>
+        <div class="pixel-text text-xs mb-2 text-gray-400">📊 Status</div>
+        <div class="pixel-text text-sm text-green-400">${project.status}</div>
       </div>
     </div>
     

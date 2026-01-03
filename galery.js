@@ -2,30 +2,30 @@
 const galleryData = [
   {
     id: 1,
-    title: "Platformer Game Level 1",
-    category: "games",
+    title: "E-Commerce App Home",
+    category: "mobile",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2387CEEB' width='400' height='300'/%3E%3Crect fill='%238B4513' y='250' width='400' height='50'/%3E%3Crect fill='%23FFD700' x='50' y='200' width='30' height='30'/%3E%3Crect fill='%23FFD700' x='150' y='180' width='30' height='30'/%3E%3Ctext x='200' y='150' fill='%23000' font-family='Arial' font-size='24'%3ELevel 1%3C/text%3E%3C/svg%3E",
-    description: "Level pertama dari platformer game dengan mekanik jump dan coin collection. Player harus menghindari musuh dan mengumpulkan semua koin.",
-    tags: ["Tynker", "Block Coding", "Platformer"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2302569B' width='400' height='300'/%3E%3Crect fill='%2354C5F8' x='20' y='20' width='160' height='260' rx='10'/%3E%3Crect fill='%23ffffff' x='35' y='40' width='130' height='60' rx='5'/%3E%3Crect fill='%23ffffff' x='35' y='110' width='60' height='60' rx='5'/%3E%3Crect fill='%23ffffff' x='105' y='110' width='60' height='60' rx='5'/%3E%3Ctext x='300' y='150' fill='%23FFF' font-family='Arial' font-size='16' text-anchor='middle'%3EFlutter App%3C/text%3E%3C/svg%3E",
+    description: "Halaman utama aplikasi e-commerce dengan product listing, search bar, dan navigation bottom. Dibangun dengan Flutter dan Firebase.",
+    tags: ["Flutter", "Firebase", "E-Commerce"],
   },
   {
     id: 2,
-    title: "Character Sprite Animation",
-    category: "art",
+    title: "Task Manager Dashboard",
+    category: "mobile",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%232d2d2d' width='400' height='300'/%3E%3Crect fill='%23FFB6C1' x='150' y='80' width='100' height='120'/%3E%3Crect fill='%23FFA500' x='160' y='90' width='80' height='40'/%3E%3Ctext x='200' y='250' fill='%23FFF' font-family='Arial' font-size='20' text-anchor='middle'%3ESprite Sheet%3C/text%3E%3C/svg%3E",
-    description: "Sprite sheet karakter dengan animasi walk cycle, jump, dan attack. Dibuat dengan pixel art style 16x16.",
-    tags: ["Pixel Art", "Animation", "Character Design"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%233DDC84' width='400' height='300'/%3E%3Crect fill='%23ffffff' x='50' y='30' width='300' height='240' rx='10'/%3E%3Crect fill='%233DDC84' x='70' y='50' width='260' height='40' rx='5'/%3E%3Crect fill='%23e8e8e8' x='70' y='100' width='260' height='30' rx='5'/%3E%3Crect fill='%23e8e8e8' x='70' y='140' width='260' height='30' rx='5'/%3E%3Crect fill='%23e8e8e8' x='70' y='180' width='260' height='30' rx='5'/%3E%3Ctext x='200' y='240' fill='%23333' font-family='Arial' font-size='14' text-anchor='middle'%3EKotlin + MVVM%3C/text%3E%3C/svg%3E",
+    description: "Dashboard task manager dengan list view, kategori, dan progress tracking. Native Android dengan Kotlin.",
+    tags: ["Android", "Kotlin", "MVVM"],
   },
   {
     id: 3,
-    title: "Minecraft Custom Mob",
-    category: "mods",
+    title: "Social Media Feed",
+    category: "mobile",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%236B8E23' width='400' height='300'/%3E%3Crect fill='%23228B22' y='200' width='400' height='100'/%3E%3Crect fill='%23FF0000' x='180' y='120' width='40' height='60'/%3E%3Crect fill='%23000' x='185' y='130' width='10' height='10'/%3E%3Crect fill='%23000' x='205' y='130' width='10' height='10'/%3E%3Ctext x='200' y='280' fill='%23FFF' font-family='Arial' font-size='18' text-anchor='middle'%3ECustom Mob%3C/text%3E%3C/svg%3E",
-    description: "Custom mob untuk Minecraft dengan AI behavior unik. Mob ini bisa menyerang player dan drop item khusus.",
-    tags: ["Minecraft", "Java", "Forge API"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2361DAFB' width='400' height='300'/%3E%3Crect fill='%23282c34' x='100' y='20' width='200' height='260' rx='15'/%3E%3Ccircle fill='%2361DAFB' cx='200' cy='80' r='30'/%3E%3Crect fill='%23ffffff' x='130' y='130' width='140' height='20' rx='3'/%3E%3Crect fill='%23ffffff' x='130' y='160' width='100' height='15' rx='3'/%3E%3Ctext x='200' y='220' fill='%2361DAFB' font-family='Arial' font-size='12' text-anchor='middle'%3EReact Native%3C/text%3E%3C/svg%3E",
+    description: "Feed sosial media dengan post cards, user profiles, dan interaction buttons. React Native dengan Redux.",
+    tags: ["React Native", "Redux", "Social"],
   },
   {
     id: 4,
@@ -33,80 +33,80 @@ const galleryData = [
     category: "web",
     image:
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%231a1a1a' width='400' height='300'/%3E%3Crect fill='%233b82f6' width='400' height='50'/%3E%3Crect fill='%23404040' x='20' y='80' width='160' height='100'/%3E%3Crect fill='%23404040' x='220' y='80' width='160' height='100'/%3E%3Ctext x='200' y='250' fill='%2322c55e' font-family='Arial' font-size='20' text-anchor='middle'%3EPortfolio%3C/text%3E%3C/svg%3E",
-    description: "Website portfolio dengan Minecraft theme menggunakan HTML, CSS, dan JavaScript. Responsive design dengan berbagai animasi.",
+    description: "Website portfolio responsive dengan animasi modern dan dark theme. HTML, CSS, JavaScript, TailwindCSS.",
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 5,
-    title: "Python Text Game",
-    category: "games",
+    title: "Payment Gateway UI",
+    category: "ui",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23000' width='400' height='300'/%3E%3Ctext x='20' y='40' fill='%2300FF00' font-family='monospace' font-size='14'%3E%3E Welcome to Adventure%3C/text%3E%3Ctext x='20' y='70' fill='%2300FF00' font-family='monospace' font-size='14'%3E%3E You are in a dark cave%3C/text%3E%3Ctext x='20' y='100' fill='%2300FF00' font-family='monospace' font-size='14'%3E%3E What do you do?%3C/text%3E%3Ctext x='20' y='140' fill='%23FFD700' font-family='monospace' font-size='14'%3E1. Go North%3C/text%3E%3Ctext x='20' y='170' fill='%23FFD700' font-family='monospace' font-size='14'%3E2. Go South%3C/text%3E%3C/svg%3E",
-    description: "Game petualangan berbasis teks dengan sistem inventory, battle, dan quest. Menggunakan OOP principles.",
-    tags: ["Python", "OOP", "Game Logic"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%236366f1' width='400' height='300'/%3E%3Crect fill='%23ffffff' x='80' y='60' width='240' height='180' rx='10'/%3E%3Crect fill='%23e5e7eb' x='100' y='90' width='200' height='30' rx='5'/%3E%3Crect fill='%23e5e7eb' x='100' y='130' width='200' height='30' rx='5'/%3E%3Crect fill='%236366f1' x='100' y='180' width='200' height='40' rx='5'/%3E%3Ctext x='200' y='205' fill='%23FFF' font-family='Arial' font-size='14' text-anchor='middle'%3EPAY NOW%3C/text%3E%3C/svg%3E",
+    description: "UI design untuk payment gateway dengan form input, button states, dan success animations.",
+    tags: ["UI/UX", "Figma", "Payment"],
   },
   {
     id: 6,
-    title: "Minecraft Custom Items",
-    category: "mods",
+    title: "Chat App Interface",
+    category: "mobile",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23404040' width='400' height='300'/%3E%3Crect fill='%23FFD700' x='100' y='80' width='60' height='60'/%3E%3Crect fill='%23C0C0C0' x='240' y='80' width='60' height='60'/%3E%3Crect fill='%23FF4500' x='100' y='180' width='60' height='60'/%3E%3Crect fill='%2300CED1' x='240' y='180' width='60' height='60'/%3E%3Ctext x='200' y='270' fill='%23FFF' font-family='Arial' font-size='16' text-anchor='middle'%3ECustom Items Collection%3C/text%3E%3C/svg%3E",
-    description: "Koleksi custom items untuk Minecraft termasuk tools, weapons, dan armor dengan stats khusus.",
-    tags: ["Minecraft", "Items", "Crafting"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2325D366' width='400' height='300'/%3E%3Crect fill='%23ECE5DD' x='80' y='30' width='240' height='240' rx='10'/%3E%3Crect fill='%23DCF8C6' x='140' y='60' width='160' height='40' rx='10'/%3E%3Crect fill='%23ffffff' x='100' y='120' width='160' height='40' rx='10'/%3E%3Crect fill='%23DCF8C6' x='140' y='180' width='160' height='40' rx='10'/%3E%3C/svg%3E",
+    description: "Interface chat app dengan message bubbles, typing indicator, dan media sharing features.",
+    tags: ["Flutter", "Socket.io", "Chat"],
   },
   {
     id: 7,
-    title: "Pixel Art Character Set",
-    category: "art",
-    image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3Crect fill='%23FF6B6B' x='50' y='100' width='50' height='80'/%3E%3Crect fill='%234ECDC4' x='120' y='100' width='50' height='80'/%3E%3Crect fill='%23FFD93D' x='190' y='100' width='50' height='80'/%3E%3Crect fill='%239B59B6' x='260' y='100' width='50' height='80'/%3E%3Ctext x='200' y='250' fill='%23333' font-family='Arial' font-size='18' text-anchor='middle'%3ECharacter Set%3C/text%3E%3C/svg%3E",
-    description: "Set karakter pixel art dengan berbagai pose dan ekspresi. Cocok untuk game 2D platformer.",
-    tags: ["Pixel Art", "Characters", "Game Assets"],
-  },
-  {
-    id: 8,
-    title: "Interactive Dashboard",
+    title: "Dashboard Analytics",
     category: "web",
     image:
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%231e1e1e' width='400' height='300'/%3E%3Crect fill='%2322c55e' x='20' y='20' width='100' height='80' rx='8'/%3E%3Crect fill='%233b82f6' x='150' y='20' width='100' height='80' rx='8'/%3E%3Crect fill='%23eab308' x='280' y='20' width='100' height='80' rx='8'/%3E%3Cpath d='M 50 180 L 100 150 L 150 170 L 200 140 L 250 160 L 300 130' stroke='%2322c55e' stroke-width='3' fill='none'/%3E%3Ctext x='200' y='280' fill='%23999' font-family='Arial' font-size='14' text-anchor='middle'%3EAnalytics Dashboard%3C/text%3E%3C/svg%3E",
-    description: "Dashboard interaktif dengan chart dan real-time data visualization menggunakan JavaScript libraries.",
-    tags: ["JavaScript", "Data Viz", "Web App"],
+    description: "Dashboard analytics dengan charts, statistics cards, dan data visualization menggunakan Chart.js.",
+    tags: ["JavaScript", "Chart.js", "Dashboard"],
+  },
+  {
+    id: 8,
+    title: "Login Screen Design",
+    category: "ui",
+    image:
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%238b5cf6' width='400' height='300'/%3E%3Crect fill='%23ffffff' x='100' y='50' width='200' height='200' rx='10'/%3E%3Ccircle fill='%238b5cf6' cx='200' cy='90' r='25'/%3E%3Crect fill='%23e5e7eb' x='130' y='130' width='140' height='25' rx='5'/%3E%3Crect fill='%23e5e7eb' x='130' y='165' width='140' height='25' rx='5'/%3E%3Crect fill='%238b5cf6' x='130' y='200' width='140' height='30' rx='5'/%3E%3C/svg%3E",
+    description: "Modern login screen design dengan gradient background, form fields, dan social login buttons.",
+    tags: ["UI/UX", "Login", "Design"],
   },
   {
     id: 9,
-    title: "Puzzle Game Mechanics",
-    category: "games",
+    title: "Product Detail Page",
+    category: "mobile",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23222' width='400' height='300'/%3E%3Crect fill='%23FF6B6B' x='80' y='80' width='60' height='60'/%3E%3Crect fill='%234ECDC4' x='160' y='80' width='60' height='60'/%3E%3Crect fill='%23FFD93D' x='240' y='80' width='60' height='60'/%3E%3Crect fill='%239B59B6' x='120' y='160' width='60' height='60'/%3E%3Crect fill='%23F38181' x='200' y='160' width='60' height='60'/%3E%3Ctext x='200' y='270' fill='%23FFF' font-family='Arial' font-size='16' text-anchor='middle'%3EPuzzle Blocks%3C/text%3E%3C/svg%3E",
-    description: "Game puzzle dengan mekanik match-3 dan physics simulation. Level progresif dengan tingkat kesulitan bertambah.",
-    tags: ["Tynker", "Puzzle", "Game Design"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f97316' width='400' height='300'/%3E%3Crect fill='%23ffffff' x='100' y='20' width='200' height='260' rx='10'/%3E%3Crect fill='%23fed7aa' x='120' y='40' width='160' height='100'/%3E%3Ctext x='200' y='170' fill='%23333' font-family='Arial' font-size='14' text-anchor='middle'%3EProduct Name%3C/text%3E%3Ctext x='200' y='190' fill='%23f97316' font-family='Arial' font-size='16' text-anchor='middle'%3E$99.99%3C/text%3E%3Crect fill='%23f97316' x='130' y='220' width='140' height='35' rx='5'/%3E%3C/svg%3E",
+    description: "Halaman detail produk dengan image gallery, price, description, dan add to cart button.",
+    tags: ["Flutter", "E-Commerce", "UI"],
   },
   {
     id: 10,
-    title: "Minecraft Biome Mod",
-    category: "mods",
+    title: "REST API Backend",
+    category: "backend",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2387CEEB' width='400' height='300'/%3E%3Crect fill='%23FF69B4' y='150' width='400' height='150'/%3E%3Ccircle fill='%23FFB6C1' cx='80' cy='120' r='30'/%3E%3Ccircle fill='%23FFB6C1' cx='200' cy='100' r='35'/%3E%3Ccircle fill='%23FFB6C1' cx='320' cy='110' r='28'/%3E%3Ctext x='200' y='280' fill='%23FFF' font-family='Arial' font-size='18' text-anchor='middle'%3ECherry Blossom Biome%3C/text%3E%3C/svg%3E",
-    description: "Custom biome untuk Minecraft dengan pohon sakura, custom blocks, dan mob khusus untuk area ini.",
-    tags: ["Minecraft", "World Gen", "Biomes"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23000' width='400' height='300'/%3E%3Ctext x='20' y='40' fill='%2300FF00' font-family='monospace' font-size='12'%3EGET /api/users%3C/text%3E%3Ctext x='20' y='70' fill='%23FFD700' font-family='monospace' font-size='12'%3EPOST /api/products%3C/text%3E%3Ctext x='20' y='100' fill='%2300BFFF' font-family='monospace' font-size='12'%3EPUT /api/orders/:id%3C/text%3E%3Ctext x='20' y='130' fill='%23FF6347' font-family='monospace' font-size='12'%3EDELETE /api/cart/:id%3C/text%3E%3Ctext x='20' y='180' fill='%23888' font-family='monospace' font-size='14'%3ENode.js + Express%3C/text%3E%3C/svg%3E",
+    description: "Backend API dengan Node.js dan Express untuk mobile app. Termasuk authentication dan CRUD operations.",
+    tags: ["Node.js", "Express", "API"],
   },
   {
     id: 11,
-    title: "UI Component Library",
-    category: "web",
+    title: "Onboarding Screens",
+    category: "ui",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f8f9fa' width='400' height='300'/%3E%3Crect fill='%233b82f6' x='40' y='40' width='120' height='40' rx='8'/%3E%3Ctext x='100' y='67' fill='%23FFF' font-family='Arial' font-size='14' text-anchor='middle'%3EButton%3C/text%3E%3Crect fill='%23FFF' stroke='%23d1d5db' stroke-width='2' x='240' y='40' width='120' height='40' rx='8'/%3E%3Crect fill='%2322c55e' x='40' y='120' width='320' height='8' rx='4'/%3E%3Crect fill='%23FFF' stroke='%23d1d5db' stroke-width='2' x='40' y='160' width='320' height='40' rx='8'/%3E%3Ctext x='200' y='270' fill='%23666' font-family='Arial' font-size='14' text-anchor='middle'%3EComponent Library%3C/text%3E%3C/svg%3E",
-    description: "Library komponen UI reusable dengan Minecraft theme. Termasuk buttons, cards, forms, dan animations.",
-    tags: ["CSS", "Components", "Design System"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2306b6d4' width='400' height='300'/%3E%3Ccircle fill='%23ffffff' cx='200' cy='100' r='50'/%3E%3Ctext x='200' y='180' fill='%23FFF' font-family='Arial' font-size='16' text-anchor='middle'%3EWelcome!%3C/text%3E%3Ctext x='200' y='210' fill='%23FFF' font-family='Arial' font-size='12' text-anchor='middle'%3EGet started with our app%3C/text%3E%3Ccircle fill='%23ffffff' cx='170' cy='260' r='6'/%3E%3Ccircle fill='%23ffffff80' cx='200' cy='260' r='6'/%3E%3Ccircle fill='%23ffffff80' cx='230' cy='260' r='6'/%3E%3C/svg%3E",
+    description: "Onboarding screens dengan illustrations, smooth transitions, dan page indicators.",
+    tags: ["UI/UX", "Onboarding", "Flutter"],
   },
   {
     id: 12,
-    title: "Isometric Tile Art",
-    category: "art",
+    title: "Firebase Database",
+    category: "backend",
     image:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e8f5e9' width='400' height='300'/%3E%3Cpath d='M 200 80 L 280 120 L 200 160 L 120 120 Z' fill='%238BC34A'/%3E%3Cpath d='M 200 160 L 280 120 L 280 180 L 200 220 Z' fill='%23689F38'/%3E%3Cpath d='M 120 120 L 200 160 L 200 220 L 120 180 Z' fill='%237CB342'/%3E%3Ctext x='200' y='270' fill='%23333' font-family='Arial' font-size='16' text-anchor='middle'%3EIsometric Tiles%3C/text%3E%3C/svg%3E",
-    description: "Koleksi isometric tile untuk game strategy atau city builder. Berbagai terrain dan building tiles.",
-    tags: ["Pixel Art", "Isometric", "Tiles"],
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23039BE5' width='400' height='300'/%3E%3Cpath d='M150 250 L200 50 L250 250 L200 280 Z' fill='%23FFCA28'/%3E%3Cpath d='M150 250 L200 180 L250 250 L200 280 Z' fill='%23FFA000'/%3E%3Ctext x='200' y='150' fill='%23FFF' font-family='Arial' font-size='20' text-anchor='middle'%3EFirebase%3C/text%3E%3C/svg%3E",
+    description: "Firebase integration dengan Firestore, Authentication, Cloud Functions, dan Cloud Messaging.",
+    tags: ["Firebase", "Cloud", "Backend"],
   },
 ];
 
@@ -179,10 +179,10 @@ function renderGallery(items = galleryData) {
 // Get category emoji
 function getCategoryEmoji(category) {
   const emojis = {
-    games: "🕹️",
-    mods: "⛏️",
+    mobile: "📱",
     web: "🌐",
-    art: "🎨",
+    ui: "🎨",
+    backend: "⚙️",
   };
   return emojis[category] || "📦";
 }
