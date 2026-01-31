@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layanan - Wira Sukma Saputra | Mobile Developer</title>
+    <meta name="description" content="Layanan pengembangan aplikasi mobile profesional dari Wira Sukma Saputra.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#0a0a0a] text-white antialiased">
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <!-- Gradient Orbs Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="mainHeader">
+      <div class="container mx-auto px-6 py-4">
+        <nav class="flex justify-between items-center backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-6 py-3 nav-glass">
+          <a href="index.html" class="logo-container flex items-center gap-3 group">
+            <div class="logo-icon w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <span class="text-lg font-bold">W</span>
+            </div>
+            <div class="hidden sm:block">
+              <h1 class="font-semibold text-white">Wira Sukma</h1>
+              <p class="text-xs text-gray-400">Mobile Developer</p>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center gap-1">
+            <a href="index.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Beranda</a>
+            <a href="about.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Tentang</a>
+            <a href="layanan.html" class="nav-link px-4 py-2 rounded-xl text-sm text-white bg-white/10 transition-all">Layanan</a>
+            <a href="galery.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Galeri</a>
+            <a href="testimoni.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Testimoni</a>
+            <a href="resume.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Resume</a>
+            <a href="index.html#techop" class="nav-link px-4 py-2 rounded-xl text-sm text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-all flex items-center gap-1">
+              <i class="fas fa-building text-xs"></i>
+              <span>TechOp.id</span>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="contact.html" class="hidden sm:flex btn-primary px-5 py-2.5 rounded-xl text-sm font-medium items-center gap-2">
+              <span>Hubungi Saya</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <button id="menuBtn" class="lg:hidden w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 hidden">
+      <div class="menu-overlay absolute inset-0 bg-black/80 backdrop-blur-lg" onclick="toggleMenu()"></div>
+      <div class="menu-content absolute right-0 top-0 h-full w-80 bg-[#111]/95 border-l border-white/10 p-8 transform translate-x-full transition-transform duration-300">
+        <div class="flex justify-end mb-8">
+          <button onclick="toggleMenu()" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-home w-5"></i> Beranda
+          </a>
+          <a href="about.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-user w-5"></i> Tentang
+          </a>
+          <a href="layanan.html" class="px-4 py-3 rounded-xl text-white bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-briefcase w-5"></i> Layanan
+          </a>
+          <a href="galery.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-images w-5"></i> Galeri
+          </a>
+          <a href="testimoni.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-star w-5"></i> Testimoni
+          </a>
+          <a href="resume.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-file-alt w-5"></i> Resume
+          </a>
+          <a href="index.html#techop" class="px-4 py-3 rounded-xl text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-all flex items-center gap-3">
+            <i class="fas fa-building w-5"></i> TechOp.id
+          </a>
+          <a href="contact.html" class="btn-primary px-4 py-3 rounded-xl mt-4 text-center font-medium">
+            Hubungi Saya
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+      <div class="container mx-auto max-w-7xl text-center">
+        <div class="reveal-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 mb-6">
+            <i class="fas fa-briefcase text-fuchsia-400"></i>
+            <span class="text-sm text-fuchsia-300">Layanan Profesional</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            Layanan <span class="text-gradient">Pengembangan</span>
+          </h1>
+          
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            Solusi pengembangan aplikasi mobile lengkap untuk membantu bisnis Anda berkembang di era digital
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-16 px-6">
+      <div class="container mx-auto max-w-7xl">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Service 1 -->
+          <div class="service-card group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-violet-500/50 transition-all duration-500 reveal-up">
+            <div class="relative mb-6">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop" alt="Flutter Development" class="w-full h-48 object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-[#02569B] flex items-center justify-center shadow-lg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-7 h-7">
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Pengembangan Flutter</h3>
+            <p class="text-gray-400 mb-4">Bangun aplikasi indah yang dikompilasi native untuk mobile, web, dan desktop dari satu codebase.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Cross-platform (iOS & Android)
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> UI yang responsif & menarik
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Performa native
+              </li>
+            </ul>
+            <div class="flex items-center justify-between">
+              <span class="text-violet-400 font-medium">Mulai dari Rp 5 Juta</span>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-cyan-500/50 transition-all duration-500 reveal-up">
+            <div class="relative mb-6">
+              <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=400&h=300&fit=crop" alt="Android Development" class="w-full h-48 object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-[#3DDC84] flex items-center justify-center shadow-lg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="w-7 h-7">
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Android Native</h3>
+            <p class="text-gray-400 mb-4">Pengembangan Android native dengan Kotlin untuk performa optimal dan integrasi platform yang mulus.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Performa maksimal
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Integrasi sistem Android
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Material Design 3
+              </li>
+            </ul>
+            <div class="flex items-center justify-between">
+              <span class="text-cyan-400 font-medium">Mulai dari Rp 4 Juta</span>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-amber-500/50 transition-all duration-500 reveal-up">
+            <div class="relative mb-6">
+              <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=400&h=300&fit=crop" alt="React Native Development" class="w-full h-48 object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-[#61DAFB] flex items-center justify-center shadow-lg">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-7 h-7">
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">React Native</h3>
+            <p class="text-gray-400 mb-4">Pengembangan mobile cross-platform dengan React Native untuk iOS dan Android dengan codebase bersama.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> JavaScript/TypeScript
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Hot Reload
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Ekosistem NPM
+              </li>
+            </ul>
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 font-medium">Mulai dari Rp 5 Juta</span>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-green-500/50 transition-all duration-500 reveal-up">
+            <div class="relative mb-6">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="UI/UX Design" class="w-full h-48 object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg">
+                <i class="fas fa-paint-brush text-white"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Desain UI/UX</h3>
+            <p class="text-gray-400 mb-4">Pendekatan desain berpusat pada pengguna untuk menciptakan antarmuka intuitif yang disukai pengguna.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Wireframe & Prototype
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> User Research
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Design System
+              </li>
+            </ul>
+            <div class="flex items-center justify-between">
+              <span class="text-green-400 font-medium">Mulai dari Rp 2 Juta</span>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-pink-500/50 transition-all duration-500 reveal-up">
+            <div class="relative mb-6">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop" alt="Backend Integration" class="w-full h-48 object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shadow-lg">
+                <i class="fas fa-server text-white"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Integrasi Backend</h3>
+            <p class="text-gray-400 mb-4">Integrasi mulus dengan Firebase, REST API, dan layanan backend lainnya untuk fungsionalitas penuh.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Firebase & Supabase
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> REST & GraphQL API
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Realtime Database
+              </li>
+            </ul>
+            <div class="flex items-center justify-between">
+              <span class="text-pink-400 font-medium">Mulai dari Rp 3 Juta</span>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-purple-500/50 transition-all duration-500 reveal-up">
+            <div class="relative mb-6">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="App Store Publishing" class="w-full h-48 object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center shadow-lg">
+                <i class="fas fa-rocket text-white"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Publikasi App Store</h3>
+            <p class="text-gray-400 mb-4">Panduan lengkap melalui proses submission aplikasi untuk Google Play dan Apple App Store.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Google Play Store
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> Apple App Store
+              </li>
+              <li class="flex items-center gap-2 text-gray-300 text-sm">
+                <i class="fas fa-check text-green-400"></i> ASO (App Store Optimization)
+              </li>
+            </ul>
+            <div class="flex items-center justify-between">
+              <span class="text-purple-400 font-medium">Mulai dari Rp 1 Juta</span>
+              <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 px-6 relative">
+      <div class="container mx-auto max-w-7xl">
+        <div class="text-center mb-16 reveal-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
+            <i class="fas fa-cogs text-cyan-400"></i>
+            <span class="text-sm text-cyan-300">Proses Kerja</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Bagaimana Saya <span class="text-gradient">Bekerja</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Proses pengembangan yang terstruktur untuk hasil yang optimal
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="relative reveal-up">
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Konsultasi</h3>
+              <p class="text-gray-400 text-sm">Diskusi kebutuhan dan goals proyek Anda</p>
+            </div>
+            <div class="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-violet-500 to-transparent"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative reveal-up">
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Desain</h3>
+              <p class="text-gray-400 text-sm">Membuat wireframe dan desain UI/UX</p>
+            </div>
+            <div class="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent"></div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative reveal-up">
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Pengembangan</h3>
+              <p class="text-gray-400 text-sm">Coding dan implementasi fitur aplikasi</p>
+            </div>
+            <div class="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-amber-500 to-transparent"></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative reveal-up">
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                4
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Peluncuran</h3>
+              <p class="text-gray-400 text-sm">Testing, deployment, dan maintenance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6">
+      <div class="container mx-auto max-w-4xl">
+        <div class="cta-card relative p-12 rounded-3xl overflow-hidden reveal-up">
+          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/90 to-fuchsia-600/90"></div>
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+          
+          <div class="relative text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+              Siap Memulai Proyek?
+            </h2>
+            <p class="text-white/80 text-lg mb-8">
+              Konsultasi gratis untuk mendiskusikan kebutuhan aplikasi Anda
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-violet-600 font-semibold hover:bg-gray-100 transition-colors group">
+              <span>Konsultasi Gratis</span>
+              <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10">
+      <div class="container mx-auto max-w-7xl">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-gray-400 text-sm">
+            © 2024 Wira Sukma Saputra. Hak cipta dilindungi.
+          </p>
+          <div class="flex items-center gap-2 text-gray-400 text-sm">
+            <span>Dibuat dengan</span>
+            <i class="fas fa-heart text-red-400"></i>
+            <span>di Indonesia</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Cursor glow effect
+      const cursorGlow = document.getElementById('cursorGlow');
+      if (cursorGlow && window.innerWidth > 768) {
+        document.addEventListener('mousemove', (e) => {
+          cursorGlow.style.left = e.clientX + 'px';
+          cursorGlow.style.top = e.clientY + 'px';
+        });
+      }
+      
+      // Mobile menu toggle
+      function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.getElementById('menuBtn');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('active');
+        if (menu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+          btn.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          document.body.style.overflow = '';
+          btn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      }
+      
+      // Reveal animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>
