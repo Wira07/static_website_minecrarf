@@ -44,7 +44,7 @@
             <a href="about.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Tentang</a>
             <a href="layanan.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Layanan</a>
             <a href="galery.html" class="nav-link px-4 py-2 rounded-xl text-sm text-white bg-white/10 transition-all">Galeri</a>
-            <a href="testimoni.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Testimoni</a>
+            <a href="blogs.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Blog</a>
             <a href="resume.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Resume</a>
             <a href="index.html#techop" class="nav-link px-4 py-2 rounded-xl text-sm text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-all flex items-center gap-1">
               <i class="fas fa-building text-xs"></i>
@@ -87,8 +87,8 @@
           <a href="galery.html" class="px-4 py-3 rounded-xl text-white bg-white/10 transition-all flex items-center gap-3">
             <i class="fas fa-images w-5"></i> Galeri
           </a>
-          <a href="testimoni.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
-            <i class="fas fa-star w-5"></i> Testimoni
+          <a href="blogs.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
+            <i class="fas fa-blog w-5"></i> Blog
           </a>
           <a href="resume.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3">
             <i class="fas fa-file-alt w-5"></i> Resume
@@ -139,211 +139,158 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
           
           <!-- Project 1 - JobNation -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="flutter">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30">
-              <img src="https://cdn.dribbble.com/userupload/6464963/file/original-adaee279987ce821c0e6d0b8b39807ea.png?resize=1024x768&vertical=center" alt="JobNation - Job Portal Project">
+          <a href="gallery-detail.html?project=jobnation" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30">
+              <img src="https://cdn.dribbble.com/userupload/6464963/file/original-adaee279987ce821c0e6d0b8b39807ea.png?resize=1024x768&vertical=center" alt="JobNation - Job Portal Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-6 h-6" alt="Flutter">
                 <span class="px-3 py-1 rounded-full bg-violet-500/30 text-violet-300 text-xs font-medium">Flutter</span>
               </div>
               <h3 class="text-xl font-bold mb-2">JobNation - Job Portal</h3>
-              <p class="text-gray-300 text-sm mb-4">Platform pencarian kerja dengan fitur lengkap untuk kandidat dan perusahaan</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Platform pencarian kerja dengan fitur lengkap untuk kandidat dan perusahaan</p>
+              <span class="inline-flex items-center gap-2 text-violet-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 2 - SCADA System -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="android">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-cyan-600/30 to-blue-600/30">
-              <img src="https://cdn.dribbble.com/userupload/11528072/file/original-dfc7a02d84ed7f54a63b25dd56e7fedf.png?resize=1024x766&vertical=center" alt="SCADA Monitoring System Project">
+          <a href="gallery-detail.html?project=scada" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-cyan-600/30 to-blue-600/30">
+              <img src="https://cdn.dribbble.com/userupload/11528072/file/original-dfc7a02d84ed7f54a63b25dd56e7fedf.png?resize=1024x766&vertical=center" alt="SCADA Monitoring System Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-6 h-6" alt="Kotlin">
                 <span class="px-3 py-1 rounded-full bg-cyan-500/30 text-cyan-300 text-xs font-medium">Kotlin</span>
               </div>
               <h3 class="text-xl font-bold mb-2">SCADA Monitoring System</h3>
-              <p class="text-gray-300 text-sm mb-4">Sistem monitoring industri dengan data sensor realtime dan alarm</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Sistem monitoring industri dengan data sensor realtime dan alarm</p>
+              <span class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 3 - DigiWallet -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="react">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-pink-600/30 to-rose-600/30">
-              <img src="https://cdn.dribbble.com/userupload/12815914/file/original-ec261475301a5d68ff6107511ca274fb.jpg?resize=1024x576&vertical=center" alt="DigiWallet E-Wallet Project">
+          <a href="gallery-detail.html?project=digiwallet" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="react">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-pink-600/30 to-rose-600/30">
+              <img src="https://cdn.dribbble.com/userupload/12815914/file/original-ec261475301a5d68ff6107511ca274fb.jpg?resize=1024x576&vertical=center" alt="DigiWallet E-Wallet Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" alt="React Native">
                 <span class="px-3 py-1 rounded-full bg-pink-500/30 text-pink-300 text-xs font-medium">React Native</span>
               </div>
               <h3 class="text-xl font-bold mb-2">DigiWallet - E-Wallet</h3>
-              <p class="text-gray-300 text-sm mb-4">Aplikasi dompet digital dengan transfer, top-up, dan QR payment</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Aplikasi dompet digital dengan transfer, top-up, dan QR payment</p>
+              <span class="inline-flex items-center gap-2 text-pink-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 4 - Finance Tracker -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="flutter">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-amber-600/70 to-orange-600/70">
-              <img src="techoppp.png" alt="Finance Tracker App Project">
+          <a href="gallery-detail.html?project=finance" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-amber-600/70 to-orange-600/70">
+              <img src="techoppp.png" alt="Finance Tracker App Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
-              <!-- <div class="flex items-center gap-2 mb-3">
-                <img src="techop.id.png" class="w-6 h-6" alt="Flutter">
-                <span class="px-3 py-1 rounded-full bg-amber-500/30 text-amber-300 text-xs font-medium">Flutter</span>
-              </div> -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <h3 class="text-xl font-bold mb-2">Finance Tracker App</h3>
-              <p class="text-gray-300 text-sm mb-4">Catat pengeluaran dan pemasukan dengan grafik visualisasi interaktif</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Catat pengeluaran dan pemasukan dengan grafik visualisasi interaktif</p>
+              <span class="inline-flex items-center gap-2 text-amber-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 5 - Health Tracker -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="android">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-green-600/30 to-emerald-600/30">
-              <img src="undangan.png" alt="Health & Fitness App Project">
+          <a href="gallery-detail.html?project=health" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-green-600/30 to-emerald-600/30">
+              <img src="undangan.png" alt="Health & Fitness App Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
-              <!-- <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-6 h-6" alt="Android">
-                <span class="px-3 py-1 rounded-full bg-green-500/30 text-green-300 text-xs font-medium">Android</span>
-              </div> -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <h3 class="text-xl font-bold mb-2">Health & Fitness App</h3>
-              <p class="text-gray-300 text-sm mb-4">Tracking kesehatan harian dengan reminder olahraga dan nutrisi</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Tracking kesehatan harian dengan reminder olahraga dan nutrisi</p>
+              <span class="inline-flex items-center gap-2 text-green-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 6 - Portfolio Website -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="web">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-indigo-600/30 to-purple-600/30">
-              <img src="bhh.jpeg" alt="Portfolio Website Project">
+          <a href="gallery-detail.html?project=portfolio" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="web">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-indigo-600/30 to-purple-600/30">
+              <img src="bhh.jpeg" alt="Portfolio Website Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript">
                 <span class="px-3 py-1 rounded-full bg-indigo-500/30 text-indigo-300 text-xs font-medium">Web</span>
               </div>
               <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-              <p class="text-gray-300 text-sm mb-4">Website portfolio modern dengan animasi interaktif dan responsif</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://wira07.github.io" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Website portfolio modern dengan animasi interaktif dan responsif</p>
+              <span class="inline-flex items-center gap-2 text-indigo-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 7 - Recipe App -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="flutter">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-red-600/30 to-rose-600/30">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Recipe & Cooking App Project">
+          <a href="gallery-detail.html?project=recipe" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-red-600/30 to-rose-600/30">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Recipe & Cooking App Project" class="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-6 h-6" alt="Flutter">
                 <span class="px-3 py-1 rounded-full bg-red-500/30 text-red-300 text-xs font-medium">Flutter</span>
               </div>
               <h3 class="text-xl font-bold mb-2">Recipe & Cooking App</h3>
-              <p class="text-gray-300 text-sm mb-4">Kumpulan resep dengan fitur pencarian, favorit, dan shopping list</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Kumpulan resep dengan fitur pencarian, favorit, dan shopping list</p>
+              <span class="inline-flex items-center gap-2 text-red-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 8 - Weather App -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="react">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-teal-600/30 to-cyan-600/30">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Weather Forecast App Project">
+          <a href="gallery-detail.html?project=weather" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="react">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-teal-600/30 to-cyan-600/30">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Weather Forecast App Project" class="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" alt="React Native">
                 <span class="px-3 py-1 rounded-full bg-teal-500/30 text-teal-300 text-xs font-medium">React Native</span>
               </div>
               <h3 class="text-xl font-bold mb-2">Weather Forecast App</h3>
-              <p class="text-gray-300 text-sm mb-4">Informasi cuaca realtime dengan prakiraan 7 hari ke depan</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Informasi cuaca realtime dengan prakiraan 7 hari ke depan</p>
+              <span class="inline-flex items-center gap-2 text-teal-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Project 9 - Notes App -->
-          <div class="gallery-item group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="android">
-            <div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-yellow-600/30 to-amber-600/30">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Smart Notes App Project">
+          <a href="gallery-detail.html?project=notes" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-yellow-600/30 to-amber-600/30">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Smart Notes App Project" class="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-6 h-6" alt="Kotlin">
                 <span class="px-3 py-1 rounded-full bg-yellow-500/30 text-yellow-300 text-xs font-medium">Android</span>
               </div>
               <h3 class="text-xl font-bold mb-2">Smart Notes App</h3>
-              <p class="text-gray-300 text-sm mb-4">Catatan dengan fitur kategori, tag, dan pencarian cepat</p>
-              <div class="flex gap-3">
-                <a href="https://github.com/Wira07" target="_blank" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
+              <p class="text-gray-300 text-sm mb-3">Catatan dengan fitur kategori, tag, dan pencarian cepat</p>
+              <span class="inline-flex items-center gap-2 text-yellow-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>

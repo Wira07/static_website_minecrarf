@@ -439,8 +439,7 @@ const servicesData = {
       { name: "E-Commerce App", desc: "Aplikasi belanja online lengkap" },
       { name: "Social Media App", desc: "Aplikasi sosial dengan chat realtime" },
       { name: "Fitness Tracker", desc: "Aplikasi pelacak kesehatan" }
-    ],
-    price: "Mulai dari Rp 8 Juta"
+    ]
   },
   android: {
     title: "Android Native",
@@ -460,8 +459,7 @@ const servicesData = {
       { name: "Task Manager", desc: "Aplikasi manajemen tugas produktif" },
       { name: "News Reader", desc: "Aplikasi pembaca berita offline" },
       { name: "Finance Tracker", desc: "Aplikasi pelacak keuangan" }
-    ],
-    price: "Mulai dari Rp 10 Juta"
+    ]
   },
   react: {
     title: "React Native",
@@ -481,8 +479,7 @@ const servicesData = {
       { name: "Chat Application", desc: "Aplikasi messaging realtime" },
       { name: "Food Delivery", desc: "Aplikasi pesan antar makanan" },
       { name: "Travel App", desc: "Aplikasi booking perjalanan" }
-    ],
-    price: "Mulai dari Rp 9 Juta"
+    ]
   },
   uiux: {
     title: "Desain UI/UX",
@@ -502,8 +499,7 @@ const servicesData = {
       { name: "Banking App Redesign", desc: "Redesign aplikasi perbankan" },
       { name: "E-learning Platform", desc: "Platform pembelajaran online" },
       { name: "Healthcare Dashboard", desc: "Dashboard kesehatan" }
-    ],
-    price: "Mulai dari Rp 5 Juta"
+    ]
   },
   backend: {
     title: "Integrasi Backend",
@@ -523,8 +519,7 @@ const servicesData = {
       { name: "Real-time Chat", desc: "Sistem chat dengan Firebase" },
       { name: "Payment Integration", desc: "Integrasi payment gateway" },
       { name: "Social Login", desc: "Login dengan Google, Facebook" }
-    ],
-    price: "Mulai dari Rp 4 Juta"
+    ]
   },
   appstore: {
     title: "Publikasi App Store",
@@ -544,8 +539,7 @@ const servicesData = {
       { name: "10+ Apps Published", desc: "Aplikasi berhasil dipublikasi" },
       { name: "100K+ Downloads", desc: "Total download aplikasi" },
       { name: "4.5+ Rating Average", desc: "Rata-rata rating aplikasi" }
-    ],
-    price: "Mulai dari Rp 2 Juta"
+    ]
   }
 };
 
@@ -559,9 +553,6 @@ function openServiceModal(serviceKey) {
       <div class="flex items-start justify-between mb-6">
         <div class="w-20 h-20 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center">
           <i class="fab ${service.icon === 'fa-android' || service.icon === 'fa-react' ? service.icon : 'fas ' + service.icon} text-3xl text-white"></i>
-        </div>
-        <div class="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium">
-          ${service.price}
         </div>
       </div>
       
