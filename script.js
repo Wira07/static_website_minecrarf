@@ -4,92 +4,157 @@
    ===================================================== */
 
 // =====================================================
+// TYPING ANIMATION
+// =====================================================
+class TypeWriter {
+  constructor(element, words, wait = 3000) {
+    this.element = element;
+    this.words = words;
+    this.wait = parseInt(wait, 10);
+    this.txt = '';
+    this.wordIndex = 0;
+    this.isDeleting = false;
+    this.type();
+  }
+
+  type() {
+    const current = this.wordIndex % this.words.length;
+    const fullTxt = this.words[current];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.element.innerHTML = this.txt;
+
+    let typeSpeed = 100;
+
+    if (this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      typeSpeed = this.wait;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.wordIndex++;
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+// Initialize typing animation
+document.addEventListener('DOMContentLoaded', () => {
+  const typingElement = document.getElementById('typingName');
+  const typingElementAbout = document.getElementById('typingNameAbout');
+  
+  const words = ['Wira Sukma Saputra', 'Fullstack Developer', 'Mobile Developer', 'UI/UX Designer', 'Freelancer'];
+  
+  if (typingElement) {
+    new TypeWriter(typingElement, words, 2000);
+  }
+  
+  if (typingElementAbout) {
+    new TypeWriter(typingElementAbout, words, 2000);
+  }
+});
+
+// =====================================================
 // PROJECT DATA
 // =====================================================
 const projects = [
   {
-    title: "E-Commerce App",
+    title: "JobNation - Job Portal App",
     subtitle: "Flutter & Firebase",
-    description: "A full-featured e-commerce application with comprehensive shopping cart functionality, payment gateway integration with multiple providers, real-time push notifications, and secure user authentication. Built with clean architecture principles and state management using BLoC pattern.",
+    description: "Platform job portal mobile yang menghubungkan pencari kerja dengan perusahaan. Dilengkapi dengan fitur pencarian pekerjaan, upload CV, lamaran online, dan notifikasi realtime. Dibangun menggunakan Flutter dengan backend Firebase.",
     tech: ["Flutter", "Firebase", "Dart", "REST API", "BLoC"],
-    difficulty: "Intermediate",
+    difficulty: "Advanced",
     status: "Published",
     color: "violet",
     icon: "📱",
     features: [
-      "Shopping cart & checkout system with guest checkout option",
-      "Multiple payment gateway integration (Midtrans, Stripe)",
-      "Real-time push notifications for orders and promotions",
-      "User authentication with social login support",
-      "Wishlist and product comparison features",
-      "Order tracking and history"
+      "Pencarian lowongan kerja dengan filter lengkap",
+      "Upload CV dan portfolio secara online",
+      "Sistem lamaran dan tracking status",
+      "Notifikasi realtime untuk update lowongan",
+      "Profile kandidat dengan skill matching",
+      "Dashboard perusahaan untuk posting lowongan"
     ],
-    github: "#",
+    github: "https://github.com/Wira07",
     demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+    screenshot: "https://raw.githubusercontent.com/ArizArmeworworworworworworworworworworworworworworworworworworworworworworworworworwor/master/screenshots/job_portal.png"
   },
   {
-    title: "Task Manager App",
+    title: "SCADA Monitoring System",
     subtitle: "Android Native Kotlin",
-    description: "A powerful productivity application designed with MVVM architecture, featuring comprehensive task scheduling with reminders, category management, and cloud synchronization. Implements Material Design 3 guidelines for a modern and intuitive user experience.",
-    tech: ["Kotlin", "Room DB", "MVVM", "WorkManager", "Coroutines"],
+    description: "Aplikasi monitoring sistem SCADA untuk industri. Menampilkan data sensor realtime, grafik monitoring, alarm system, dan kontrol perangkat. Dikembangkan untuk PT. Hadiscada Inovasindo dengan arsitektur MVVM.",
+    tech: ["Kotlin", "Room DB", "MVVM", "WorkManager", "MQTT"],
     difficulty: "Advanced",
     status: "Published",
     color: "cyan",
     icon: "🤖",
     features: [
-      "Task scheduling with customizable reminders",
-      "Smart category management with color coding",
-      "Cloud sync with Firebase for cross-device access",
-      "Material Design 3 with dynamic theming",
-      "Widgets for quick task access",
-      "Analytics dashboard for productivity insights"
+      "Monitoring sensor data realtime via MQTT",
+      "Grafik visualisasi data historis",
+      "Sistem alarm dan notifikasi",
+      "Kontrol perangkat jarak jauh",
+      "Export laporan dalam format PDF",
+      "Multi-user dengan role management"
     ],
-    github: "#",
+    github: "https://github.com/Wira07",
     demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+    screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/scada.png"
   },
   {
-    title: "Social Media App",
-    subtitle: "React Native",
-    description: "A cross-platform social networking application featuring real-time posting, likes, comments, and instant messaging. Built with React Native for optimal performance across iOS and Android, with a Node.js backend handling real-time communication.",
-    tech: ["React Native", "Redux", "Node.js", "Socket.io", "MongoDB"],
+    title: "DigiWallet - E-Wallet App",
+    subtitle: "React Native & Node.js",
+    description: "Aplikasi dompet digital dengan fitur transfer, top-up, pembayaran, dan QR code. Cross-platform untuk iOS dan Android dengan backend Node.js dan integrasi payment gateway.",
+    tech: ["React Native", "Redux", "Node.js", "Express", "MongoDB"],
     difficulty: "Intermediate",
     status: "Published",
     color: "pink",
     icon: "⚛️",
     features: [
-      "Post creation with media upload support",
-      "Real-time like and comment functionality",
-      "Instant messaging with read receipts",
-      "User profiles with following system",
-      "Push notifications for interactions",
-      "Content moderation system"
+      "Transfer antar pengguna instant",
+      "Top-up saldo via bank/e-wallet",
+      "Pembayaran dengan scan QR Code",
+      "Riwayat transaksi lengkap",
+      "Biometric authentication",
+      "Voucher dan promo integration"
     ],
-    github: "#",
+    github: "https://github.com/Wira07",
     demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/ewallet.png"
   },
   {
     title: "Portfolio Website",
     subtitle: "HTML, CSS, JavaScript",
-    description: "A modern, responsive portfolio website showcasing professional work and skills. Features smooth animations, interactive UI components, and optimized performance. Built with clean, semantic HTML and modern CSS practices including Flexbox and Grid.",
+    description: "Website portfolio modern dan responsif dengan animasi halus, komponen UI interaktif, dan performa optimal. Dibangun dengan HTML semantik, CSS modern, dan JavaScript vanilla.",
     tech: ["HTML", "CSS", "JavaScript", "TailwindCSS", "GSAP"],
     difficulty: "Beginner",
     status: "Live",
     color: "amber",
     icon: "🌐",
     features: [
-      "Fully responsive design for all devices",
-      "Smooth scroll animations and transitions",
-      "Interactive project showcase with filtering",
-      "Contact form with validation",
+      "Desain responsif untuk semua perangkat",
+      "Animasi scroll yang halus",
+      "Showcase proyek interaktif dengan filter",
+      "Form kontak dengan validasi",
       "SEO optimized structure",
-      "Fast loading with optimized assets"
+      "Fast loading dengan optimized assets"
     ],
-    github: "#",
-    demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    github: "https://github.com/Wira07",
+    demo: "https://wira07.github.io",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/portfolio.png"
   }
 ];
 

@@ -131,7 +131,11 @@
             </div>
             
             <h1 class="text-4xl sm:text-5xl font-bold mb-6">
-              Halo, Saya <span class="text-gradient">Wira Sukma Saputra</span>
+              Halo, Saya 
+              <span class="typing-container">
+                <span class="text-gradient" id="typingNameAbout"></span>
+                <span class="typing-cursor"></span>
+              </span>
             </h1>
             
             <p class="text-xl text-gray-400 mb-6">
@@ -172,7 +176,7 @@
             Selama bertahun-tahun, saya memiliki kesempatan untuk mengerjakan proyek-proyek beragam - dari platform job portal hingga aplikasi SCADA - masing-masing mengajarkan saya sesuatu yang baru tentang user experience, optimasi performa, dan arsitektur kode yang bersih.
           </p>
           <p class="text-gray-300 leading-relaxed">
-            Dengan pengalaman di berbagai perusahaan seperti Jobnation.id, Hadiscada Inovasindo, dan Bangkit Academy by Google, saya terus mengasah skill dalam Mobile Development, UI/UX Design, dan Web Development untuk menciptakan solusi digital yang inovatif.
+            Dengan pengalaman di berbagai perusahaan seperti Jobnation.id, PT Hadiscada Inovasindo, dan Bangkit Academy by Google, saya terus mengasah skill dalam Mobile Development, UI/UX Design, dan Web Development untuk menciptakan solusi digital yang inovatif.
           </p>
         </div>
       </div>
@@ -221,7 +225,7 @@
               <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
                 <div>
                   <h3 class="text-xl font-semibold">Web Developer</h3>
-                  <p class="text-violet-400">Hadiscada Inovasindo</p>
+                  <p class="text-violet-400"> PT Hadiscada Inovasindo</p>
                 </div>
                 <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-sm">Sep 2025 - Sekarang</span>
               </div>
@@ -439,6 +443,57 @@
       }, { threshold: 0.1 });
       
       document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+      
+      // Typing animation
+      class TypeWriter {
+        constructor(element, words, wait = 3000) {
+          this.element = element;
+          this.words = words;
+          this.wait = parseInt(wait, 10);
+          this.txt = '';
+          this.wordIndex = 0;
+          this.isDeleting = false;
+          this.type();
+        }
+
+        type() {
+          const current = this.wordIndex % this.words.length;
+          const fullTxt = this.words[current];
+
+          if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
+
+          this.element.innerHTML = this.txt;
+
+          let typeSpeed = 100;
+
+          if (this.isDeleting) {
+            typeSpeed /= 2;
+          }
+
+          if (!this.isDeleting && this.txt === fullTxt) {
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+          } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+          }
+
+          setTimeout(() => this.type(), typeSpeed);
+        }
+      }
+
+      // Initialize typing animation
+      const typingElementAbout = document.getElementById('typingNameAbout');
+      const words = ['Wira Sukma Saputra', 'Fullstack Developer', 'Mobile Developer', 'UI/UX Designer', 'Freelancer'];
+      
+      if (typingElementAbout) {
+        new TypeWriter(typingElementAbout, words, 2000);
+      }
     </script>
   </body>
 </html>

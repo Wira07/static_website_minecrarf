@@ -99,9 +99,12 @@
             </div>
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.2s">
-              <span class="text-white">Wira Sukma</span>
+              <span class="text-white">Halo, Saya</span>
               <br />
-              <span class="text-gradient">Saputra</span>
+              <span class="typing-container">
+                <span class="text-gradient" id="typingName"></span>
+                <span class="typing-cursor"></span>
+              </span>
             </h1>
 
             <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up" style="animation-delay: 0.3s">
@@ -323,8 +326,8 @@
             style="animation-delay: 0.1s"
             onclick="openServiceModal('flutter')"
           >
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-              <i class="fas fa-mobile-alt text-2xl text-white"></i>
+            <div class="w-16 h-16 rounded-2xl bg-[#02569B] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-10 h-10">
             </div>
             <h3 class="text-xl font-semibold mb-3">Pengembangan Flutter</h3>
             <p class="text-gray-400 mb-4">Bangun aplikasi indah yang dikompilasi native untuk mobile, web, dan desktop dari satu codebase.</p>
@@ -340,8 +343,8 @@
             style="animation-delay: 0.2s"
             onclick="openServiceModal('android')"
           >
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-              <i class="fab fa-android text-2xl text-white"></i>
+            <div class="w-16 h-16 rounded-2xl bg-[#3DDC84] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="w-10 h-10">
             </div>
             <h3 class="text-xl font-semibold mb-3">Android Native</h3>
             <p class="text-gray-400 mb-4">Pengembangan Android native dengan Kotlin untuk performa optimal dan integrasi platform yang mulus.</p>
@@ -357,8 +360,8 @@
             style="animation-delay: 0.3s"
             onclick="openServiceModal('react')"
           >
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-              <i class="fab fa-react text-2xl text-white"></i>
+            <div class="w-16 h-16 rounded-2xl bg-[#20232A] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-10 h-10">
             </div>
             <h3 class="text-xl font-semibold mb-3">React Native</h3>
             <p class="text-gray-400 mb-4">Pengembangan mobile cross-platform dengan React Native untuk iOS dan Android dengan codebase bersama.</p>
@@ -374,8 +377,8 @@
             style="animation-delay: 0.4s"
             onclick="openServiceModal('uiux')"
           >
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-              <i class="fas fa-paint-brush text-2xl text-white"></i>
+            <div class="w-16 h-16 rounded-2xl bg-[#F24E1E] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="w-10 h-10">
             </div>
             <h3 class="text-xl font-semibold mb-3">Desain UI/UX</h3>
             <p class="text-gray-400 mb-4">Pendekatan desain berpusat pada pengguna untuk menciptakan antarmuka intuitif yang disukai pengguna.</p>
@@ -391,8 +394,8 @@
             style="animation-delay: 0.5s"
             onclick="openServiceModal('backend')"
           >
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-              <i class="fas fa-server text-2xl text-white"></i>
+            <div class="w-16 h-16 rounded-2xl bg-[#FFCA28] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-10 h-10">
             </div>
             <h3 class="text-xl font-semibold mb-3">Integrasi Backend</h3>
             <p class="text-gray-400 mb-4">Integrasi mulus dengan Firebase, REST API, dan layanan backend lainnya untuk fungsionalitas penuh.</p>
@@ -409,7 +412,7 @@
             onclick="openServiceModal('appstore')"
           >
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-              <i class="fas fa-rocket text-2xl text-white"></i>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Play" class="w-10 h-10">
             </div>
             <h3 class="text-xl font-semibold mb-3">Publikasi App Store</h3>
             <p class="text-gray-400 mb-4">Panduan lengkap melalui proses submission aplikasi untuk Google Play dan Apple App Store.</p>
@@ -447,7 +450,7 @@
 
         <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 gap-8" id="projectsGrid">
-          <!-- Project 1 -->
+          <!-- Project 1 - JobNation -->
           <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="flutter" onclick="openModal(0)">
             <div class="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20"></div>
             <div class="relative p-8">
@@ -456,25 +459,30 @@
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-10 h-10" />
                 </div>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-medium">Intermediate</span>
+                  <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-medium">Advanced</span>
                   <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Published</span>
                 </div>
               </div>
 
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-violet-400 transition-colors">Aplikasi E-Commerce</h3>
-              <p class="text-gray-400 mb-6">Aplikasi e-commerce lengkap dengan sistem keranjang, integrasi payment gateway, dan notifikasi realtime.</p>
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-violet-400 transition-colors">JobNation - Job Portal</h3>
+              <p class="text-gray-400 mb-6">Platform job portal mobile yang menghubungkan pencari kerja dengan perusahaan. Dilengkapi fitur pencarian, upload CV, dan notifikasi realtime.</p>
 
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Flutter</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Firebase</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Dart</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">REST API</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-4 h-4" alt="" />Flutter
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-4 h-4" alt="" />Firebase
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" class="w-4 h-4" alt="" />Dart
+                </span>
               </div>
 
               <div class="flex items-center justify-between">
                 <span class="text-violet-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
                 <div class="flex gap-3">
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
+                  <a href="https://github.com/Wira07" target="_blank" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
                     <i class="fab fa-github text-lg"></i>
                   </a>
                   <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
@@ -490,12 +498,12 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
+          <!-- Project 2 - SCADA System -->
           <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="android" onclick="openModal(1)" style="animation-delay: 0.1s">
             <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20"></div>
             <div class="relative p-8">
               <div class="flex items-start justify-between mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#3DDC84] flex items-center justify-center">
+                <div class="w-16 h-16 rounded-2xl bg-[#7F52FF] flex items-center justify-center">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="w-10 h-10" />
                 </div>
                 <div class="flex gap-2">
@@ -504,20 +512,23 @@
                 </div>
               </div>
 
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">Aplikasi Manajemen Tugas</h3>
-              <p class="text-gray-400 mb-6">Aplikasi produktivitas dengan penjadwalan tugas, pengingat, kategori, dan sinkronisasi cloud menggunakan arsitektur MVVM.</p>
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">SCADA Monitoring System</h3>
+              <p class="text-gray-400 mb-6">Aplikasi monitoring sistem SCADA untuk industri. Menampilkan data sensor realtime, grafik monitoring, dan alarm system.</p>
 
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Kotlin</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Room DB</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">MVVM</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">WorkManager</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-4 h-4" alt="" />Kotlin
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-4 h-4" alt="" />Android
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">MQTT</span>
               </div>
 
               <div class="flex items-center justify-between">
                 <span class="text-cyan-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
                 <div class="flex gap-3">
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
+                  <a href="https://github.com/Wira07" target="_blank" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
                     <i class="fab fa-github text-lg"></i>
                   </a>
                   <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
@@ -532,7 +543,7 @@
             </div>
           </div>
 
-          <!-- Project 3 -->
+          <!-- Project 3 - DigiWallet -->
           <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="react" onclick="openModal(2)" style="animation-delay: 0.2s">
             <div class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-rose-600/20"></div>
             <div class="relative p-8">
@@ -546,20 +557,25 @@
                 </div>
               </div>
 
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-pink-400 transition-colors">Aplikasi Media Sosial</h3>
-              <p class="text-gray-400 mb-6">Platform sosial cross-platform dengan fitur posting, like, komentar, dan chat realtime.</p>
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-pink-400 transition-colors">DigiWallet - E-Wallet App</h3>
+              <p class="text-gray-400 mb-6">Aplikasi dompet digital dengan fitur transfer, top-up, pembayaran, dan QR code. Cross-platform untuk iOS dan Android.</p>
 
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">React Native</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Redux</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Node.js</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Socket.io</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-4 h-4" alt="" />React Native
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-4 h-4" alt="" />Node.js
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-4 h-4" alt="" />MongoDB
+                </span>
               </div>
 
               <div class="flex items-center justify-between">
                 <span class="text-pink-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
                 <div class="flex gap-3">
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
+                  <a href="https://github.com/Wira07" target="_blank" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
                     <i class="fab fa-github text-lg"></i>
                   </a>
                   <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
@@ -574,7 +590,7 @@
             </div>
           </div>
 
-          <!-- Project 4 -->
+          <!-- Project 4 - Portfolio Website -->
           <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="web" onclick="openModal(3)" style="animation-delay: 0.3s">
             <div class="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-orange-600/20"></div>
             <div class="relative p-8">
@@ -588,23 +604,31 @@
                 </div>
               </div>
 
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-amber-400 transition-colors">Website Portfolio</h3>
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-amber-400 transition-colors">Portfolio Website</h3>
               <p class="text-gray-400 mb-6">Website portfolio modern dan responsif dengan animasi halus, UI interaktif, dan performa optimal.</p>
 
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">HTML</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">CSS</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">JavaScript</span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">TailwindCSS</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-4 h-4" alt="" />HTML
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-4 h-4" alt="" />CSS
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-4 h-4" alt="" />JavaScript
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-4 h-4" alt="" />TailwindCSS
+                </span>
               </div>
 
               <div class="flex items-center justify-between">
                 <span class="text-amber-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
                 <div class="flex gap-3">
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
+                  <a href="https://github.com/Wira07" target="_blank" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
                     <i class="fab fa-github text-lg"></i>
                   </a>
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
+                  <a href="https://wira07.github.io" target="_blank" class="text-gray-400 hover:text-white transition-colors" onclick="event.stopPropagation()">
                     <i class="fas fa-external-link-alt text-lg"></i>
                   </a>
                 </div>
