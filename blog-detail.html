@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Wira Sukma Saputra | Fullstack Developer</title>
+    <meta name="description" content="Artikel tentang pengembangan aplikasi dari Wira Sukma Saputra.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#0a0a0a] text-white antialiased">
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="mainHeader">
+      <div class="container mx-auto px-6 py-4">
+        <nav class="flex justify-between items-center backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-6 py-3 nav-glass">
+          <a href="index.html" class="logo-container flex items-center gap-3 group">
+            <div class="logo-icon w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <span class="text-lg font-bold">W</span>
+            </div>
+            <div class="hidden sm:block">
+              <h1 class="font-semibold text-white">Wira Sukma Saputra</h1>
+              <p class="text-xs text-gray-400">Fullstack Developer</p>
+            </div>
+          </a>
+          <div class="hidden lg:flex items-center gap-1">
+            <a href="index.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Beranda</a>
+            <a href="about.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Tentang</a>
+            <a href="layanan.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Layanan</a>
+            <a href="galery.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Galeri</a>
+            <a href="blogs.html" class="nav-link px-4 py-2 rounded-xl text-sm text-white bg-white/10 transition-all">Blog</a>
+            <a href="resume.html" class="nav-link px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all">Resume</a>
+            <a href="index.html#techop" class="nav-link px-4 py-2 rounded-xl text-sm text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-all flex items-center gap-1">
+              <i class="fas fa-building text-xs"></i>
+              <span>techop.id</span>
+            </a>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="contact.html" class="hidden sm:flex btn-primary px-5 py-2.5 rounded-xl text-sm font-medium items-center gap-2">
+              <span>Hubungi Saya</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <button id="menuBtn" class="lg:hidden w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 hidden">
+      <div class="menu-overlay absolute inset-0 bg-black/80 backdrop-blur-lg" onclick="toggleMenu()"></div>
+      <div class="menu-content absolute right-0 top-0 h-full w-80 bg-[#111]/95 border-l border-white/10 p-8 transform translate-x-full transition-transform duration-300">
+        <div class="flex justify-end mb-8">
+          <button onclick="toggleMenu()" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3"><i class="fas fa-home w-5"></i> Beranda</a>
+          <a href="about.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3"><i class="fas fa-user w-5"></i> Tentang</a>
+          <a href="layanan.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3"><i class="fas fa-briefcase w-5"></i> Layanan</a>
+          <a href="galery.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3"><i class="fas fa-images w-5"></i> Galeri</a>
+          <a href="blogs.html" class="px-4 py-3 rounded-xl text-white bg-white/10 transition-all flex items-center gap-3"><i class="fas fa-blog w-5"></i> Blog</a>
+          <a href="resume.html" class="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-3"><i class="fas fa-file-alt w-5"></i> Resume</a>
+          <a href="index.html#techop" class="px-4 py-3 rounded-xl text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-all flex items-center gap-3"><i class="fas fa-building w-5"></i> techop.id</a>
+          <a href="contact.html" class="btn-primary px-4 py-3 rounded-xl mt-4 text-center font-medium">Hubungi Saya</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <section class="pt-28 pb-4 px-6">
+      <div class="container mx-auto max-w-4xl">
+        <a href="blogs.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group">
+          <i class="fas fa-arrow-left transform group-hover:-translate-x-1 transition-transform"></i>
+          <span>Kembali ke Blog</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Blog Detail -->
+    <article class="py-8 px-6">
+      <div class="container mx-auto max-w-4xl">
+        <!-- Header -->
+        <div class="mb-8 reveal-up">
+          <div class="flex items-center gap-3 mb-4">
+            <span id="blogCategory" class="px-3 py-1 rounded-full text-xs font-medium"></span>
+            <span id="blogDate" class="text-gray-500 text-sm"></span>
+          </div>
+          <h1 id="blogTitle" class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"></h1>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+                <span class="text-sm font-bold">W</span>
+              </div>
+              <div>
+                <p class="text-sm font-medium">Wira Sukma Saputra</p>
+                <p id="blogReadTime" class="text-xs text-gray-500"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cover Image -->
+        <div class="mb-10 reveal-up">
+          <div class="rounded-3xl overflow-hidden border border-white/10">
+            <img id="blogImage" src="" alt="" class="w-full h-auto object-cover" style="max-height: 500px;">
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div id="blogContent" class="prose prose-invert max-w-none mb-12 reveal-up">
+        </div>
+
+        <!-- Tags -->
+        <div class="mb-12 reveal-up">
+          <h4 class="text-sm font-medium text-gray-400 mb-3 uppercase tracking-wider">Tags</h4>
+          <div id="blogTags" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Share -->
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 mb-12 reveal-up">
+          <p class="text-gray-400 text-sm mb-3">Bagikan artikel ini</p>
+          <div class="flex gap-3">
+            <button onclick="shareArticle('twitter')" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-[#1DA1F2]/20 hover:text-[#1DA1F2] transition-all">
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button onclick="shareArticle('linkedin')" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-[#0A66C2]/20 hover:text-[#0A66C2] transition-all">
+              <i class="fab fa-linkedin-in"></i>
+            </button>
+            <button onclick="shareArticle('copy')" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-violet-500/20 hover:text-violet-400 transition-all">
+              <i class="fas fa-link"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="reveal-up">
+          <h3 class="text-2xl font-bold mb-6">Artikel Lainnya</h3>
+          <div id="relatedArticles" class="grid md:grid-cols-2 gap-6"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 mt-12">
+      <div class="container mx-auto max-w-7xl">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-gray-400 text-sm">&copy; 2024 Wira Sukma Saputra. Hak cipta dilindungi.</p>
+          <div class="flex items-center gap-2 text-gray-400 text-sm">
+            <span>Dibuat dengan</span>
+            <i class="fas fa-heart text-red-400"></i>
+            <span>di Indonesia</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const cursorGlow = document.getElementById('cursorGlow');
+      if (cursorGlow && window.innerWidth > 768) {
+        document.addEventListener('mousemove', (e) => {
+          cursorGlow.style.left = e.clientX + 'px';
+          cursorGlow.style.top = e.clientY + 'px';
+        });
+      }
+
+      function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.getElementById('menuBtn');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('active');
+        if (menu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+          btn.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          document.body.style.overflow = '';
+          btn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      }
+
+      const blogPosts = {
+        'featured': {
+          title: 'Panduan Lengkap Memulai Karir sebagai Mobile Developer di 2024',
+          category: 'Karir',
+          categoryColor: 'bg-violet-500/30 text-violet-300',
+          date: '10 Januari 2024',
+          readTime: '8 menit baca',
+          image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&h=600&fit=crop',
+          tags: ['Karir', 'Mobile Development', 'Tips', 'Pemula'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">Memulai karir sebagai mobile developer di tahun 2024 merupakan keputusan yang sangat tepat. Industri mobile terus berkembang pesat dengan kebutuhan yang semakin tinggi akan developer berkualitas.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">1. Pilih Platform dan Bahasa Pemrograman</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Langkah pertama adalah menentukan platform yang ingin Anda kuasai. Ada beberapa pilihan utama:</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6 ml-4">
+              <li><strong>Android Native</strong> - Kotlin dengan Jetpack Compose untuk UI modern</li>
+              <li><strong>Flutter</strong> - Framework cross-platform dari Google menggunakan Dart</li>
+              <li><strong>iOS Native</strong> - Swift dengan SwiftUI untuk ekosistem Apple</li>
+            </ul>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">2. Bangun Fondasi yang Kuat</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Sebelum mendalami framework, pastikan Anda memahami konsep dasar pemrograman seperti OOP, data structures, algorithms, dan design patterns. Ini akan mempermudah Anda memahami framework apapun.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">3. Praktik dengan Proyek Nyata</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Teori saja tidak cukup. Mulailah membangun proyek-proyek kecil yang menyelesaikan masalah nyata. Dari to-do app sederhana hingga aplikasi yang lebih kompleks dengan integrasi API dan database.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">4. Bangun Portfolio</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Portfolio yang baik adalah aset terbesar Anda. Upload proyek ke GitHub, buat dokumentasi yang rapi, dan tampilkan di website portfolio pribadi. Recruiter dan klien akan melihat kualitas kerja Anda dari portfolio.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">5. Networking dan Komunitas</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Bergabunglah dengan komunitas developer, ikuti meetup, dan aktif di platform seperti GitHub dan Stack Overflow. Networking membuka banyak peluang karir yang tidak terduga.</p>
+          `
+        },
+        '1': {
+          title: 'State Management di Flutter: Provider vs Riverpod',
+          category: 'Flutter',
+          categoryColor: 'bg-cyan-500/30 text-cyan-300',
+          date: '5 Januari 2024',
+          readTime: '5 menit baca',
+          image: 'https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?w=1200&h=600&fit=crop',
+          tags: ['Flutter', 'State Management', 'Provider', 'Riverpod'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">State management adalah salah satu konsep terpenting dalam pengembangan aplikasi Flutter. Dua solusi paling populer saat ini adalah Provider dan Riverpod.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Provider</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Provider adalah state management yang direkomendasikan oleh Tim Flutter. Mudah dipelajari dan cocok untuk proyek skala kecil hingga menengah. Menggunakan InheritedWidget di balik layar.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Riverpod</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Riverpod adalah evolusi dari Provider yang dibuat oleh developer yang sama. Menawarkan compile-time safety, tidak bergantung pada BuildContext, dan lebih mudah untuk testing.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Kapan Menggunakan Apa?</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6 ml-4">
+              <li>Gunakan <strong>Provider</strong> untuk proyek kecil atau jika Anda baru belajar Flutter</li>
+              <li>Gunakan <strong>Riverpod</strong> untuk proyek besar yang membutuhkan scalability dan testability</li>
+            </ul>
+          `
+        },
+        '2': {
+          title: 'Jetpack Compose: Membangun UI Modern di Android',
+          category: 'Jetpack Compose',
+          categoryColor: 'bg-green-500/30 text-green-300',
+          date: '3 Januari 2024',
+          readTime: '7 menit baca',
+          image: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=1200&h=600&fit=crop',
+          tags: ['Jetpack Compose', 'Android', 'Kotlin', 'UI'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">Jetpack Compose telah mengubah cara kita membangun UI di Android. Dengan pendekatan deklaratif, kita bisa membuat antarmuka yang lebih intuitif dan mudah dimaintain.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Mengapa Jetpack Compose?</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Jetpack Compose menghilangkan kebutuhan XML layout dan menggantikannya dengan kode Kotlin yang lebih ringkas. Ini berarti lebih sedikit boilerplate, lebih cepat development, dan UI yang lebih konsisten.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Konsep Dasar</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6 ml-4">
+              <li><strong>Composable Functions</strong> - Fungsi yang membangun UI</li>
+              <li><strong>State</strong> - Data yang memicu rekomposisi saat berubah</li>
+              <li><strong>Modifier</strong> - Dekorasi dan layout untuk composable</li>
+              <li><strong>Material Design 3</strong> - Komponen UI siap pakai</li>
+            </ul>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Tips Memulai</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Mulailah dengan proyek kecil dan pelajari composable dasar seperti Column, Row, Box, dan LazyColumn. Kemudian pelajari state management dengan remember dan mutableStateOf.</p>
+          `
+        },
+        '3': {
+          title: 'Kotlin Coroutines untuk Pemula: Panduan Lengkap',
+          category: 'Android',
+          categoryColor: 'bg-pink-500/30 text-pink-300',
+          date: '1 Januari 2024',
+          readTime: '6 menit baca',
+          image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=600&fit=crop',
+          tags: ['Kotlin', 'Coroutines', 'Android', 'Async'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">Kotlin Coroutines menyederhanakan pemrograman asinkron di Android. Dengan coroutines, kode async terlihat seperti kode sinkron biasa.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Apa itu Coroutines?</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Coroutines adalah lightweight threads yang bisa di-suspend dan di-resume tanpa blocking thread. Ini sangat efisien untuk operasi I/O seperti network requests dan database queries.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Dispatchers</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6 ml-4">
+              <li><strong>Dispatchers.Main</strong> - Untuk operasi UI</li>
+              <li><strong>Dispatchers.IO</strong> - Untuk operasi network/database</li>
+              <li><strong>Dispatchers.Default</strong> - Untuk komputasi berat</li>
+            </ul>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Best Practices</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Selalu gunakan viewModelScope atau lifecycleScope untuk menghindari memory leaks. Gunakan Flow untuk data stream yang reactive.</p>
+          `
+        },
+        '4': {
+          title: '5 Tools yang Wajib Dimiliki Mobile Developer',
+          category: 'Tips & Trik',
+          categoryColor: 'bg-amber-500/30 text-amber-300',
+          date: '28 Desember 2023',
+          readTime: '4 menit baca',
+          image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop',
+          tags: ['Tools', 'Productivity', 'Developer', 'Tips'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">Produktivitas seorang developer sangat bergantung pada tools yang digunakan. Berikut 5 tools yang wajib ada di arsenal Anda.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">1. Android Studio / VS Code</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">IDE adalah tool utama Anda. Android Studio untuk Android native dan Jetpack Compose, VS Code untuk Flutter dan web development.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">2. Git & GitHub</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Version control adalah keharusan. Git membantu Anda melacak perubahan kode dan berkolaborasi dengan tim.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">3. Figma</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Untuk melihat dan mengkonversi desain UI menjadi kode. Kolaborasi dengan designer jadi lebih mudah.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">4. Postman</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Testing API menjadi lebih mudah dengan Postman. Bisa menyimpan collection dan membuat environment variables.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">5. Firebase</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Backend-as-a-Service yang sangat powerful untuk authentication, database, storage, dan analytics.</p>
+          `
+        },
+        '5': {
+          title: 'Integrasi Firebase dengan Flutter: Panduan Lengkap',
+          category: 'Flutter',
+          categoryColor: 'bg-indigo-500/30 text-indigo-300',
+          date: '25 Desember 2023',
+          readTime: '10 menit baca',
+          image: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1200&h=600&fit=crop',
+          tags: ['Flutter', 'Firebase', 'Backend', 'Database'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">Firebase menyediakan berbagai layanan backend yang sangat cocok untuk aplikasi Flutter. Dari authentication hingga realtime database, semuanya bisa diintegrasikan dengan mudah.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Setup Firebase di Flutter</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Gunakan FlutterFire CLI untuk setup otomatis. Jalankan <code class="bg-white/10 px-2 py-1 rounded">flutterfire configure</code> dan pilih platform yang diinginkan.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Firebase Authentication</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Mendukung berbagai metode login: Email/Password, Google Sign-In, Facebook, Apple, dan masih banyak lagi. Implementasinya cukup beberapa baris kode.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Cloud Firestore</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Database NoSQL yang realtime dan scalable. Data otomatis tersingkronisasi di semua client. Sangat cocok untuk aplikasi chat, social media, dan collaborative tools.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">Cloud Storage</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Upload dan download file seperti gambar dan video dengan mudah. Dilengkapi security rules untuk mengontrol akses.</p>
+          `
+        },
+        '6': {
+          title: 'Cara Membangun Portfolio yang Menarik untuk Developer',
+          category: 'Karir',
+          categoryColor: 'bg-teal-500/30 text-teal-300',
+          date: '20 Desember 2023',
+          readTime: '6 menit baca',
+          image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop',
+          tags: ['Portfolio', 'Karir', 'Personal Branding', 'Web'],
+          content: `
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">Portfolio adalah first impression Anda di mata recruiter dan klien. Berikut cara membangun portfolio yang benar-benar menonjol.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">1. Tampilkan Hanya Proyek Terbaik</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Kualitas lebih penting dari kuantitas. Pilih 4-6 proyek terbaik yang menunjukkan keahlian dan range kemampuan Anda.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">2. Ceritakan Prosesnya</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Jangan hanya menampilkan screenshot. Jelaskan masalah yang diselesaikan, teknologi yang digunakan, tantangan yang dihadapi, dan hasilnya.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">3. Desain yang Profesional</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Portfolio Anda sendiri adalah proyek showcase. Pastikan desainnya modern, responsif, dan memiliki performa yang baik.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-8">4. Tambahkan Elemen Personal</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">Tunjukkan kepribadian Anda. About section yang menarik, blog untuk berbagi pengetahuan, dan testimoni dari klien atau kolega.</p>
+          `
+        }
+      };
+
+      function loadBlog() {
+        const params = new URLSearchParams(window.location.search);
+        const blogId = params.get('id');
+
+        if (!blogId || !blogPosts[blogId]) {
+          window.location.href = 'blogs.html';
+          return;
+        }
+
+        const post = blogPosts[blogId];
+
+        document.title = post.title + ' - Wira Sukma Saputra';
+        document.getElementById('blogTitle').textContent = post.title;
+        document.getElementById('blogDate').textContent = post.date;
+        document.getElementById('blogReadTime').textContent = post.readTime;
+        document.getElementById('blogImage').src = post.image;
+        document.getElementById('blogImage').alt = post.title;
+        document.getElementById('blogContent').innerHTML = post.content;
+
+        const catEl = document.getElementById('blogCategory');
+        catEl.textContent = post.category;
+        catEl.className = 'px-3 py-1 rounded-full text-xs font-medium ' + post.categoryColor;
+
+        document.getElementById('blogTags').innerHTML = post.tags.map(t =>
+          `<span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">${t}</span>`
+        ).join('');
+
+        // Related articles (show 2 random others)
+        const otherIds = Object.keys(blogPosts).filter(id => id !== blogId);
+        const shuffled = otherIds.sort(() => 0.5 - Math.random()).slice(0, 2);
+        
+        document.getElementById('relatedArticles').innerHTML = shuffled.map(id => {
+          const p = blogPosts[id];
+          return `
+            <a href="blog-detail.html?id=${id}" class="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-violet-500/30 transition-all block">
+              <div class="aspect-video rounded-xl overflow-hidden mb-4">
+                <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <span class="${p.categoryColor} px-2 py-0.5 rounded-full text-xs font-medium">${p.category}</span>
+              <h4 class="text-base font-semibold mt-2 group-hover:text-violet-400 transition-colors">${p.title}</h4>
+              <p class="text-gray-500 text-xs mt-1">${p.readTime}</p>
+            </a>`;
+        }).join('');
+      }
+
+      function shareArticle(platform) {
+        const url = window.location.href;
+        const title = document.getElementById('blogTitle').textContent;
+        if (platform === 'twitter') {
+          window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url));
+        } else if (platform === 'linkedin') {
+          window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url));
+        } else if (platform === 'copy') {
+          navigator.clipboard.writeText(url);
+        }
+      }
+
+      loadBlog();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>

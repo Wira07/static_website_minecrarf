@@ -113,26 +113,26 @@ const projects = [
     screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/scada.png"
   },
   {
-    title: "DigiWallet - E-Wallet App",
-    subtitle: "React Native & Node.js",
-    description: "Aplikasi dompet digital dengan fitur transfer, top-up, pembayaran, dan QR code. Cross-platform untuk iOS dan Android dengan backend Node.js dan integrasi payment gateway.",
-    tech: ["React Native", "Redux", "Node.js", "Express", "MongoDB"],
+    title: "EduApp - Platform Edukasi",
+    subtitle: "Jetpack Compose & Kotlin",
+    description: "Platform edukasi interaktif dengan materi pembelajaran lengkap, kuis interaktif, dan progress tracking. Dibangun dengan Jetpack Compose untuk UI modern dan arsitektur MVVM.",
+    tech: ["Kotlin", "Jetpack Compose", "Room DB", "Hilt", "MVVM"],
     difficulty: "Intermediate",
     status: "Published",
     color: "pink",
-    icon: "⚛️",
+    icon: "📚",
     features: [
-      "Transfer antar pengguna instant",
-      "Top-up saldo via bank/e-wallet",
-      "Pembayaran dengan scan QR Code",
-      "Riwayat transaksi lengkap",
-      "Biometric authentication",
-      "Voucher dan promo integration"
+      "Materi pembelajaran interaktif dengan multimedia",
+      "Kuis dan evaluasi dengan scoring system",
+      "Progress tracking dan sertifikat",
+      "Bookmark dan catatan per materi",
+      "Mode offline untuk belajar tanpa internet",
+      "UI modern dengan Jetpack Compose"
     ],
     github: "https://github.com/Wira07",
     demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/ewallet.png"
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg",
+    screenshot: ""
   },
   {
     title: "Portfolio Website",
@@ -391,13 +391,9 @@ function openModal(index) {
       </div>
       
       <div class="flex gap-4">
-        <a href="${project.github}" class="btn-secondary px-6 py-3 rounded-xl font-medium flex items-center gap-2 flex-1 justify-center">
-          <i class="fab fa-github"></i>
-          View Code
-        </a>
-        <a href="${project.demo}" class="btn-primary px-6 py-3 rounded-xl font-medium flex items-center gap-2 flex-1 justify-center">
-          <i class="fas fa-external-link-alt"></i>
-          Live Demo
+        <a href="galery.html" class="btn-primary px-6 py-3 rounded-xl font-medium flex items-center gap-2 flex-1 justify-center">
+          <i class="fas fa-images"></i>
+          Lihat di Galeri
         </a>
       </div>
     </div>
@@ -461,24 +457,24 @@ const servicesData = {
       { name: "Finance Tracker", desc: "Aplikasi pelacak keuangan" }
     ]
   },
-  react: {
-    title: "React Native",
-    icon: "fa-react",
+  compose: {
+    title: "Jetpack Compose",
+    icon: "fa-android",
     gradient: "from-amber-500 to-orange-500",
-    description: "React Native memungkinkan pengembangan aplikasi mobile cross-platform menggunakan JavaScript dan React. Ideal untuk tim yang sudah familiar dengan ekosistem React dan ingin berbagi kode dengan web.",
+    description: "Jetpack Compose adalah toolkit UI deklaratif modern dari Google untuk membangun antarmuka Android native. Dengan Compose, UI dibuat menggunakan fungsi Kotlin yang intuitif dan reaktif.",
     features: [
-      "Codebase tunggal untuk iOS dan Android",
-      "Komponen yang dapat digunakan kembali dari React",
-      "Akses ke modul native saat diperlukan",
-      "Ekosistem npm yang luas",
-      "Fast refresh untuk development cepat",
-      "Integrasi mudah dengan backend Node.js"
+      "UI deklaratif dengan Kotlin",
+      "Material Design 3 built-in",
+      "State management yang reaktif",
+      "Navigation Compose untuk routing",
+      "Integrasi dengan arsitektur MVVM",
+      "Preview langsung di Android Studio"
     ],
-    technologies: ["React Native", "JavaScript", "TypeScript", "Redux", "Node.js", "Socket.io"],
+    technologies: ["Kotlin", "Jetpack Compose", "Material Design 3", "Hilt", "Room DB", "Coroutines"],
     portfolio: [
-      { name: "Chat Application", desc: "Aplikasi messaging realtime" },
-      { name: "Food Delivery", desc: "Aplikasi pesan antar makanan" },
-      { name: "Travel App", desc: "Aplikasi booking perjalanan" }
+      { name: "EduApp", desc: "Aplikasi edukasi interaktif" },
+      { name: "Passion App", desc: "Aplikasi hobi dan passion" },
+      { name: "QuizMaster", desc: "Aplikasi kuis interaktif" }
     ]
   },
   uiux: {

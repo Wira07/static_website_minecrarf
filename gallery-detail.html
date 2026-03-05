@@ -133,32 +133,36 @@
         </div>
 
         <!-- Project Info -->
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <!-- Links -->
-          <div class="reveal-up">
-            <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
-              <i class="fas fa-link text-violet-400"></i>
-              Tautan Proyek
-            </h3>
-            <div class="flex gap-4">
-              <a id="detailGithub" href="#" target="_blank" class="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all">
-                <i class="fab fa-github text-lg"></i>
-                <span>GitHub</span>
-              </a>
-              <a id="detailDemo" href="#" target="_blank" class="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:opacity-90 transition-all">
-                <i class="fas fa-external-link-alt"></i>
-                <span>Live Demo</span>
-              </a>
-            </div>
-          </div>
-
+        <div class="mb-12">
           <!-- Tech Stack -->
-          <div class="reveal-up" style="animation-delay: 0.1s">
-            <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+          <div class="reveal-up">
+            <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
               <i class="fas fa-code text-cyan-400"></i>
-              Teknologi
+              Teknologi yang Digunakan
             </h3>
-            <div id="detailTech" class="flex flex-wrap gap-2">
+            
+            <!-- Language -->
+            <div class="mb-6">
+              <h4 class="text-sm font-medium text-gray-400 mb-3 uppercase tracking-wider">Bahasa Pemrograman</h4>
+              <div id="detailLang" class="flex flex-wrap gap-2"></div>
+            </div>
+            
+            <!-- Framework / Library -->
+            <div class="mb-6">
+              <h4 class="text-sm font-medium text-gray-400 mb-3 uppercase tracking-wider">Framework & Library</h4>
+              <div id="detailFramework" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <!-- Database & API -->
+            <div class="mb-6">
+              <h4 class="text-sm font-medium text-gray-400 mb-3 uppercase tracking-wider">Database & API</h4>
+              <div id="detailDatabase" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <!-- Tools & Architecture -->
+            <div class="mb-6">
+              <h4 class="text-sm font-medium text-gray-400 mb-3 uppercase tracking-wider">Tools & Arsitektur</h4>
+              <div id="detailTools" class="flex flex-wrap gap-2"></div>
             </div>
           </div>
         </div>
@@ -226,9 +230,10 @@
           images: ['edu.jpeg', 'edu2.jpeg'],
           category: 'Jetpack Compose',
           categoryColor: 'bg-violet-500/30 text-violet-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['Kotlin', 'Jetpack Compose', 'Room DB', 'Hilt', 'MVVM']
+          languages: ['Kotlin'],
+          frameworks: ['Jetpack Compose', 'Material Design 3', 'Navigation Compose'],
+          databases: ['Room DB', 'DataStore'],
+          tools: ['MVVM', 'Hilt (DI)', 'Coroutines', 'Android Studio', 'Gradle']
         },
         'cerita': {
           title: 'CeritaKu',
@@ -236,9 +241,10 @@
           images: ['cerita1.jpeg', 'cerita2.jpeg'],
           category: 'Android',
           categoryColor: 'bg-cyan-500/30 text-cyan-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['Kotlin', 'Android SDK', 'Room DB', 'MVVM', 'Coroutines']
+          languages: ['Kotlin', 'XML'],
+          frameworks: ['Android SDK', 'Material Design', 'RecyclerView', 'ViewBinding'],
+          databases: ['Room DB', 'SharedPreferences'],
+          tools: ['MVVM', 'Coroutines', 'LiveData', 'Android Studio', 'Gradle']
         },
         'passion': {
           title: 'Passion App',
@@ -246,9 +252,10 @@
           images: ['passion.jpeg', 'passion2.jpeg'],
           category: 'Jetpack Compose',
           categoryColor: 'bg-pink-500/30 text-pink-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Hilt', 'Navigation Compose']
+          languages: ['Kotlin'],
+          frameworks: ['Jetpack Compose', 'Material Design 3', 'Navigation Compose', 'Accompanist'],
+          databases: ['Firebase Firestore', 'Firebase Auth'],
+          tools: ['MVVM', 'Hilt (DI)', 'Coroutines', 'Flow', 'Android Studio']
         },
         'quiz': {
           title: 'QuizMaster',
@@ -256,9 +263,10 @@
           images: ['quiz.jpeg', 'quiz2.jpeg'],
           category: 'Android',
           categoryColor: 'bg-amber-500/30 text-amber-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['Kotlin', 'Android SDK', 'Firebase', 'MVVM', 'LiveData']
+          languages: ['Kotlin', 'XML'],
+          frameworks: ['Android SDK', 'Material Design', 'RecyclerView', 'ViewBinding'],
+          databases: ['Firebase Realtime DB', 'Firebase Auth', 'REST API'],
+          tools: ['MVVM', 'LiveData', 'Coroutines', 'Retrofit', 'Android Studio']
         },
         'qr': {
           title: 'QR Scanner Pro',
@@ -266,9 +274,10 @@
           images: ['qr.jpeg', 'qr2.jpeg'],
           category: 'Flutter',
           categoryColor: 'bg-green-500/30 text-green-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['Flutter', 'Dart', 'Camera API', 'Provider', 'SQLite']
+          languages: ['Dart'],
+          frameworks: ['Flutter', 'Material Design', 'Camera Plugin', 'QR Code Scanner'],
+          databases: ['SQLite', 'Hive'],
+          tools: ['BLoC Pattern', 'Provider', 'VS Code', 'Flutter DevTools', 'Pub.dev']
         },
         'uang': {
           title: 'UangKu',
@@ -276,9 +285,10 @@
           images: ['uang.jpeg', 'uang2.jpeg'],
           category: 'Flutter',
           categoryColor: 'bg-red-500/30 text-red-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['Flutter', 'Dart', 'SQLite', 'Charts', 'BLoC']
+          languages: ['Dart'],
+          frameworks: ['Flutter', 'Material Design', 'FL Chart', 'Intl'],
+          databases: ['SQLite', 'SharedPreferences'],
+          tools: ['BLoC Pattern', 'GetX', 'VS Code', 'Flutter DevTools', 'Git']
         },
         'techop': {
           title: 'Techop.id',
@@ -286,9 +296,10 @@
           images: ['techop.id.png'],
           category: 'Web',
           categoryColor: 'bg-emerald-500/30 text-emerald-300',
-          github: 'https://github.com/Wira07',
-          demo: 'https://techop.id',
-          tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'Responsive']
+          languages: ['HTML', 'CSS', 'JavaScript'],
+          frameworks: ['TailwindCSS', 'AOS (Animate)', 'Font Awesome'],
+          databases: ['localStorage'],
+          tools: ['Responsive Design', 'SEO Optimization', 'VS Code', 'Git', 'Vercel']
         },
         'payroll': {
           title: 'Payroll System',
@@ -296,9 +307,10 @@
           images: ['payroll.png'],
           category: 'Web',
           categoryColor: 'bg-indigo-500/30 text-indigo-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL']
+          languages: ['PHP', 'HTML', 'CSS', 'JavaScript'],
+          frameworks: ['Laravel', 'Bootstrap', 'jQuery', 'DataTables'],
+          databases: ['MySQL', 'REST API'],
+          tools: ['MVC Pattern', 'Composer', 'XAMPP', 'VS Code', 'Git']
         },
         'undangan': {
           title: 'Undangan Digital',
@@ -306,9 +318,10 @@
           images: ['undangan.png'],
           category: 'Web',
           categoryColor: 'bg-yellow-500/30 text-yellow-300',
-          github: 'https://github.com/Wira07',
-          demo: '#',
-          tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'AOS']
+          languages: ['HTML', 'CSS', 'JavaScript'],
+          frameworks: ['TailwindCSS', 'AOS (Animate)', 'SweetAlert2'],
+          databases: ['Google Sheets API', 'localStorage'],
+          tools: ['Responsive Design', 'PWA', 'VS Code', 'Git', 'Netlify']
         }
       };
 
@@ -328,7 +341,7 @@
         document.getElementById('detailTitle').textContent = project.title;
         document.getElementById('detailDescription').textContent = project.description;
         
-        // Render images - side by side for mobile (2 images), single for web (1 image)
+        // Render images
         const container = document.getElementById('detailImageContainer');
         if (project.images.length > 1) {
           container.innerHTML = `
@@ -345,14 +358,15 @@
         const categoryEl = document.getElementById('detailCategory');
         categoryEl.textContent = project.category;
         categoryEl.className = 'px-3 py-1 rounded-full text-xs font-medium ' + project.categoryColor;
-        
-        document.getElementById('detailGithub').href = project.github;
-        document.getElementById('detailDemo').href = project.demo;
-        
-        const techContainer = document.getElementById('detailTech');
-        techContainer.innerHTML = project.tech.map(t => 
+
+        const renderTags = (items) => items.map(t => 
           `<span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300">${t}</span>`
         ).join('');
+        
+        document.getElementById('detailLang').innerHTML = renderTags(project.languages);
+        document.getElementById('detailFramework').innerHTML = renderTags(project.frameworks);
+        document.getElementById('detailDatabase').innerHTML = renderTags(project.databases);
+        document.getElementById('detailTools').innerHTML = renderTags(project.tools);
       }
 
       loadProject();

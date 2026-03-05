@@ -136,7 +136,7 @@
           <span class="px-4 py-2 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-300 text-sm cursor-pointer hover:bg-violet-500/30 transition-all">Semua</span>
           <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm cursor-pointer hover:bg-white/10 transition-all">Flutter</span>
           <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm cursor-pointer hover:bg-white/10 transition-all">Android</span>
-          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm cursor-pointer hover:bg-white/10 transition-all">React Native</span>
+          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm cursor-pointer hover:bg-white/10 transition-all">Jetpack Compose</span>
           <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm cursor-pointer hover:bg-white/10 transition-all">Tips & Trik</span>
           <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm cursor-pointer hover:bg-white/10 transition-all">Karir</span>
         </div>
@@ -146,9 +146,9 @@
     <!-- Featured Article -->
     <section class="pb-16 px-6">
       <div class="container mx-auto max-w-7xl">
-        <div class="grid lg:grid-cols-2 gap-8 items-center p-8 rounded-3xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 border border-violet-500/20 reveal-up">
-          <div class="aspect-video rounded-2xl bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 flex items-center justify-center">
-            <div class="text-6xl">📱</div>
+        <a href="blog-detail.html?id=featured" class="grid lg:grid-cols-2 gap-8 items-center p-8 rounded-3xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 border border-violet-500/20 reveal-up group hover:border-violet-500/40 transition-all block">
+          <div class="aspect-video rounded-2xl bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=450&fit=crop" alt="Mobile Development Career" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
           <div>
             <div class="flex items-center gap-3 mb-4">
@@ -171,12 +171,12 @@
                   <p class="text-xs text-gray-500">8 menit baca</p>
                 </div>
               </div>
-              <a href="#" class="text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-2">
+              <span class="text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-2">
                 Baca Selengkapnya <i class="fas fa-arrow-right"></i>
-              </a>
+              </span>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -186,15 +186,15 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           <!-- Blog Card 1 -->
-          <article class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-violet-500/30 transition-all reveal-up">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-cyan-600/30 to-blue-600/30 flex items-center justify-center mb-6">
-              <i class="fab fa-flutter text-4xl text-cyan-400"></i>
+          <a href="blog-detail.html?id=1" class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-cyan-500/30 transition-all reveal-up block">
+            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?w=600&h=340&fit=crop" alt="State Management Flutter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex items-center gap-3 mb-3">
               <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-medium">Flutter</span>
               <span class="text-gray-500 text-xs">5 Jan 2024</span>
             </div>
-            <h3 class="text-lg font-semibold mb-3 group-hover:text-cyan-400 transition-colors cursor-pointer">
+            <h3 class="text-lg font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
               State Management di Flutter: Provider vs Riverpod
             </h3>
             <p class="text-gray-400 text-sm mb-4">
@@ -202,20 +202,20 @@
             </p>
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-500">5 menit baca</span>
-              <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors">Baca →</a>
+              <span class="text-cyan-400 hover:text-cyan-300 transition-colors">Baca →</span>
             </div>
-          </article>
+          </a>
 
           <!-- Blog Card 2 -->
-          <article class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-green-500/30 transition-all reveal-up">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-green-600/30 to-emerald-600/30 flex items-center justify-center mb-6">
-              <i class="fab fa-android text-4xl text-green-400"></i>
+          <a href="blog-detail.html?id=2" class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-green-500/30 transition-all reveal-up block">
+            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=600&h=340&fit=crop" alt="Jetpack Compose UI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex items-center gap-3 mb-3">
-              <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Android</span>
+              <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Jetpack Compose</span>
               <span class="text-gray-500 text-xs">3 Jan 2024</span>
             </div>
-            <h3 class="text-lg font-semibold mb-3 group-hover:text-green-400 transition-colors cursor-pointer">
+            <h3 class="text-lg font-semibold mb-3 group-hover:text-green-400 transition-colors">
               Jetpack Compose: Membangun UI Modern di Android
             </h3>
             <p class="text-gray-400 text-sm mb-4">
@@ -223,41 +223,41 @@
             </p>
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-500">7 menit baca</span>
-              <a href="#" class="text-green-400 hover:text-green-300 transition-colors">Baca →</a>
+              <span class="text-green-400 hover:text-green-300 transition-colors">Baca →</span>
             </div>
-          </article>
+          </a>
 
           <!-- Blog Card 3 -->
-          <article class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-pink-500/30 transition-all reveal-up">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-pink-600/30 to-rose-600/30 flex items-center justify-center mb-6">
-              <i class="fab fa-react text-4xl text-pink-400"></i>
+          <a href="blog-detail.html?id=3" class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-pink-500/30 transition-all reveal-up block">
+            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=340&fit=crop" alt="Kotlin Coroutines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex items-center gap-3 mb-3">
-              <span class="px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-medium">React Native</span>
+              <span class="px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-medium">Android</span>
               <span class="text-gray-500 text-xs">1 Jan 2024</span>
             </div>
-            <h3 class="text-lg font-semibold mb-3 group-hover:text-pink-400 transition-colors cursor-pointer">
-              Optimasi Performa Aplikasi React Native
+            <h3 class="text-lg font-semibold mb-3 group-hover:text-pink-400 transition-colors">
+              Kotlin Coroutines untuk Pemula: Panduan Lengkap
             </h3>
             <p class="text-gray-400 text-sm mb-4">
-              Tips dan trik untuk meningkatkan performa aplikasi React Native Anda agar lebih cepat dan responsif.
+              Pelajari dasar-dasar Kotlin Coroutines untuk mengelola operasi asinkron di aplikasi Android Anda.
             </p>
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-500">6 menit baca</span>
-              <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors">Baca →</a>
+              <span class="text-pink-400 hover:text-pink-300 transition-colors">Baca →</span>
             </div>
-          </article>
+          </a>
 
           <!-- Blog Card 4 -->
-          <article class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-amber-500/30 transition-all reveal-up">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-amber-600/30 to-orange-600/30 flex items-center justify-center mb-6">
-              <i class="fas fa-lightbulb text-4xl text-amber-400"></i>
+          <a href="blog-detail.html?id=4" class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-amber-500/30 transition-all reveal-up block">
+            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=340&fit=crop" alt="Developer Tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex items-center gap-3 mb-3">
               <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-medium">Tips & Trik</span>
               <span class="text-gray-500 text-xs">28 Des 2023</span>
             </div>
-            <h3 class="text-lg font-semibold mb-3 group-hover:text-amber-400 transition-colors cursor-pointer">
+            <h3 class="text-lg font-semibold mb-3 group-hover:text-amber-400 transition-colors">
               5 Tools yang Wajib Dimiliki Mobile Developer
             </h3>
             <p class="text-gray-400 text-sm mb-4">
@@ -265,20 +265,20 @@
             </p>
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-500">4 menit baca</span>
-              <a href="#" class="text-amber-400 hover:text-amber-300 transition-colors">Baca →</a>
+              <span class="text-amber-400 hover:text-amber-300 transition-colors">Baca →</span>
             </div>
-          </article>
+          </a>
 
           <!-- Blog Card 5 -->
-          <article class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-indigo-500/30 transition-all reveal-up">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-indigo-600/30 to-purple-600/30 flex items-center justify-center mb-6">
-              <i class="fas fa-database text-4xl text-indigo-400"></i>
+          <a href="blog-detail.html?id=5" class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-indigo-500/30 transition-all reveal-up block">
+            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&h=340&fit=crop" alt="Firebase Flutter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex items-center gap-3 mb-3">
               <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-medium">Flutter</span>
               <span class="text-gray-500 text-xs">25 Des 2023</span>
             </div>
-            <h3 class="text-lg font-semibold mb-3 group-hover:text-indigo-400 transition-colors cursor-pointer">
+            <h3 class="text-lg font-semibold mb-3 group-hover:text-indigo-400 transition-colors">
               Integrasi Firebase dengan Flutter: Panduan Lengkap
             </h3>
             <p class="text-gray-400 text-sm mb-4">
@@ -286,20 +286,20 @@
             </p>
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-500">10 menit baca</span>
-              <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors">Baca →</a>
+              <span class="text-indigo-400 hover:text-indigo-300 transition-colors">Baca →</span>
             </div>
-          </article>
+          </a>
 
           <!-- Blog Card 6 -->
-          <article class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-teal-500/30 transition-all reveal-up">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-teal-600/30 to-cyan-600/30 flex items-center justify-center mb-6">
-              <i class="fas fa-briefcase text-4xl text-teal-400"></i>
+          <a href="blog-detail.html?id=6" class="blog-card group p-6 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-teal-500/30 transition-all reveal-up block">
+            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=340&fit=crop" alt="Portfolio Developer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex items-center gap-3 mb-3">
               <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-medium">Karir</span>
               <span class="text-gray-500 text-xs">20 Des 2023</span>
             </div>
-            <h3 class="text-lg font-semibold mb-3 group-hover:text-teal-400 transition-colors cursor-pointer">
+            <h3 class="text-lg font-semibold mb-3 group-hover:text-teal-400 transition-colors">
               Cara Membangun Portfolio yang Menarik untuk Developer
             </h3>
             <p class="text-gray-400 text-sm mb-4">
@@ -307,9 +307,9 @@
             </p>
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-500">6 menit baca</span>
-              <a href="#" class="text-teal-400 hover:text-teal-300 transition-colors">Baca →</a>
+              <span class="text-teal-400 hover:text-teal-300 transition-colors">Baca →</span>
             </div>
-          </article>
+          </a>
 
         </div>
 
