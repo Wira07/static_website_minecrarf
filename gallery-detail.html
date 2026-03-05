@@ -125,10 +125,10 @@
           <p id="detailDescription" class="text-gray-400 text-lg max-w-3xl"></p>
         </div>
 
-        <!-- Full Width Image -->
+        <!-- Full Width Image(s) -->
         <div class="mb-12 reveal-up">
-          <div class="rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-transparent">
-            <img id="detailImage" src="" alt="" class="w-full h-auto object-contain" style="max-height: 80vh;" />
+          <div id="detailImageContainer" class="rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-transparent">
+            <!-- Images will be injected by JS -->
           </div>
         </div>
 
@@ -220,95 +220,95 @@
 
       // Gallery projects data
       const galleryProjects = {
-        'jobnation': {
-          title: 'JobNation - Job Portal',
-          description: 'Platform pencarian kerja dengan fitur lengkap untuk kandidat dan perusahaan. Dilengkapi pencarian lowongan, upload CV, dan notifikasi realtime.',
-          image: 'https://cdn.dribbble.com/userupload/6464963/file/original-adaee279987ce821c0e6d0b8b39807ea.png?resize=1024x768&vertical=center',
-          category: 'Flutter',
+        'edu': {
+          title: 'EduApp',
+          description: 'Platform edukasi interaktif dengan materi pembelajaran lengkap. Dilengkapi fitur kuis, progress tracking, dan sertifikat.',
+          images: ['edu.jpeg', 'edu2.jpeg'],
+          category: 'Jetpack Compose',
           categoryColor: 'bg-violet-500/30 text-violet-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['Flutter', 'Dart', 'Firebase', 'REST API', 'BLoC']
+          tech: ['Kotlin', 'Jetpack Compose', 'Room DB', 'Hilt', 'MVVM']
         },
-        'scada': {
-          title: 'SCADA Monitoring System',
-          description: 'Sistem monitoring industri dengan data sensor realtime dan alarm. Dikembangkan untuk kebutuhan monitoring SCADA profesional.',
-          image: 'https://cdn.dribbble.com/userupload/11528072/file/original-dfc7a02d84ed7f54a63b25dd56e7fedf.png?resize=1024x766&vertical=center',
-          category: 'Kotlin',
+        'cerita': {
+          title: 'CeritaKu',
+          description: 'Aplikasi baca cerita digital dengan koleksi cerita menarik. Mendukung bookmark, mode baca malam, dan berbagai genre cerita.',
+          images: ['cerita1.jpeg', 'cerita2.jpeg'],
+          category: 'Android',
           categoryColor: 'bg-cyan-500/30 text-cyan-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['Kotlin', 'Android SDK', 'MVVM', 'MQTT', 'Room DB']
+          tech: ['Kotlin', 'Android SDK', 'Room DB', 'MVVM', 'Coroutines']
         },
-        'digiwallet': {
-          title: 'DigiWallet - E-Wallet',
-          description: 'Aplikasi dompet digital dengan transfer, top-up, dan QR payment. Cross-platform untuk iOS dan Android.',
-          image: 'https://cdn.dribbble.com/userupload/12815914/file/original-ec261475301a5d68ff6107511ca274fb.jpg?resize=1024x576&vertical=center',
-          category: 'React Native',
+        'passion': {
+          title: 'Passion App',
+          description: 'Aplikasi lifestyle untuk mengeksplorasi dan mengembangkan passion. Temukan minat baru dan terhubung dengan komunitas.',
+          images: ['passion.jpeg', 'passion2.jpeg'],
+          category: 'Jetpack Compose',
           categoryColor: 'bg-pink-500/30 text-pink-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['React Native', 'Redux', 'Node.js', 'MongoDB']
+          tech: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Hilt', 'Navigation Compose']
         },
-        'finance': {
-          title: 'Finance Tracker App',
-          description: 'Catat pengeluaran dan pemasukan dengan grafik visualisasi interaktif. Membantu mengelola keuangan pribadi dengan mudah.',
-          image: 'techoppp.png',
-          category: 'Flutter',
+        'quiz': {
+          title: 'QuizMaster',
+          description: 'Aplikasi kuis interaktif dengan berbagai kategori dan level kesulitan. Fitur leaderboard dan multiplayer mode.',
+          images: ['quiz.jpeg', 'quiz2.jpeg'],
+          category: 'Android',
           categoryColor: 'bg-amber-500/30 text-amber-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['Flutter', 'Dart', 'SQLite', 'Charts']
+          tech: ['Kotlin', 'Android SDK', 'Firebase', 'MVVM', 'LiveData']
         },
-        'health': {
-          title: 'Health & Fitness App',
-          description: 'Tracking kesehatan harian dengan reminder olahraga dan nutrisi. Membantu pengguna menjalani gaya hidup sehat.',
-          image: 'undangan.png',
-          category: 'Android',
+        'qr': {
+          title: 'QR Scanner Pro',
+          description: 'Aplikasi pemindai QR code dengan fitur generate dan riwayat scan. Mendukung berbagai format barcode dan QR code.',
+          images: ['qr.jpeg', 'qr2.jpeg'],
+          category: 'Flutter',
           categoryColor: 'bg-green-500/30 text-green-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['Kotlin', 'Android SDK', 'Room DB', 'WorkManager']
+          tech: ['Flutter', 'Dart', 'Camera API', 'Provider', 'SQLite']
         },
-        'portfolio': {
-          title: 'Portfolio Website',
-          description: 'Website portfolio modern dengan animasi interaktif dan responsif. Dibangun dengan teknologi web terkini.',
-          image: 'bhh.jpeg',
-          category: 'Web',
-          categoryColor: 'bg-indigo-500/30 text-indigo-300',
-          github: 'https://github.com/Wira07',
-          demo: 'https://wira07.github.io',
-          tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS']
-        },
-        'recipe': {
-          title: 'Recipe & Cooking App',
-          description: 'Kumpulan resep dengan fitur pencarian, favorit, dan shopping list. Mempermudah memasak dengan panduan langkah demi langkah.',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+        'uang': {
+          title: 'UangKu',
+          description: 'Manajemen keuangan pribadi dengan pencatatan pemasukan dan pengeluaran. Grafik visualisasi dan laporan bulanan.',
+          images: ['uang.jpeg', 'uang2.jpeg'],
           category: 'Flutter',
           categoryColor: 'bg-red-500/30 text-red-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['Flutter', 'Dart', 'Firebase', 'Provider']
+          tech: ['Flutter', 'Dart', 'SQLite', 'Charts', 'BLoC']
         },
-        'weather': {
-          title: 'Weather Forecast App',
-          description: 'Informasi cuaca realtime dengan prakiraan 7 hari ke depan. Dilengkapi notifikasi cuaca ekstrem.',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-          category: 'React Native',
-          categoryColor: 'bg-teal-500/30 text-teal-300',
+        'techop': {
+          title: 'Techop.id',
+          description: 'Company profile website untuk layanan teknologi profesional. Desain modern dengan fitur CMS dan SEO optimized.',
+          images: ['techop.id.png'],
+          category: 'Web',
+          categoryColor: 'bg-emerald-500/30 text-emerald-300',
+          github: 'https://github.com/Wira07',
+          demo: 'https://techop.id',
+          tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'Responsive']
+        },
+        'payroll': {
+          title: 'Payroll System',
+          description: 'Sistem manajemen penggajian karyawan dengan fitur lengkap. Hitung gaji otomatis, slip gaji, dan laporan.',
+          images: ['payroll.png'],
+          category: 'Web',
+          categoryColor: 'bg-indigo-500/30 text-indigo-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['React Native', 'TypeScript', 'Weather API', 'Redux']
+          tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL']
         },
-        'notes': {
-          title: 'Smart Notes App',
-          description: 'Catatan dengan fitur kategori, tag, dan pencarian cepat. Mendukung markdown dan sinkronisasi cloud.',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg',
-          category: 'Android',
+        'undangan': {
+          title: 'Undangan Digital',
+          description: 'Website undangan digital dengan desain modern dan interaktif. Fitur RSVP, galeri foto, dan countdown timer.',
+          images: ['undangan.png'],
+          category: 'Web',
           categoryColor: 'bg-yellow-500/30 text-yellow-300',
           github: 'https://github.com/Wira07',
           demo: '#',
-          tech: ['Kotlin', 'Room DB', 'MVVM', 'Coroutines']
+          tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'AOS']
         }
       };
 
@@ -318,7 +318,6 @@
         const projectId = params.get('project');
         
         if (!projectId || !galleryProjects[projectId]) {
-          // Redirect to gallery if project not found
           window.location.href = 'galery.html';
           return;
         }
@@ -328,8 +327,20 @@
         document.title = project.title + ' - Wira Sukma Saputra | Fullstack Developer';
         document.getElementById('detailTitle').textContent = project.title;
         document.getElementById('detailDescription').textContent = project.description;
-        document.getElementById('detailImage').src = project.image;
-        document.getElementById('detailImage').alt = project.title;
+        
+        // Render images - side by side for mobile (2 images), single for web (1 image)
+        const container = document.getElementById('detailImageContainer');
+        if (project.images.length > 1) {
+          container.innerHTML = `
+            <div class="flex items-center justify-center gap-4 p-6 bg-gradient-to-br from-white/5 to-transparent" style="min-height: 50vh;">
+              ${project.images.map((img, i) => 
+                `<img src="${img}" alt="${project.title} Screenshot ${i + 1}" class="h-auto max-h-[70vh] w-auto rounded-xl object-contain shadow-2xl">`
+              ).join('')}
+            </div>`;
+        } else {
+          container.innerHTML = `
+            <img src="${project.images[0]}" alt="${project.title}" class="w-full h-auto object-contain" style="max-height: 80vh;">`;
+        }
         
         const categoryEl = document.getElementById('detailCategory');
         categoryEl.textContent = project.category;

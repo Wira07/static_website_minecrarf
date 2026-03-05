@@ -127,7 +127,7 @@
           <button class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-medium transition-all" data-filter="all">Semua</button>
           <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all" data-filter="flutter">Flutter</button>
           <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all" data-filter="android">Android</button>
-          <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all" data-filter="react">React Native</button>
+          <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all" data-filter="compose">Jetpack Compose</button>
           <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all" data-filter="web">Web</button>
         </div>
       </div>
@@ -138,154 +138,171 @@
       <div class="container mx-auto max-w-7xl">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
           
-          <!-- Project 1 - JobNation -->
-          <a href="gallery-detail.html?project=jobnation" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30">
-              <img src="https://cdn.dribbble.com/userupload/6464963/file/original-adaee279987ce821c0e6d0b8b39807ea.png?resize=1024x768&vertical=center" alt="JobNation - Job Portal Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-6 h-6" alt="Flutter">
-                <span class="px-3 py-1 rounded-full bg-violet-500/30 text-violet-300 text-xs font-medium">Flutter</span>
+          <!-- Project 1 - EduApp (Jetpack Compose) -->
+          <a href="gallery-detail.html?project=edu" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="compose">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="edu.jpeg" alt="EduApp Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="edu2.jpeg" alt="EduApp Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
               </div>
-              <h3 class="text-xl font-bold mb-2">JobNation - Job Portal</h3>
-              <p class="text-gray-300 text-sm mb-3">Platform pencarian kerja dengan fitur lengkap untuk kandidat dan perusahaan</p>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-violet-500/30 text-violet-300 text-xs font-medium">Jetpack Compose</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">EduApp</h3>
+              <p class="text-gray-300 text-sm mb-3">Platform edukasi interaktif dengan materi pembelajaran lengkap</p>
               <span class="inline-flex items-center gap-2 text-violet-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 2 - SCADA System -->
-          <a href="gallery-detail.html?project=scada" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-cyan-600/30 to-blue-600/30">
-              <img src="https://cdn.dribbble.com/userupload/11528072/file/original-dfc7a02d84ed7f54a63b25dd56e7fedf.png?resize=1024x766&vertical=center" alt="SCADA Monitoring System Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-6 h-6" alt="Kotlin">
-                <span class="px-3 py-1 rounded-full bg-cyan-500/30 text-cyan-300 text-xs font-medium">Kotlin</span>
+          <!-- Project 2 - CeritaKu (Android) -->
+          <a href="gallery-detail.html?project=cerita" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-cyan-600/20 to-blue-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="cerita1.jpeg" alt="CeritaKu Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="cerita2.jpeg" alt="CeritaKu Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
               </div>
-              <h3 class="text-xl font-bold mb-2">SCADA Monitoring System</h3>
-              <p class="text-gray-300 text-sm mb-3">Sistem monitoring industri dengan data sensor realtime dan alarm</p>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-cyan-500/30 text-cyan-300 text-xs font-medium">Android</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">CeritaKu</h3>
+              <p class="text-gray-300 text-sm mb-3">Aplikasi baca cerita digital dengan koleksi cerita menarik</p>
               <span class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 3 - DigiWallet -->
-          <a href="gallery-detail.html?project=digiwallet" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="react">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-pink-600/30 to-rose-600/30">
-              <img src="https://cdn.dribbble.com/userupload/12815914/file/original-ec261475301a5d68ff6107511ca274fb.jpg?resize=1024x576&vertical=center" alt="DigiWallet E-Wallet Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" alt="React Native">
-                <span class="px-3 py-1 rounded-full bg-pink-500/30 text-pink-300 text-xs font-medium">React Native</span>
+          <!-- Project 3 - Passion App (Jetpack Compose) -->
+          <a href="gallery-detail.html?project=passion" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="compose">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-pink-600/20 to-rose-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="passion.jpeg" alt="Passion App Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="passion2.jpeg" alt="Passion App Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
               </div>
-              <h3 class="text-xl font-bold mb-2">DigiWallet - E-Wallet</h3>
-              <p class="text-gray-300 text-sm mb-3">Aplikasi dompet digital dengan transfer, top-up, dan QR payment</p>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-pink-500/30 text-pink-300 text-xs font-medium">Jetpack Compose</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Passion App</h3>
+              <p class="text-gray-300 text-sm mb-3">Aplikasi lifestyle untuk mengeksplorasi dan mengembangkan passion</p>
               <span class="inline-flex items-center gap-2 text-pink-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 4 - Finance Tracker -->
-          <a href="gallery-detail.html?project=finance" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-amber-600/70 to-orange-600/70">
-              <img src="techoppp.png" alt="Finance Tracker App Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Project 4 - QuizMaster (Android) -->
+          <a href="gallery-detail.html?project=quiz" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-amber-600/20 to-orange-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="quiz.jpeg" alt="QuizMaster Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="quiz2.jpeg" alt="QuizMaster Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+              </div>
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-              <h3 class="text-xl font-bold mb-2">Finance Tracker App</h3>
-              <p class="text-gray-300 text-sm mb-3">Catat pengeluaran dan pemasukan dengan grafik visualisasi interaktif</p>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-amber-500/30 text-amber-300 text-xs font-medium">Android</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">QuizMaster</h3>
+              <p class="text-gray-300 text-sm mb-3">Aplikasi kuis interaktif dengan berbagai kategori dan level</p>
               <span class="inline-flex items-center gap-2 text-amber-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 5 - Health Tracker -->
-          <a href="gallery-detail.html?project=health" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-green-600/30 to-emerald-600/30">
-              <img src="undangan.png" alt="Health & Fitness App Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Project 5 - QR Scanner Pro (Flutter) -->
+          <a href="gallery-detail.html?project=qr" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-green-600/20 to-emerald-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="qr.jpeg" alt="QR Scanner Pro Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="qr2.jpeg" alt="QR Scanner Pro Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+              </div>
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-              <h3 class="text-xl font-bold mb-2">Health & Fitness App</h3>
-              <p class="text-gray-300 text-sm mb-3">Tracking kesehatan harian dengan reminder olahraga dan nutrisi</p>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-green-500/30 text-green-300 text-xs font-medium">Flutter</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">QR Scanner Pro</h3>
+              <p class="text-gray-300 text-sm mb-3">Aplikasi pemindai QR code dengan fitur generate dan riwayat scan</p>
               <span class="inline-flex items-center gap-2 text-green-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 6 - Portfolio Website -->
-          <a href="gallery-detail.html?project=portfolio" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="web">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-indigo-600/30 to-purple-600/30">
-              <img src="bhh.jpeg" alt="Portfolio Website Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript">
-                <span class="px-3 py-1 rounded-full bg-indigo-500/30 text-indigo-300 text-xs font-medium">Web</span>
+          <!-- Project 6 - UangKu (Flutter) -->
+          <a href="gallery-detail.html?project=uang" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-red-600/20 to-rose-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="uang.jpeg" alt="UangKu Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="uang2.jpeg" alt="UangKu Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
               </div>
-              <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-              <p class="text-gray-300 text-sm mb-3">Website portfolio modern dengan animasi interaktif dan responsif</p>
-              <span class="inline-flex items-center gap-2 text-indigo-400 text-sm font-medium group-hover:gap-3 transition-all">
-                Lihat Detail <i class="fas fa-arrow-right"></i>
-              </span>
             </div>
-          </a>
-
-          <!-- Project 7 - Recipe App -->
-          <a href="gallery-detail.html?project=recipe" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="flutter">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-red-600/30 to-rose-600/30">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Recipe & Cooking App Project" class="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-6 h-6" alt="Flutter">
                 <span class="px-3 py-1 rounded-full bg-red-500/30 text-red-300 text-xs font-medium">Flutter</span>
               </div>
-              <h3 class="text-xl font-bold mb-2">Recipe & Cooking App</h3>
-              <p class="text-gray-300 text-sm mb-3">Kumpulan resep dengan fitur pencarian, favorit, dan shopping list</p>
+              <h3 class="text-xl font-bold mb-2">UangKu</h3>
+              <p class="text-gray-300 text-sm mb-3">Manajemen keuangan pribadi dengan pencatatan pemasukan dan pengeluaran</p>
               <span class="inline-flex items-center gap-2 text-red-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 8 - Weather App -->
-          <a href="gallery-detail.html?project=weather" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="react">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-teal-600/30 to-cyan-600/30">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Weather Forecast App Project" class="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-500">
+          <!-- Project 7 - Techop.id (Web) -->
+          <a href="gallery-detail.html?project=techop" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="web">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-emerald-600/20 to-teal-600/20">
+              <img src="techop.id.png" alt="Techop.id Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" alt="React Native">
-                <span class="px-3 py-1 rounded-full bg-teal-500/30 text-teal-300 text-xs font-medium">React Native</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-500/30 text-emerald-300 text-xs font-medium">Web</span>
               </div>
-              <h3 class="text-xl font-bold mb-2">Weather Forecast App</h3>
-              <p class="text-gray-300 text-sm mb-3">Informasi cuaca realtime dengan prakiraan 7 hari ke depan</p>
-              <span class="inline-flex items-center gap-2 text-teal-400 text-sm font-medium group-hover:gap-3 transition-all">
+              <h3 class="text-xl font-bold mb-2">Techop.id</h3>
+              <p class="text-gray-300 text-sm mb-3">Company profile website untuk layanan teknologi profesional</p>
+              <span class="inline-flex items-center gap-2 text-emerald-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
             </div>
           </a>
 
-          <!-- Project 9 - Notes App -->
-          <a href="gallery-detail.html?project=notes" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="android">
-            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-yellow-600/30 to-amber-600/30">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Smart Notes App Project" class="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-500">
+          <!-- Project 8 - Payroll System (Web) -->
+          <a href="gallery-detail.html?project=payroll" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="web">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-indigo-600/20 to-purple-600/20">
+              <img src="payroll.png" alt="Payroll System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
               <div class="flex items-center gap-2 mb-3">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-6 h-6" alt="Kotlin">
-                <span class="px-3 py-1 rounded-full bg-yellow-500/30 text-yellow-300 text-xs font-medium">Android</span>
+                <span class="px-3 py-1 rounded-full bg-indigo-500/30 text-indigo-300 text-xs font-medium">Web</span>
               </div>
-              <h3 class="text-xl font-bold mb-2">Smart Notes App</h3>
-              <p class="text-gray-300 text-sm mb-3">Catatan dengan fitur kategori, tag, dan pencarian cepat</p>
+              <h3 class="text-xl font-bold mb-2">Payroll System</h3>
+              <p class="text-gray-300 text-sm mb-3">Sistem manajemen penggajian karyawan dengan fitur lengkap</p>
+              <span class="inline-flex items-center gap-2 text-indigo-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Lihat Detail <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Project 9 - Undangan Digital (Web) -->
+          <a href="gallery-detail.html?project=undangan" class="gallery-item group relative rounded-3xl overflow-hidden reveal-up block" data-category="web">
+            <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-yellow-600/20 to-amber-600/20">
+              <img src="undangan.png" alt="Undangan Digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-yellow-500/30 text-yellow-300 text-xs font-medium">Web</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Undangan Digital</h3>
+              <p class="text-gray-300 text-sm mb-3">Website undangan digital dengan desain modern dan interaktif</p>
               <span class="inline-flex items-center gap-2 text-yellow-400 text-sm font-medium group-hover:gap-3 transition-all">
                 Lihat Detail <i class="fas fa-arrow-right"></i>
               </span>
