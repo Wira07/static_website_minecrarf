@@ -446,105 +446,29 @@
           <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition-all" data-filter="flutter">Flutter</button>
           <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition-all" data-filter="android">Android</button>
           <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition-all" data-filter="compose">Jetpack Compose</button>
+          <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition-all" data-filter="web">Web</button>
         </div>
 
         <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 gap-8" id="projectsGrid">
-          <!-- Project 1 - JobNation -->
-          <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="flutter" onclick="openModal(0)">
-            <div class="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20"></div>
-            <div class="relative p-8">
-              <div class="flex items-start justify-between mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#02569B] flex items-center justify-center">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-10 h-10" />
-                </div>
-                <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-medium">Advanced</span>
-                  <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Published</span>
-                </div>
-              </div>
-
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-violet-400 transition-colors">JobNation - Job Portal</h3>
-              <p class="text-gray-400 mb-6">Platform job portal mobile yang menghubungkan pencari kerja dengan perusahaan. Dilengkapi fitur pencarian, upload CV, dan notifikasi realtime.</p>
-
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-4 h-4" alt="" />Flutter
-                </span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-4 h-4" alt="" />Firebase
-                </span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" class="w-4 h-4" alt="" />Dart
-                </span>
-              </div>
-
-              <div class="flex items-center">
-                <span class="text-violet-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
+          <!-- Project 1 - EduApp (Jetpack Compose) -->
+          <a href="gallery-detail.html?project=edu" class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up block" data-category="compose">
+            <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="edu.jpeg" alt="EduApp Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="edu2.jpeg" alt="EduApp Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
               </div>
             </div>
-
-            <!-- Hover Glow Effect -->
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div class="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10"></div>
-            </div>
-          </div>
-
-          <!-- Project 2 - SCADA System -->
-          <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="android" onclick="openModal(1)" style="animation-delay: 0.1s">
-            <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20"></div>
-            <div class="relative p-8">
-              <div class="flex items-start justify-between mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#7F52FF] flex items-center justify-center">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="w-10 h-10" />
-                </div>
-                <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-medium">Advanced</span>
-                  <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Published</span>
-                </div>
-              </div>
-
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">SCADA Monitoring System</h3>
-              <p class="text-gray-400 mb-6">Aplikasi monitoring sistem SCADA untuk industri. Menampilkan data sensor realtime, grafik monitoring, dan alarm system.</p>
-
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-4 h-4" alt="" />Kotlin
-                </span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-4 h-4" alt="" />Android
-                </span>
-                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">MQTT</span>
-              </div>
-
-              <div class="flex items-center">
-                <span class="text-cyan-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
-              </div>
-            </div>
-
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10"></div>
-            </div>
-          </div>
-
-          <!-- Project 3 - EduApp (Jetpack Compose) -->
-          <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="compose" onclick="openModal(2)" style="animation-delay: 0.2s">
-            <div class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-rose-600/20"></div>
-            <div class="relative p-8">
-              <div class="flex items-start justify-between mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#4285F4] flex items-center justify-center">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg" alt="Jetpack Compose" class="w-10 h-10" />
-                </div>
+            <div class="relative p-6">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-2xl font-bold group-hover:text-violet-400 transition-colors">EduApp</h3>
                 <div class="flex gap-2">
                   <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-medium">Intermediate</span>
                   <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Published</span>
                 </div>
               </div>
-
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-pink-400 transition-colors">EduApp - Platform Edukasi</h3>
-              <p class="text-gray-400 mb-6">Platform edukasi interaktif dengan materi pembelajaran, kuis, dan progress tracking. Dibangun dengan Jetpack Compose.</p>
-
-              <div class="flex flex-wrap gap-2 mb-6">
+              <p class="text-gray-400 mb-4">Platform edukasi interaktif dengan materi pembelajaran, kuis, dan progress tracking. Dibangun dengan Jetpack Compose.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-4 h-4" alt="" />Kotlin
                 </span>
@@ -552,36 +476,89 @@
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg" class="w-4 h-4" alt="" />Compose
                 </span>
                 <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Room DB</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">MVVM</span>
               </div>
+              <span class="text-violet-400 flex items-center gap-2 group-hover:gap-3 transition-all">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
 
-              <div class="flex items-center">
-                <span class="text-pink-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
+          <!-- Project 2 - CeritaKu (Android) -->
+          <a href="gallery-detail.html?project=cerita" class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up block" data-category="android" style="animation-delay: 0.1s">
+            <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-cyan-600/20 to-blue-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="cerita1.jpeg" alt="CeritaKu Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="cerita2.jpeg" alt="CeritaKu Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
               </div>
             </div>
-
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-rose-500/10"></div>
-            </div>
-          </div>
-
-          <!-- Project 4 - Portfolio Website -->
-          <div class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up" data-category="web" onclick="openModal(3)" style="animation-delay: 0.3s">
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-orange-600/20"></div>
-            <div class="relative p-8">
-              <div class="flex items-start justify-between mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#F7DF1E] flex items-center justify-center">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10" />
-                </div>
+            <div class="relative p-6">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-2xl font-bold group-hover:text-cyan-400 transition-colors">CeritaKu</h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Beginner</span>
+                  <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-medium">Intermediate</span>
+                  <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Published</span>
+                </div>
+              </div>
+              <p class="text-gray-400 mb-4">Aplikasi baca cerita digital dengan koleksi cerita menarik dan fitur bookmark.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-4 h-4" alt="" />Kotlin
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-4 h-4" alt="" />Android
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Retrofit</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Room DB</span>
+              </div>
+              <span class="text-cyan-400 flex items-center gap-2 group-hover:gap-3 transition-all">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Project 3 - QR Scanner Pro (Flutter) -->
+          <a href="gallery-detail.html?project=qr" class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up block" data-category="flutter" style="animation-delay: 0.2s">
+            <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-green-600/20 to-emerald-600/20">
+              <div class="w-full h-full flex items-center justify-center gap-3 p-4">
+                <img src="qr.jpeg" alt="QR Scanner Screenshot 1" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <img src="qr2.jpeg" alt="QR Scanner Screenshot 2" class="h-full w-auto rounded-xl object-contain shadow-2xl group-hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+            <div class="relative p-6">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-2xl font-bold group-hover:text-green-400 transition-colors">QR Scanner Pro</h3>
+                <div class="flex gap-2">
+                  <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-medium">Intermediate</span>
+                  <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-medium">Published</span>
+                </div>
+              </div>
+              <p class="text-gray-400 mb-4">Aplikasi pemindai QR code dengan fitur generate dan riwayat scan lengkap.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-4 h-4" alt="" />Flutter
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" class="w-4 h-4" alt="" />Dart
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">Camera API</span>
+                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">BLoC</span>
+              </div>
+              <span class="text-green-400 flex items-center gap-2 group-hover:gap-3 transition-all">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Project 4 - Techop.id (Web) -->
+          <a href="gallery-detail.html?project=techop" class="project-card group relative rounded-3xl overflow-hidden cursor-pointer reveal-up block" data-category="web" style="animation-delay: 0.3s">
+            <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-emerald-600/20 to-teal-600/20">
+              <img src="techop.id.png" alt="Techop.id Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="relative p-6">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-2xl font-bold group-hover:text-emerald-400 transition-colors">Techop.id</h3>
+                <div class="flex gap-2">
+                  <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-medium">Advanced</span>
                   <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-medium">Live</span>
                 </div>
               </div>
-
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-amber-400 transition-colors">Portfolio Website</h3>
-              <p class="text-gray-400 mb-6">Website portfolio modern dan responsif dengan animasi halus, UI interaktif, dan performa optimal.</p>
-
-              <div class="flex flex-wrap gap-2 mb-6">
+              <p class="text-gray-400 mb-4">Company profile website untuk layanan teknologi profesional dengan desain modern.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-1">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-4 h-4" alt="" />HTML
                 </span>
@@ -595,16 +572,9 @@
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-4 h-4" alt="" />TailwindCSS
                 </span>
               </div>
-
-              <div class="flex items-center">
-                <span class="text-amber-400 flex items-center gap-2 group-hover:gap-3 transition-all"> Lihat Detail <i class="fas fa-arrow-right"></i> </span>
-              </div>
+              <span class="text-emerald-400 flex items-center gap-2 group-hover:gap-3 transition-all">Lihat Detail <i class="fas fa-arrow-right"></i></span>
             </div>
-
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/10"></div>
-            </div>
-          </div>
+          </a>
         </div>
 
         <!-- View All Projects Button -->
@@ -789,7 +759,10 @@
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Android" />
             </div>
             <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform invert" alt="iOS" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Linux" />
+            </div>
+            <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Ubuntu" />
             </div>
             <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="VS Code" />
@@ -798,13 +771,10 @@
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Android Studio" />
             </div>
             <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Node.js" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Postman" />
             </div>
             <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="MongoDB" />
-            </div>
-            <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="PostgreSQL" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Gradle" />
             </div>
             <div class="tech-icon-badge group p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all cursor-pointer">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-8 h-8 group-hover:scale-110 transition-transform" alt="Docker" />

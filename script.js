@@ -69,57 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // =====================================================
 const projects = [
   {
-    title: "JobNation - Job Portal App",
-    subtitle: "Flutter & Firebase",
-    description: "Platform job portal mobile yang menghubungkan pencari kerja dengan perusahaan. Dilengkapi dengan fitur pencarian pekerjaan, upload CV, lamaran online, dan notifikasi realtime. Dibangun menggunakan Flutter dengan backend Firebase.",
-    tech: ["Flutter", "Firebase", "Dart", "REST API", "BLoC"],
-    difficulty: "Advanced",
-    status: "Published",
-    color: "violet",
-    icon: "📱",
-    features: [
-      "Pencarian lowongan kerja dengan filter lengkap",
-      "Upload CV dan portfolio secara online",
-      "Sistem lamaran dan tracking status",
-      "Notifikasi realtime untuk update lowongan",
-      "Profile kandidat dengan skill matching",
-      "Dashboard perusahaan untuk posting lowongan"
-    ],
-    github: "https://github.com/Wira07",
-    demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-    screenshot: "https://raw.githubusercontent.com/ArizArmeworworworworworworworworworworworworworworworworworworworworworworworworworwor/master/screenshots/job_portal.png"
-  },
-  {
-    title: "SCADA Monitoring System",
-    subtitle: "Android Native Kotlin",
-    description: "Aplikasi monitoring sistem SCADA untuk industri. Menampilkan data sensor realtime, grafik monitoring, alarm system, dan kontrol perangkat. Dikembangkan untuk PT. Hadiscada Inovasindo dengan arsitektur MVVM.",
-    tech: ["Kotlin", "Room DB", "MVVM", "WorkManager", "MQTT"],
-    difficulty: "Advanced",
-    status: "Published",
-    color: "cyan",
-    icon: "🤖",
-    features: [
-      "Monitoring sensor data realtime via MQTT",
-      "Grafik visualisasi data historis",
-      "Sistem alarm dan notifikasi",
-      "Kontrol perangkat jarak jauh",
-      "Export laporan dalam format PDF",
-      "Multi-user dengan role management"
-    ],
-    github: "https://github.com/Wira07",
-    demo: "#",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
-    screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/scada.png"
-  },
-  {
-    title: "EduApp - Platform Edukasi",
+    title: "EduApp",
     subtitle: "Jetpack Compose & Kotlin",
     description: "Platform edukasi interaktif dengan materi pembelajaran lengkap, kuis interaktif, dan progress tracking. Dibangun dengan Jetpack Compose untuk UI modern dan arsitektur MVVM.",
     tech: ["Kotlin", "Jetpack Compose", "Room DB", "Hilt", "MVVM"],
     difficulty: "Intermediate",
     status: "Published",
-    color: "pink",
+    color: "violet",
     icon: "📚",
     features: [
       "Materi pembelajaran interaktif dengan multimedia",
@@ -129,32 +85,68 @@ const projects = [
       "Mode offline untuk belajar tanpa internet",
       "UI modern dengan Jetpack Compose"
     ],
-    github: "https://github.com/Wira07",
-    demo: "#",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg",
-    screenshot: ""
+    galleryLink: "gallery-detail.html?project=edu"
   },
   {
-    title: "Portfolio Website",
+    title: "CeritaKu",
+    subtitle: "Android Native Kotlin",
+    description: "Aplikasi baca cerita digital dengan koleksi cerita menarik dan fitur bookmark. Dibangun dengan Kotlin dan arsitektur MVVM untuk pengalaman membaca yang nyaman.",
+    tech: ["Kotlin", "Android SDK", "Retrofit", "Room DB", "MVVM"],
+    difficulty: "Intermediate",
+    status: "Published",
+    color: "cyan",
+    icon: "📖",
+    features: [
+      "Koleksi cerita digital yang beragam",
+      "Fitur bookmark dan riwayat baca",
+      "Mode baca malam untuk kenyamanan",
+      "Pencarian cerita berdasarkan kategori",
+      "Offline reading support",
+      "UI yang bersih dan intuitif"
+    ],
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+    galleryLink: "gallery-detail.html?project=cerita"
+  },
+  {
+    title: "QR Scanner Pro",
+    subtitle: "Flutter & Dart",
+    description: "Aplikasi pemindai QR code dengan fitur generate dan riwayat scan. Dibangun dengan Flutter untuk performa tinggi dan UI yang responsif.",
+    tech: ["Flutter", "Dart", "Camera API", "BLoC", "SQLite"],
+    difficulty: "Intermediate",
+    status: "Published",
+    color: "green",
+    icon: "📷",
+    features: [
+      "Scan QR code dan barcode cepat",
+      "Generate QR code custom",
+      "Riwayat scan tersimpan otomatis",
+      "Berbagi hasil scan ke aplikasi lain",
+      "Flashlight support untuk kondisi gelap",
+      "Multi-format barcode support"
+    ],
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+    galleryLink: "gallery-detail.html?project=qr"
+  },
+  {
+    title: "Techop.id",
     subtitle: "HTML, CSS, JavaScript",
-    description: "Website portfolio modern dan responsif dengan animasi halus, komponen UI interaktif, dan performa optimal. Dibangun dengan HTML semantik, CSS modern, dan JavaScript vanilla.",
+    description: "Company profile website untuk layanan teknologi profesional. Dibangun dengan desain modern, responsif, dan performa optimal.",
     tech: ["HTML", "CSS", "JavaScript", "TailwindCSS", "GSAP"],
-    difficulty: "Beginner",
+    difficulty: "Advanced",
     status: "Live",
-    color: "amber",
+    color: "emerald",
     icon: "🌐",
     features: [
-      "Desain responsif untuk semua perangkat",
-      "Animasi scroll yang halus",
-      "Showcase proyek interaktif dengan filter",
-      "Form kontak dengan validasi",
+      "Desain modern dan profesional",
+      "Animasi scroll yang halus dengan GSAP",
+      "Fully responsive di semua perangkat",
       "SEO optimized structure",
+      "Contact form dengan validasi",
       "Fast loading dengan optimized assets"
     ],
-    github: "https://github.com/Wira07",
-    demo: "https://wira07.github.io",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    screenshot: "https://raw.githubusercontent.com/Wira07/screenshots/main/portfolio.png"
+    galleryLink: "gallery-detail.html?project=techop"
   }
 ];
 
@@ -337,7 +329,9 @@ function openModal(index) {
     violet: 'from-violet-500 to-fuchsia-500',
     cyan: 'from-cyan-500 to-blue-500',
     pink: 'from-pink-500 to-rose-500',
-    amber: 'from-amber-500 to-orange-500'
+    amber: 'from-amber-500 to-orange-500',
+    green: 'from-green-500 to-emerald-500',
+    emerald: 'from-emerald-500 to-teal-500'
   };
   
   const difficultyColors = {
@@ -391,7 +385,7 @@ function openModal(index) {
       </div>
       
       <div class="flex gap-4">
-        <a href="galery.html" class="btn-primary px-6 py-3 rounded-xl font-medium flex items-center gap-2 flex-1 justify-center">
+        <a href="${project.galleryLink || 'galery.html'}" class="btn-primary px-6 py-3 rounded-xl font-medium flex items-center gap-2 flex-1 justify-center">
           <i class="fas fa-images"></i>
           Lihat di Galeri
         </a>
